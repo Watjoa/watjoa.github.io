@@ -1,0 +1,34 @@
+name: "Watjoa_web"
+title: "Watjoa"
+theme: "theme.css"
+include: ["footer.html"]
+google_analytics: "UA-77306155-2"
+description: |
+  Watjoa
+output_dir: "docs"
+twitter:
+  site: "@watjoa"
+navbar:
+  search: true
+  logo:
+    image: images/logo.png
+    href: https://www.rstudio.com
+  right:
+    - text: "Figures"
+      href: figures.html
+    - text: "Tables"
+      href: tables.html
+    - text: "Citations"
+      href: citations.html
+    - text: "Publish"
+      menu:
+        - text: "Publishing Articles"
+          href: publish_article.html
+        - text: "Publishing a Website"
+          href: publish_website.html
+        - text: "---"
+        - text: "Article Metadata"
+          href: metadata.html
+    - icon: fab fa-github
+      href: https://github.com/rstudio/distill
+output: distill::distill_article
