@@ -1,0 +1,216 @@
+---
+title: "Antoine Soetewey's Resume"
+author: Antoine Soetewey
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    css: ['css/custom_resume.css', 'css/styles.css', 'resume']
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+knit: pagedown::chrome_print
+---
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+library(tidyverse)
+library(glue)
+
+# ======================================================================
+# These variables determine how the the data is loaded and how the exports are
+# done.
+
+# Is data stored in google sheets? If no data will be gather from the csvs/
+# folder in project
+using_googlesheets <- TRUE
+
+# Just the copied URL from the sheet
+positions_sheet_loc <- "https://docs.google.com/spreadsheets/d/1tuwOW1_quMx2u5BHrsR9ui_lcVAjcqphwhbWyA3hcuI/edit?usp=sharing"
+
+# Is this sheet available for anyone to read? If you're using a private sheet
+# set this to false and go to gather_data.R and run the data loading manually
+# once to cache authentication
+sheet_is_publicly_readable <- TRUE
+
+# Is the goal of this knit to build a document that is exported to PDF? If so
+# set this to true to have links turned into footnotes at the end of the
+# document
+PDF_EXPORT <- FALSE
+
+
+# A global (gasp) variable that holds all the links that were inserted for
+# placement at the end
+links <- c()
+
+# ======================================================================
+# Now we source two external scripts. One contains functions for building the
+# text output and the other loads up our data from either googlesheets or csvs
+
+# Functions for building sections from CSV data
+source('parsing_functions.R') 
+
+# Load data for CV/Resume
+source('gather_data.R')
+
+# Now we just need to filter down the position data to include less verbose
+# categories and only the entries we have designated for the resume
+position_data <- position_data %>% 
+  filter(in_resume) %>% 
+  mutate(
+    # Build some custom sections by collapsing others
+    section = case_when(
+      section %in% c('research_positions', 'industry_positions') ~ 'positions', 
+      section %in% c('data_science_writings', 'by_me_press') ~ 'writings',
+      TRUE ~ section
+    )
+  ) 
+```
+
+
+
+Aside
+================================================================================
+
+
+![logo](logo.png){width=100%}
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+```{r}
+contact_info %>% 
+  glue_data("- <i class='fa fa-{icon}'></i> {contact}")
+```
+
+
+
+<!-- Language Skills {#skills} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- build_skill_bars(skills) -->
+<!-- ``` -->
+
+Research {#research}
+--------------------------------------------------------------------------------
+
+See all publications, posters and talks at: <br /> [antoinesoetewey.com/research](https://www.antoinesoetewey.com/research/)
+
+
+Software {#open-source}
+--------------------------------------------------------------------------------
+
+All projects available at: <br /> [antoinesoetewey.com/software](https://www.antoinesoetewey.com/software/)
+
+Languages {#languages}
+--------------------------------------------------------------------------------
+
+French: native, English: fluent, Dutch: intermediate
+
+
+More info {#more-info}
+--------------------------------------------------------------------------------
+
+See full CV at: <br /> [antoinesoetewey.com/cv](https://www.antoinesoetewey.com/cv.html)
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+<!-- Made w/ [**pagedown**](https://github.com/rstudio/pagedown).  -->
+
+<!-- Source code: [github.com/AntoineSoetewey/cv](https://github.com/AntoineSoetewey/cv). -->
+
+<!-- Last updated on `r format(Sys.time(), '%B %d, %Y')`. -->
+
+
+
+Main
+================================================================================
+
+Antoine Soetewey {#title}
+--------------------------------------------------------------------------------
+
+```{r}
+print_text_block(text_blocks, 'intro')
+```
+
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+position_data %>% print_section('education')
+```
+
+Teaching Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'teaching_positions')
+```
+
+Writing {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'writing_positions')
+```
+
+<!-- Professional Experience {data-icon=suitcase} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'industry_positions') -->
+<!-- ``` -->
+
+<!-- Research {data-icon=book} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'research_positions_resume') -->
+<!-- ``` -->
+
+<!-- Software {data-icon=laptop} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'software') -->
+<!-- ``` -->
+
+<!-- Associations {data-icon=chart-line} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'associations') -->
+<!-- ``` -->
+
+<!-- Languages {data-icon=language} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'languages') -->
+<!-- ``` -->
+
+
+<!-- Selected Positions {data-icon=suitcase} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- position_data %>% print_section('positions') -->
+<!-- ``` -->
+
+
+
+<!-- Selected Writing {data-icon=newspaper} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r} -->
+<!-- position_data %>% print_section('writings') -->
+<!-- ``` -->
+
+

@@ -1,0 +1,41 @@
+[
+  {
+    "path": "posts/clustering/",
+    "title": "Cluster analysis",
+    "description": "A theoretical and practical guide for K-Mean clustering and Latent Profile Analysis in R",
+    "author": [
+      {
+        "name": "Joachim Waterschoot",
+        "url": {}
+      }
+    ],
+    "date": "2021-06-09",
+    "categories": [
+      "portfolios",
+      "dygraphs"
+    ],
+    "contents": "\n\n\nlibrary(ggplot2)\nggplot(diamonds, aes(carat, price)) + geom_smooth() +\n  facet_grid(~ cut)\n\n\n\n\n\nHere is a small side note.\n\n\n\n",
+    "preview": "posts/clustering/Clustering_files/figure-html5/unnamed-chunk-1-1.png",
+    "last_modified": "2021-05-09T13:46:22+02:00",
+    "input_file": {},
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to My Blog",
+    "description": "Welcome to our new blog, My Blog. We hope you enjoy \nreading what we have to say!",
+    "author": [
+      {
+        "name": "Nora Jones",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2021-05-09",
+    "categories": [],
+    "contents": "\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-05-09T13:25:36+02:00",
+    "input_file": {}
+  }
+]

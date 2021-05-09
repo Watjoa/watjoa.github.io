@@ -1,0 +1,36 @@
+---
+title: "Cluster analysis"
+description: |
+  A theoretical and practical guide for K-Mean clustering and Latent Profile Analysis in R
+author:
+  - name: Joachim Waterschoot
+date: 06-09-2021
+categories:
+  - portfolios
+  - dygraphs
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    highlight: haddock
+    highlight_downlit: true
+---
+
+```{r, layout="l-body-outset", preview=TRUE}
+library(ggplot2)
+ggplot(diamonds, aes(carat, price)) + geom_smooth() +
+  facet_grid(~ cut)
+```
+
+<aside>
+Here is a small side note.
+</aside>
+
+
+
+
+
+
+
