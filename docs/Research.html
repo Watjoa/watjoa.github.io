@@ -54,62 +54,57 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ad0000; } /* Alert */
-code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
-code span.bn { color: #ad0000; } /* BaseN */
+code span.al { color: #ff0000; } /* Alert */
+code span.an { color: #008000; } /* Annotation */
+code span.at { } /* Attribute */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
-code span.ch { color: #20794d; } /* Char */
-code span.cn { color: #8f5902; } /* Constant */
-code span.co { color: #5e5e5e; } /* Comment */
-code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-code span.dt { color: #ad0000; } /* DataType */
-code span.dv { color: #ad0000; } /* DecVal */
-code span.er { color: #ad0000; } /* Error */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.ch { color: #008080; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #008000; } /* Comment */
+code span.cv { color: #008000; } /* CommentVar */
+code span.do { color: #008000; } /* Documentation */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
-code span.fl { color: #ad0000; } /* Float */
-code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
-code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
-code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
-code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
-code span.ss { color: #20794d; } /* SpecialString */
-code span.st { color: #20794d; } /* String */
-code span.va { color: #111111; } /* Variable */
-code span.vs { color: #20794d; } /* VerbatimString */
-code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+code span.in { color: #008000; } /* Information */
+code span.kw { color: #0000ff; } /* Keyword */
+code span.op { } /* Operator */
+code span.ot { color: #ff4000; } /* Other */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.ss { color: #008080; } /* SpecialString */
+code span.st { color: #008080; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Watjoa: About this blog</title>
+  <title>Watjoa: Scientific curriculum</title>
 
-  <meta property="description" itemprop="description" content="Some additional details about the blog"/>
 
   <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico"/>
 
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-05-09"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-05-09"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Watjoa: About this blog"/>
+  <meta property="og:title" content="Watjoa: Scientific curriculum"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Some additional details about the blog"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Watjoa"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Watjoa: About this blog"/>
-  <meta property="twitter:description" content="Some additional details about the blog"/>
+  <meta property="twitter:title" content="Watjoa: Scientific curriculum"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About this blog"]},{"type":"character","attributes":{},"value":["Some additional details about the blog"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Scientific curriculum"]},{"type":"character","attributes":{},"value":["2021-05-09"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float","highlight","highlight_downlit"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["haddock"]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2054,7 +2049,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About this blog","description":"Some additional details about the blog","authors":[]}
+{"title":"Scientific curriculum","authors":[],"publishedDate":"2021-05-09T00:00:00.000+00:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2076,7 +2071,7 @@ Statistics
 <span class="down-arrow">&#x25BE;</span>
 </button>
 <div class="nav-dropdown-content">
-<a href="_posts/clustering/Clustering.html">Clustering analysis</a>
+<a href="Clustering.html">Clustering analysis</a>
 <hr/>
 <a href="publish_website.html">Boredom</a>
 <hr/>
@@ -2113,14 +2108,265 @@ Projects
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About this blog</h1>
+<h1>Scientific curriculum</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Some additional details about the blog</p></p>
+
 </div>
 
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#publications">Publications</a>
+<ul>
+<li><a href="#section">2021</a></li>
+<li><a href="#section-1">2020</a></li>
+<li><a href="#section-2">2019</a></li>
+<li><a href="#submitted">Submitted</a></li>
+<li><a href="#in-progress">In progress</a></li>
+</ul></li>
+<li><a href="#public-reports">Public reports</a></li>
+<li><a href="#master-theses-supervision">Master theses supervision</a>
+<ul>
+<li><a href="#current">Current</a></li>
+<li><a href="#section-3">2020</a></li>
+<li><a href="#section-4">2019</a></li>
+<li><a href="#section-5">2018</a></li>
+</ul></li>
+<li><a href="#conference-proceedings">Conference proceedings</a>
+<ul>
+<li><a href="#section-6">2020</a></li>
+<li><a href="#section-7">2019</a></li>
+<li><a href="#section-8">2018</a></li>
+</ul></li>
+<li><a href="#lectures">Lectures</a></li>
+</ul>
+</nav>
+</div>
+<h2 id="publications">Publications</h2>
+<h3 id="section">2021</h3>
+<ul>
+<li><strong>Waterschoot. J.</strong>, Van der Kaap-Deeder, J., Morbée, S., Soenens, B., &amp; Vansteenkiste, M. (2021). ‘How to Unlock Myself from Boredom?’ The Role of Mindfulness and a dual Awareness- and Action-Oriented Pathway during the COVID-19 Lockdown. <em>Personality and Individual Differences, 175</em>, 110729.DOI: <a href="https://doi.org/10.1016/j.paid.2021.110729" class="uri">https://doi.org/10.1016/j.paid.2021.110729</a></li>
+</ul>
+<aside>
+<a href="download/sciencs/studies/1-s2.0-S0191886921001045-main.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<ul>
+<li>Van der Kaap-Deeder, J., Vermote, B., <strong>Waterschoot, J.</strong>, Soenens, B., Morbee, S., &amp; Vansteenkiste, M. (2021). The Role of Ego Integrity and Despair in Older Adults’ Well-being during the Covid-19 Crisis: The Mediating Role of Need-based Experiences. <em>European Journal of Ageing</em></li>
+</ul>
+<aside>
+<a href="download/sciencs/studies/VanDerKaap-Deeder2021_Article_TheRoleOfEgoIntegrityAndDespai.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<ul>
+<li>Vermote, B., <strong>Waterschoot. J.</strong>, Morbée, S., Van der Kaap-Deeder, J., Schrooyen, C., Soenens, B., Ryan, R., &amp; Vansteenkiste, M. (2021). Do psychological needs play a role in times of uncertainty? Associations with well-being during the corona crisis. <em>Journal of Happiness Studies</em> <a href="https://doi.org/10.1007/s10902-021-00398-x" class="uri">https://doi.org/10.1007/s10902-021-00398-x</a></li>
+</ul>
+<aside>
+<a href="download/sciencs/studies/Vermote_et_al-2021-Journal_of_Happiness_Studies.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<h3 id="section-1">2020</h3>
+<ul>
+<li><strong>Waterschoot, J.</strong>, Van der Kaap-Deeder, J., &amp; Vansteenkiste, M. (2020). The Role of Competence-related Attentional Bias and Resilience in Restoring Thwarted Feelings of Competence. <em>Motivation and Emotion. Special issue: Advancing the Field of Basic Psychological Needs, 44</em>(1), 82-98. DOI: <a href="https://doi.org/10.1007/s11031-019-09776-8" class="uri">https://doi.org/10.1007/s11031-019-09776-8</a></li>
+</ul>
+<aside>
+<a href="download/sciencs/studies/Waterschoot2020_Article_TheRoleOfCompetence-relatedAtt.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<h3 id="section-2">2019</h3>
+<ul>
+<li>De Muynck, G., Soenens, B., <strong>Waterschoot, J.</strong>, Degrauewe, L., Vande Broek, G., &amp; Vansteenkiste, M. (2019). Towards a More Refined Insight in the Critical Motivating Features of Choice: An Experimental Study among Recreational Rope Skippers. <em>Journal of Psychology of Sport &amp; Exercise, 45</em>, 101561. DOI: <a href="https://doi.org/10.1016/j.psychsport.2019.101561" class="uri">https://doi.org/10.1016/j.psychsport.2019.101561</a></li>
+</ul>
+<aside>
+<a href="download/sciencs/studies/1-s2.0-S1469029218304990-main.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<ul>
+<li><strong>Waterschoot, J.</strong>, Vansteenkiste, M. &amp; Soenens, B. (2019). The Effects of Experimentally Induced Choice on Elementary School Children’s Intrinsic Motivation: The Moderating Role of Indecisiveness and Teacher-Student Relatedness. <em>Journal of Experimentally Child Psychology, 188</em>. DOI: <a href="https://doi.org/10.1016/j.jecp.2019.104692" class="uri">https://doi.org/10.1016/j.jecp.2019.104692</a></li>
+</ul>
+<aside>
+<a href="download/sciencs/studies/1-s2.0-S0022096519301110-main.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<h3 id="submitted">Submitted</h3>
+<ul>
+<li><p><strong>Waterschoot. J.</strong>, Morbée, S., Vermote, B., Brenning, K., Flamant, N., Vansteenkiste, M., &amp; Soenens, B. (<strong>in review</strong>) Emotion Regulation in Times of COVID-19: A Person-Centered Approach Based on Self-Determination. <em>Journal of Current Psychology</em></p></li>
+<li><p>Morbée, J., Haerens, L., <strong>Waterschoot, J.</strong>, &amp; Vansteenkiste, M. (<strong>in review</strong>). Which Cyclists Manage to Cope with the Corona Crisis in a Resilient Way? The Role of Motivational Profiles. <em>Psychology of Sport &amp; Exercise</em></p></li>
+<li><p>Morbée, S., Vermote, B., <strong>Waterschoot, J.</strong>, Dieleman, L., Soenens, B., Van den Bergh, O., Ryan, R. M., Vanhalst, J., De Muynck, G-J., &amp; Vansteenkiste, M. (<strong>submitted</strong>) Adherence to Covid-19 Measures: The Critical Role of Voluntary Motivation on a Short- and Long-Term Basis.</p></li>
+<li><p>Schrooyen, C., Soenens, B., <strong>Waterschoot, J.</strong>, Vermote, B., Morbée, S., Beyers, W., Brenning, K., Dieleman, L., Van der Kaap-Deeder, J., &amp; Vansteenkiste, M. (<strong>in review</strong>) At Home With the Kids During the COVID-19 Lockdown: A Party or a Prison? Parental Identity as a Resource for Parental Adaptation through Basic Psychological Need Satisfaction. <em>Journal of Family Psychology</em></p></li>
+</ul>
+<h3 id="in-progress">In progress</h3>
+<h4 id="phd-research-self-motivation">PhD-research: Self-Motivation</h4>
+<ul>
+<li><p>“It’s up to you”: a multi-method approach towards the validation and the effectiveness of self-motivating strategies.</p></li>
+<li><p>A Taxonomical Research on Goals to participate a 100 km walk</p></li>
+<li><p>A statistical comparison between K- Means cluster analysis and Latent Profile Analysis</p></li>
+<li><p>A qualitative-quantitative comparison of motivation measurements</p></li>
+<li><p>‘Walking a mile in one’s shoes’: the role of motivational profiles in the experience and performance of a 100 km walking tour</p></li>
+<li><p>Towards a refined insight in the shifts in adolescents’ motivational profiles: A longitudinal study</p></li>
+<li><p>Parental effects of reward on children’s motivation compared to autonomy-support and psychological control.</p></li>
+<li><p>Rafael, Lennia, Bart, Maarten,.. Motivational profiles in dangerous sections in Peru</p></li>
+<li><p>Lennia, Bart, Maarten, Rafael. Motivational profiles in business students</p></li>
+</ul>
+<h4 id="the-motivationbarometer">The MotivationBarometer</h4>
+<ul>
+<li><p>Descriptive evolutions of the need during the COVID-19 crisis</p></li>
+<li><p>Brenning, .. Short report on 10-wave study ER-styles and people’s well-being during COVID-19</p></li>
+<li><p>Motivation paper 2: effect of hospitalisations, risk perception, worries and motivation on adherence</p></li>
+<li><p>Motivation paper 3: descriptives in Belgium crisis - 1-year measurement + impact of governmental communication style</p></li>
+<li><p>Vaccin vignets and psychological conditions</p></li>
+<li><p>Christmas scenarios</p></li>
+<li><p>Personality</p></li>
+<li><p>Department of Health psychology (GEES dataset)</p></li>
+<li><p>Longitudinal adolescents</p></li>
+<li><p>Students Artevelde</p></li>
+<li><p>Mothers’ day</p></li>
+</ul>
+<p><br></p>
+<h2 id="public-reports">Public reports</h2>
+<ul>
+<li><p>Motivation Barometer (May 10, 2021). <em>Update on vaccination, motivation, and mental health during a transitional phase</em> (Report No. 30). Ghent &amp; Louvain, Belgium.</p></li>
+<li><p>Motivation Barometer (April 20, 2021). <em>Does the prospect of feedbacks motivate the population?</em> (Report No. 29). Ghent &amp; Louvain, Belgium.</p></li>
+<li><p>Motivation Barometer (April 6, 2021). <em>Vaccination: preferences become clear!</em> (Report No. 28). Ghent &amp; Louvain, Belgium.</p></li>
+<li><p>Motivation Barometer (April 1, 2021). <em>Saliva testing in schools: impact on mental health, motivation and behavior</em> (Report No. 27). Ghent &amp; Louvain, Belgium.</p></li>
+<li><p>Motivation Barometer (March 24, 2021). <em>Is there motivational willingness for stricter measures?</em> (Report No. 26). Ghent &amp; Louvain, Belgium.</p></li>
+<li><p>Motivation Barometer (March 2, 2021). <em>The corona numbers: motivation matters!</em> (Report No. 25). Ghent &amp; Louvain, Belgium.</p></li>
+<li><p>Motivation Barometer (February 14, 2021). <em>How can we reinvigorate motivation?</em> (Report No. 24). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (February 11, 2021). <em>(Re)building trust: vaccination and the actors of the pandemic</em> (Report No. 23). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (February 5, 2021). <em>Movement as a source of well-being</em> (Report No. 22). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (January 29, 2021). <em>At our limits end and yet persevering</em> (Report No. 21). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (January 15, 2021). <em>What are the psychological conditions to vaccination?</em> (Report No. 20). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (December 23, 2020). <em>Christmas 2020</em> (Report No. 19). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (December 14, 2020). <em>Vaccination willingness and motivation</em> (Report No. 18). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (23 November 2020). <em>What makes for a happy Christmas in 2020?</em> (Report No. 17). Gent, Belgium.</p></li>
+<li><p>Motivation Barometer (October 27, 2020). <em>Taking a closer look at some assumptions about behavior and motivation</em> (Report No. 16). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (October 14, 2020). <em>Even hard nuts can be cracked in a motivational way!</em> (Report No. 15). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (September 30, 2020). <em>What do citizens think of coronabadges and the -barometer? A closer look at some motivational tools</em> (Report No. 14). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (September 17, 2020). <em>What do people think are meaningful alternatives to the current bubble concept? The psychological effects of flex bubbles and a social carte blanche compared</em> (Report No. 13). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (August 19, 2020). <em>The population is no longer motivated. How can we create a motivational framework</em> (Report No. 12). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (July 16, 2020). <em>How to maintain high motivation for tracking during this summertime? The role of risk perception, fear, and obligation</em> (Report No. 11). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (July 1, 2020). <em>What makes for an invigorating and rewarding summer vacation in corona times?</em> (Report No. 10). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (May 19, 2020). <em>Discomforts of face masks: how we wear them with a smile by encouraging voluntary responsibility</em> (Report No. 9). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (May 14, 2020). <em>Student years are the time of your life! Even during corona?</em> (Report No. 8). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (May 12, 2020). <em>Does ‘bubbling’ on Mother’s Day boost our connectedness and motivation?</em> (Report No. 7). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (May 5, 2020). <em>Motivation rises slightly. Government continue the positive momentum of motivational communication!</em> (Report No. 6). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (April 26, 2020). <em>Fatigue during the collective marathon strikes. Evolutions in motivation, mental health and (de)motivating government communication</em> (Report No. 5). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (April 21, 2020). <em>Motivational willingness for the public marathon is dwindling: the leadership compass as a guide to motivational communication</em> (Report No. 4). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (April 14, 2020). <em>Psychological vitamins in times of corona fatigue</em> (Report No. 3). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (April 8, 2020). <em>Is our motivation to adhere to the measures flattening? The importance of clear and logical communication</em> (Report No. 2). Ghent, Belgium.</p></li>
+<li><p>Motivation Barometer (March 30, 2020). <em>How long will we hold on to these measures? Our motivation is strong at the moment!</em> (Report No. 1). Ghent, Belgium.</p></li>
+</ul>
+<h2 id="master-theses-supervision">Master theses supervision</h2>
+<h3 id="current">Current</h3>
+<ul>
+<li><p>Vanhaverbeke, Alica (current). longitudinale profielen in middelbare school motivatie. <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
+<li><p>Belgrado, Laura (current). mediërende rol van zelfmotivatie tussen emotieregulatie en verveling. <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
+<li><p>Bogaerts, Liesa (current). zelfmotivatie, tweede lockdown, verveling en kwalitatieve codering. <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
+<li><p>Sercu, Jade (current). Ouders en geven van beloningen tijdens vervelende taak. <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
+<li><p>Van Houtte, Camille (current). De Dodentochtstudie: de ervaring vanuit het oogpunt van de wandelaar via diepte-interviews. <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
+<li><p>Hernandez, Nicaurys (current). Rol van emotieregulatie op verveling en zelfmotivatie tijdens eerste lockdown COVID-19 <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
+<li><p>De Quick, Lotte (current). mindfulness en verveling over tijd in middelbare leerlingen populatie <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
+<li><p>Bruteyn, Sarah (current). telewerken motivatie zelfmotivatie verveling mindfulness <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
+<li><p>Vandecasteele, Liesanne (current). Rol van persoonlijkheid tov mindfulness <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
+</ul>
+<h3 id="section-3">2020</h3>
+<ul>
+<li>De Lille, Maud (2020). De motivatie achter de Dodentocht: een heldentocht of een lijdensweg? <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</li>
+</ul>
+<aside>
+<a href="download/sciencs/masterproeven/Masterproef%20II_MaudDeLille_Waar%20een%20wil%20is,%20is%20een%20weg.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<ul>
+<li>Dewilde, Bjarne (2020). Even stilstaan in het hier en nu: waarom deze taak als vervelend aan- voelt. De rol van mindfulness in onze capaciteit tot zelfmotivatie. <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</li>
+</ul>
+<aside>
+<a href="download/sciencs/masterproeven/HUISWERK%20IN%20TIJDEN%20VAN%20CORONA%20HET%20VERBAND%20TUSSEN%20SCHOOLMOTIVATIE,%20ZELFMOTIVATIE%20EN%20MINDFULNESS.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<ul>
+<li>Koekelkoren, Juno (2020). Mijn doelen in een deelname aan de Dodentocht: een kwalitatieve analyse <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste) <a href="download/sciencs/masterproeven/01305553_Juno%20KOEKELKOREN_Masterproef_Doelgericht%20in%20beweging.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a><br />
+
+</aside></li>
+<li>Wydooghe, Lore (2020). “Hoe motiveer ik mezelf voor een vervelende taak?”: een onderzoek naar de wortels van zelf-motivatie. <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</li>
+</ul>
+<aside>
+<a href="download/sciencs/masterproeven/Masterproef%20-%20Hoe%20motiveer%20je%20jezelf%20voor%20een%20vervelende%20taak%20-%20Lore%20Wydooghe.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<ul>
+<li>Zels, Julie (2020). De motivatie achter de Dodentocht: een heldentocht of een lijdensweg? <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</li>
+</ul>
+<aside>
+<a href="download/sciencs/masterproeven/De%20motivatie%20achter%20de%20Dodentocht_JulieZels.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<ul>
+<li>Casteleyn, Demi (2020). “Help, ik doe dit écht niet graag!”: hoe ouders de capaciteit tot zelf-motivatie kunnen versterken." <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</li>
+</ul>
+<aside>
+<a href="download/sciencs/masterproeven/MasterproefII_Demi_Casteleyn.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<h3 id="section-4">2019</h3>
+<ul>
+<li>Swinnen, Kato (2019). “Smartphonenende” ouders: hoe beschikbaar zijn ze voor hun kinderen en hoe voeden ze hun kinderen op? <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</li>
+</ul>
+<aside>
+<a href="download/sciencs/masterproeven/MASTERPROEF%20II_Kato%20Swinnen_Smartphonende%20ouders%20Hoe%20beschikbaar%20zijn%20ze%20voor%20hun%20kinderen%20en%20hoe%20voeden%20ze%20hun%20kinderen%20op.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<h3 id="section-5">2018</h3>
+<ul>
+<li>Vermeire, Ephraïm (2018). Mag plezier bestaan in de klas? Een differentiatie van plezier en de samenhang met aspecten van zelfbeheersing in klassikale context. <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</li>
+</ul>
+<aside>
+<a href="download/sciencs/masterproeven/Ephraïm%20Vermeire%20(2018)%20-%20Twee%20vormen%20van%20plezier%20en%20zelfbeheersing.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<p><br></p>
+<h2 id="conference-proceedings">Conference proceedings</h2>
+<h3 id="section-6">2020</h3>
+<ul>
+<li><strong>Waterschoot, J.</strong>, Soenens, B., Vermote, B., &amp; Vansteenkiste, M. (POSTPONED). <em>How to increase one’s own motivation when performing a boring activity? A multi-method approach.</em> Paper presented at the tenth SELF International Conference, June 2020, Quebec, Canada<br />
+</li>
+<li><strong>Waterschoot, J.</strong>, Soenens, B., Vermote, B., &amp; Vansteenkiste, M. (POSTPONED). <em>How to increase one’s own motivation when performing a boring activity? A multi-method approach.</em> Paper presented at the International Conference on Motivation, September 2020, Dresden, Germany.<br />
+</li>
+<li><strong>Waterschoot, J.</strong>, Soenens, B., Vermote, B., &amp; Vansteenkiste, M. (POSTPONED). <em>How to increase one’s own motivation when performing a boring activity? A multi-method approach.</em> Paper presented at the International Conference on Motivation, Invited Interdisciplinary Symposia ‘MetaMotivation - MetaReasoning’ (organiser: Kou Murayama &amp; Rakefet Ackerman), September 2020, Dresden, Germany.<br />
+</li>
+<li>Vermote, B., Vansteenkiste, M., Soenens, B., <strong>Waterschoot, J.</strong>, &amp; Beyers, W. (POSTPONED). <em>Student life as a period of conflict or harmony between activities? The role of an Authentic Inner Compass.</em> Paper presented at the International Conference on Motivation, September 2020, Dresden, Germany</li>
+</ul>
+<h3 id="section-7">2019</h3>
+<ul>
+<li><strong>Waterschoot, J.</strong>, Vansteenkiste, M., &amp; Soenens, B. (2019, May). <em>Life ain’t no ponyfarm: examining the effectiveness of different self-motivating strategies when facing boring activites.</em> Poster presented at the SDT conference, Egmond aan Zee, The Netherlands.<br />
+</li>
+<li><strong>Waterschoot, J.</strong>, Vansteenkiste, M., Verscheuren, K., &amp; Soenens, B. (2019, August). <em>Towards a refined insight in the shifts in adolescents’ motivational profiles: A longitudinal study.</em> Paper presented at the EARLI conference, August 2019, Aachen, Germany.<br />
+</li>
+<li><strong>Waterschoot, J.</strong>, Vansteenkiste, M., Verscheuren, K., &amp; Soenens, B. (2019, September). <em>Towards a refined insight in the shifts in adolescents’ motivational profiles: A longitudinal study.</em> Paper presented at the European Conference of Developmental Psychology, September 2019, Athene, Greece.</li>
+</ul>
+<h3 id="section-8">2018</h3>
+<ul>
+<li><strong>Waterschoot, J.</strong>, Soenens, B., &amp; Vansteenkiste, M. (2018, July). <em>Effects of Experimentally Induced Choice on Intrinsic Motivation in Middle Childhood.</em> Paper presented at the JURE Conference 2018 at the University of Antwerp, Antwerp, Belgium.<br />
+</li>
+<li><strong>Waterschoot, J.</strong>, Van-der Kaap Deeder, J., &amp; Vansteenkiste, M. (2018, August). <em>How do People Handle Competence Frustration?: The Role of Resilience and Attentional Bias.</em> Paper presented at the International Conference on Motivation (ICM) at the Aarhus University, Aarhus, Denmark.<br />
+</li>
+<li><strong>Waterschoot, J.</strong>, Soenens, B., &amp; Vansteenkiste, M. (2018, August). <em>Effects of Experimentally Induced Choice on Intrinsic Motivation in Middle Childhood.</em> Paper presented at the International Conference on Motivation (ICM) at the Aarhus University, Denmark.<br />
+</li>
+<li>Aelterman, N., Soenens, B., Vansteenkiste, M., <strong>Waterschoot, J.</strong>, &amp; Haerens, L. (2018, August). <em>Effects of Teachers’ Style of Rule Setting on Students’ Psychological: Needs and Behavioral Responses.</em> Paper presented at the International Conference on Motivation (ICM) at the Aarhus University, Denmark.<br />
+</li>
+<li><strong>Waterschoot, J.</strong>, Van-der Kaap Deeder, J., &amp; Vansteenkiste, M. (2018, September). <em>The Role of Competence-related Attentional Bias and Resilience in Restoring Thwarted Feelings of Competence.</em> Paper presented at the EARA congress at Ghent University, Ghent, Belgium<br />
+</li>
+<li>Vandenkerckhove, B., Soenens, B., Nasso, S., <strong>Waterschoot, J.</strong>, De Raedt, R., Luyten, P., &amp; Vansteenkiste, M. (2018, July). <em>Effects of social rejection in dependent individuals: an experimental study with the cyberball paradigm.</em> Poster presented at the ISSBD Conference (International Society for the Study of Behavioural Development), Gold Coast, Australia.</li>
+</ul>
+<p><br></p>
+<h2 id="lectures">Lectures</h2>
+<ul>
+<li><em>03/05/2021</em>: lecture on Interest Theory, Motivation Psychology, Ghent University</li>
+<li><em>09/02/2021</em>: gastcollege ‘de motivatiebarometer’, studiedag, VIVES hogeschool</li>
+<li><em>10/12/2020</em>: ‘De Belgische bevolking als leerling in de klas: de uitdagingen voor de overheid als leerkracht tijdens COVID-19’, studiedag, Arteveldehogeschool.</li>
+<li><em>05/03/2020</em>: ‘Wanneer de mentale brandstof de motor doet wandelen: presentatie Dodentochtstudie’, open publiek, FPPW, Universiteit Gent, Gent<br />
+</li>
+<li><em>11/02/2020</em>: ‘Wanneer de mentale brandstof de motor doet wandelen: presentatie Dodentochtstudie op de werkvloer’, HR groep, Kortrijk<br />
+</li>
+<li><em>15/10/2019</em>: ‘An integrative overview of motivation’, students of the Hult International Business School, London<br />
+</li>
+<li><em>20/03/2018</em>: ‘Motivation from a Self-Determination theory perspective’, students, teachers and parents of Da Vinci Campus, Ronse</li>
+<li><em>12/03/2015</em>: ‘A Choice Experiment among elementary school children’, students Occupational Science, Artevelde School, Ghent</li>
+</ul>
+<!-- <aside> -->
+<!-- Here is a small side note. -->
+<!-- </aside> -->
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
