@@ -1,0 +1,467 @@
+---
+title: "Data manipulation"
+description: |
+  A theoretical and practical guide for K-Means clustering and Latent Profile Analysis in R
+author:
+  - name: Joachim Waterschoot
+  - orcid_id: 0000-0003-0845-9310
+date: 06-09-2021
+categories:
+  - clustering
+  - analyses
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    highlight: haddock
+    highlight_downlit: true
+    code_folding: true
+---
+
+<style type="text/css">
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
+div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding: 20px;}
+</style>
+
+<meta name="decsription" content="Find useful online applications to make correlation tables, moderation or interaction plots and many more." />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120279443-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120279443-3');
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        document.title = 'Rcoding';
+    });
+
+</script>
+
+<style>
+.main-container {
+  background-color:#d1d9e0;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+# First steps and tips
+
+* Always use R on your local computer and **not via athena**  
+
+* Always download the latest version of [R](https://www.r-project.org/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/#download)
+
+* Running a code can be done by c*trl + enter* (windows) or *cmd + enter* (mac)
+
+* Always direct your R code to a specific file in which you want to use a dataset and save all your files. You can do this by `setwd("/Users/joachimwaterschoot/Downloads/R")` (example for Downloads folder on mac)
+
+* If you have an error, always google this one. A lost of fora provide you a clear answer on what is going on
+
+* A warning (= you can continue) is not an error (= nothing happpened)
+
+# Load and install packages
+
+You can load different packages (list *packages*) at once by the `lapply` function. The list represents most of the packages I use.
+
+```{r,echo=TRUE,message=FALSE,warning=FALSE}
+
+packages_folder <- "/Users/joachimwaterschoot/Downloads/R Packages"
+  
+packages<- c('foreign','lavaan','tidyverse','cluster',
+     'factoextra','dendextend','ape','tidyr',
+     'magrittr','clValid',
+     'ggfortify','clustree','FactoMineR',
+     'corrplot','ggiraphExtra','GGally',
+     'knitr','kableExtra','plyr','haven','apaTables',
+     'qgraph','dplyr','ComplexHeatmap','dendextend',
+     'circlize','RColorBrewer','ggpubr','rstatix',
+     'car','broom','hausekeep',"writexl",
+     'Publish','data.table','janitor','psych',
+     'sjPlot', 'Hmisc','xtable','survey',
+     'srvyr','questionr','ggplot2','ggfortify',
+     'lme4','lmerTest','foreign','VIM',"mice",'readxl')
+
+```
+
+```{r, echo=FALSE,results='hide',message=FALSE,warning=FALSE}
+lapply(packages, require, character.only = TRUE)
+```
+
+Refer to your folder where you have downloaded all packages and load them all at once
+
+```{r,eval=FALSE, echo=TRUE,message=FALSE,warning=FALSE}
+
+lapply(packages, require, character.only = TRUE, lib.loc=packages_folder)
+
+```
+
+The loading of packages has to be done **each time you open R**. Before you are able to load (and use) them, you have to download these on your computer. You can refer to a specific file wherein you save the packages (here the *Downloads* folder on a mac as example).
+
+```{r, eval = FALSE, echo=TRUE,message=FALSE,warning=FALSE}
+
+install.packages(packages,lib=packages_folder)
+
+```
+
+**! Attention**: some of the packages are not available in *cran* and cannot be downloaded by the function above. When you see an error saying that the package cannot be installed, please check google. Most of the times, you have to download the package from github using the *devtools* package (e.g. `devtools::install_github("author/package")` )
+
+# Data upload
+
+You can upload different kinds of filetypes into R.
+
+```{r, eval = FALSE, echo=TRUE,message=FALSE,warning=FALSE}
+# EXCEL
+data <- read_excel("file_name.xlsx")
+
+# CSV
+data <- read.csv("file_name.csv", 
+                  header = TRUE, sep = ",", quote = "\"",
+                  dec = ".", fill = TRUE, 
+                  comment.char = "",na.string = "")
+
+## When coming from Qualtrics, delete first two rows including labels and description
+data <- data[-1:-2,]
+
+
+# SPSS
+library(foreign)
+data <- read.spss("data.sav", 
+                  use.value.labels = FALSE, 
+                  to.data.frame=TRUE)
+
+```
+
+```{r, echo=FALSE,message=FALSE,warning=FALSE}
+data <- read.spss("data.sav", 
+                  use.value.labels = FALSE, 
+                  to.data.frame=TRUE)
+```
+
+When this is done and no error has occured, you can check if the data is uploaded correctly.
+
+```{r, echo=TRUE,message=FALSE,warning=FALSE}
+# check the first 6 rows of the dataset
+head(data)
+
+# check the last 6 rows of the dataset
+tail(data)
+
+# check the descriptive statistics of the dataset
+summary(data)
+```
+
+## Merge files by rows
+
+```{r, eval=FALSE, echo=TRUE,message=FALSE,warning=FALSE}
+data <- dplyr::bind_rows(dataset1, dataset2)
+```
+
+<br>
+
+# Manipulate variables
+
+If you want to label specific levels of a categorical variable:
+
+```{r, echo=TRUE,message=FALSE,warning=FALSE}
+
+data$gender <- as.factor(data$gender)
+levels(data$gender)
+data$gender <- factor(data$gender,
+                      levels = c(1,2),
+                      labels = c('male','female'))
+freq(data$gender)
+```
+
+Check summary of a numerical variable
+
+```{r, echo=TRUE,message=FALSE,warning=FALSE}
+data$age <- as.numeric(data$age)
+summary(data$age)
+```
+
+<br>
+
+# Manipulate dataset
+
+## Wide to long
+
+```{r, eval=FALSE, echo=TRUE,message=FALSE,warning=FALSE}
+data_long <- reshape(data = data,
+               idvar = "ppnr",
+               varying = list(
+                 var_1=c('var_1_time1','var_1_time2','var_1_time3'),
+                 var_2=c('var_2_time1','var_2_time2','var_2_time3'),
+                 var_3=c('var_3_time1','var_3_time2','var_3_time3')
+               ),
+               direction="long",
+               v.names = c(
+                'var_1','var_2','var_3'
+               ),
+               sep="_")
+rownames(data_long) <- NULL
+```
+
+## Long to wide
+
+```{r, eval=FALSE, echo=TRUE,message=FALSE,warning=FALSE}
+data_wide <- reshape(data_long, idvar = "ppnr", timevar = "time", direction = "wide")
+```
+
+
+<br>
+
+# Scale scores and reliability 
+
+## Scale scores
+
+```{r, echo=FALSE,message=FALSE,warning=FALSE}
+
+data <- foreign::read.spss("SAQ_ouders_DATA_alleouderssamen.sav", 
+                  use.value.labels = FALSE, 
+                  to.data.frame=TRUE)
+
+data <- data[,c('s1as_a','s1ch_b','s1str_v','s1con_d','s2ch_a','s2as_p','s2con_e','s2str1_v','s2as_a','s2str2_v','s3con_d',
+               's3as1_a','s3ch_b','s3as_p','s3con_e','s3str_v','s3ch_a','s3as2_a','s4str_v','s4con_d','s4ch_b','s4as_a','s4con_e','s5ch_b',
+               's5as_a','s5con_d','s5ch_a','s5str_v','s5con_e','s6as1_a','s6ch_a','s6con1_e','s6as_p','s6str_v','s6con2_e','s6str_b',
+               's6as2_a','s7str_v','s7as_a','s7ch_a','s7con_d','s8as_p','s8ch_b','s8str_v','s8con_d','s8as_a','s9con_d','s9ch_b','s9as_a',
+               's9con_e','s9str_v','s10str_b','s10as_a','s10con_d','s10ch_a','s11str1_b','s11ch_b','s11str2_b','s11as1_a','s11con_e',
+               's11as2_a','s12con_e','s12ch_b','s12str_v','s12as_a','s12con_d','s13as_a','s13ch1_b','s13con_e','s13as_p','s13str_b',
+               's13ch2_b','s13con_d','s14ch_a','s14con_d','s14str_b','s14as_a','s15as_p','s15ch_a','s15con_e','s15str_b','s16con1_e',
+               's16ch_b','s16as1_a','s16con_d','s16str_b','s16as2_a','s16con2_e','s17str_v','s17as_p','s17ch_a','s17con_e','s18ch_b',
+               's18as_a','s18str_b','s18con_d')]
+colnames(data) <- c("item1",
+"item2",
+"item3",
+"item4",
+"item5",
+"item6",
+"item7",
+"item8",
+"item9",
+"item10",
+"item11",
+"item12",
+"item13",
+"item14",
+"item15",
+"item16",
+"item17",
+"item18",
+"item19",
+"item20",
+"item21",
+"item22",
+"item23",
+"item24",
+"item25",
+"item26",
+"item27",
+"item28",
+"item29",
+"item30",
+"item31",
+"item32",
+"item33",
+"item34",
+"item35",
+"item36",
+"item37",
+"item38",
+"item39",
+"item40",
+"item41",
+"item42",
+"item43",
+"item44",
+"item45",
+"item46",
+"item47",
+"item48",
+"item49",
+"item50",
+"item51",
+"item52",
+"item53",
+"item54",
+"item55",
+"item56",
+"item57",
+"item58",
+"item59",
+"item60",
+"item61",
+"item62",
+"item63",
+"item64",
+"item65",
+"item66",
+"item67",
+"item68",
+"item69",
+"item70",
+"item71",
+"item72",
+"item73",
+"item74",
+"item75",
+"item76",
+"item77",
+"item78",
+"item79",
+"item80",
+"item81",
+"item82",
+"item83",
+"item84",
+"item85",
+"item86",
+"item87",
+"item88",
+"item89",
+"item90",
+"item91",
+"item92",
+"item93",
+"item94",
+"item95",
+"item96")
+
+data[1,'item4'] <- NA
+data[1,'item5'] <- NA
+data[1,'item11'] <- NA
+```
+
+In R, there is the possibility to calculate scale scores for all cases and multiple variables **with the same response scale** at the same time. Therefore, we need the package `psych`.  
+First, a list-object is made including all names of the variables (see `var1` and `var2`). Variables are separated by `,`. 
+Important, the minimum and maximum values for these items are the same and need to be described. 
+
+Maybe, before starting, an items has to be recoded:
+
+```{r, eval=FALSE,message=FALSE, warning=FALSE}
+data$item.r <- as.factor(recode(data$item, '1'='5', '2'='4','3'='3','4'='2','5'='1'))
+```
+
+```{r, message=FALSE, warning=FALSE}
+library(psych)
+
+# assign the items to the variable or scale score
+keys.list <- list(
+  var1 = c("item4","item7","item11","item15"),
+  var2 = c("item5","item6","item7","item8")
+) 
+
+keys <- make.keys(data,keys.list) 
+
+# describe the minimum and maximum values of the items
+scores <- scoreItems(keys,data,
+                       min=1,max=5,
+                       missing=TRUE) 
+
+# check the first 6 scale scores in your dataset
+head(scores$scores)
+```
+
+**Missing values**  
+
+The first choice is to impute the missing data based on the median of the variable. This is used as default.
+```{r, message=FALSE, warning=FALSE}
+scores <- scoreItems(keys,data,
+                       min=1,max=5,
+                       impute="median") 
+```
+The second choice is to formulate specific variables as missing value `NA` when a specific number of items is not completed. 
+```{r, message=FALSE, warning=FALSE}
+Percentage <- 80 #if more than 80% of the items is missing, then the scale score becomes a missing values
+
+scores <- scoreItems(keys,data,
+                       min=1,max=5,
+                       impute="none") # no imputation is done here
+
+colnames(scores$missing) <- paste0('missing_', colnames(scores$missing))
+
+# calculate the percentage of missing values
+percNA <- as.data.frame((scores$missing/scores$n.items)*100)
+
+NAcells <- which(percNA > Percentage)
+
+scores$scores[NAcells] <- NA
+```
+
+Check the intercorrelations of the variables. 
+
+```{r, message=FALSE}
+# check intercorrelations
+summary(scores)
+```
+
+Check the descriptives of the calculated scales scores as an extra check.
+
+```{r, message=FALSE}
+# Check descriptives
+describe(scores$scores)
+```
+
+Assign them to the original dataset. 
+
+```{r, message=FALSE}
+# assign them to the original dataframe
+means <- as.data.frame(scores$scores)
+dataset <- cbind(data,means)
+```
+
+## Save dataset
+
+You can export your dataset to multiple file types
+
+```{r, message=FALSE}
+
+# SPSS
+write_sav(data, "FILENAME.sav")
+
+# CSV
+write_csv(data,'FILENAME.csv')
+
+# EXCEL
+write_xlsx(data,'FILENAME.xlsx')
+
+# RDS
+saveRDS(data, "FILENAME.rds")
+```
+
+
+***
+
+&nbsp;
+<hr />
+<p style="text-align: center;">A work by <a href="www.ugent.be/epg/coronastudie">Joachim Waterschoot</a></p>
+<p style="text-align: center;"><span style="color: #808080;"><em>Joachim.Waterschoot@ugent.be</em></span></p>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+    <a href="https://twitter.com/watjoa" class="fa fa-twitter"></a>
+    <a href="https://www.linkedin.com/in/watjoa/" class="fa fa-linkedin"></a>
+    <a href="https://github.com/watjoa/" class="fa fa-github"></a>
+</p>
+
+&nbsp;
+
+
+
+
+
+
+
+
+

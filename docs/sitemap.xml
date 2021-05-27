@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
-    <loc>https://beta.rstudioconnect.com/content/11424/about.html</loc>
+    <loc>https://watjoa.github.io/about.html</loc>
     <lastmod>2021-05-09T13:25:35+02:00</lastmod>
   </url>
   <url>
-    <loc>https://beta.rstudioconnect.com/content/11424/</loc>
+    <loc>https://watjoa.github.io/</loc>
     <lastmod>2021-05-09T13:25:35+02:00</lastmod>
   </url>
   <url>
-    <loc>https://beta.rstudioconnect.com/content/11424/Research.html</loc>
-    <lastmod>2021-05-09T13:55:04+02:00</lastmod>
+    <loc>https://watjoa.github.io/Research.html</loc>
+    <lastmod>2021-05-19T15:49:49+02:00</lastmod>
   </url>
   <url>
-    <loc>https://beta.rstudioconnect.com/content/11424/posts/clustering/</loc>
-    <lastmod>2021-05-09T13:46:22+02:00</lastmod>
+    <loc>https://watjoa.github.io/posts/clustering/</loc>
+    <lastmod>2021-05-10T21:45:01+02:00</lastmod>
   </url>
   <url>
-    <loc>https://beta.rstudioconnect.com/content/11424/posts/welcome/</loc>
-    <lastmod>2021-05-09T13:25:36+02:00</lastmod>
+    <loc>https://watjoa.github.io/posts/correlations/</loc>
+    <lastmod>2021-05-27T15:26:23+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://watjoa.github.io/posts/datamanipulation/</loc>
+    <lastmod>2021-05-27T15:25:18+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://watjoa.github.io/posts/inter_cons/</loc>
+    <lastmod>2021-05-27T15:22:41+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://watjoa.github.io/posts/multidimensionalscaling/</loc>
+    <lastmod>2021-05-27T15:24:50+02:00</lastmod>
+  </url>
+  <url>
+    <loc>https://watjoa.github.io/posts/regressionmodeling/</loc>
+    <lastmod>2021-05-27T15:24:18+02:00</lastmod>
   </url>
 </urlset>

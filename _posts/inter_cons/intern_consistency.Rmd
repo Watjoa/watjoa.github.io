@@ -1,0 +1,112 @@
+---
+title: "Internal consistency"
+description: |
+  A theoretical and practical guide for K-Means clustering and Latent Profile Analysis in R
+author:
+  - name: Joachim Waterschoot
+  - orcid_id: 0000-0003-0845-9310
+date: 06-09-2021
+categories:
+  - clustering
+  - analyses
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    highlight: haddock
+    highlight_downlit: true
+    code_folding: true
+---
+
+<style type="text/css">
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
+div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding: 20px;}
+</style>
+
+
+<meta name="decsription" content="Find useful online applications to make correlation tables, moderation or interaction plots and many more." />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120279443-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120279443-3');
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        document.title = 'Rcoding';
+    });
+
+</script>
+
+<style>
+.main-container {
+  background-color:#d1d9e0;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+## Reliability
+
+The `sjt.itemanalysis` function of the `sjPlot` package provide some useful functions to check internal validation of variables. Following data are given:  
+
+- overview of items  
+- percentage of missing values  
+- standard deviation  
+- skewness
+    + the higher, the skewer
+- item difficulty  
+    + should range between .20 and .80. Ideal value is `p+(1-p)/2` (mostly between .50 and .80)
+- item discrimination  
+    + acceptable cut-off of .20. The closer to 1, the better.
+- Cronbach's Alpha if item was removed from scale  
+- mean (or average) inter-item correlation  
+    + acceptable between .20 and .40
+- Cronbach's Alpha
+    + acceptable cut-off of .70
+
+
+<!-- # ```{r, message=FALSE} -->
+<!-- # # extract variable from keys.list -->
+<!-- # rel <- data[,c(keys.list$var1)]  -->
+<!-- #  -->
+<!-- # sjt.itemanalysis(rel) -->
+<!-- # ``` -->
+
+<br>
+***
+
+&nbsp;
+<hr />
+<p style="text-align: center;">A work by <a href="www.ugent.be/epg/coronastudie">Joachim Waterschoot</a></p>
+<p style="text-align: center;"><span style="color: #808080;"><em>Joachim.Waterschoot@ugent.be</em></span></p>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+    <a href="https://twitter.com/watjoa" class="fa fa-twitter"></a>
+    <a href="https://www.linkedin.com/in/watjoa/" class="fa fa-linkedin"></a>
+    <a href="https://github.com/watjoa/" class="fa fa-github"></a>
+</p>
+
+&nbsp;
+
+
+
+
+
+
+
+
+
