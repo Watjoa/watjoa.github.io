@@ -1,61 +1,27 @@
 ---
 title: "Regression modelling"
 description: |
-  A theoretical and practical guide for K-Means clustering and Latent Profile Analysis in R
+  Building and visualising regression models with checks for diagnostics
 author:
-  - name: Joachim Waterschoot
-  - orcid_id: 0000-0003-0845-9310
-date: 06-09-2021
+  - first_name: "Joachim"
+    last_name: "Waterschoot"
+    url: https://github.com/watjoa
+    affiliation: Ghent University
+    affiliation_url: www.ugent.be
+    orcid_id: 0000-0003-0845-9310
+date: 05-26-2021
 categories:
-  - clustering
   - analyses
 output:
   distill::distill_article:
-    self_contained: false
+    self_contained: true
     toc: true
     toc_depth: 3
     toc_float: true
     highlight: haddock
     highlight_downlit: true
-    code_folding: true
+    code_folding: false
 ---
-
-<style type="text/css">
-div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
-div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
-div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding: 20px;}
-</style>
-
-
-<meta name="decsription" content="Find useful online applications to make correlation tables, moderation or interaction plots and many more." />
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120279443-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-120279443-3');
-</script>
-
-<script type="text/javascript">
-
-    $(document).ready(function() {
-        document.title = 'Rcoding';
-    });
-
-</script>
-
-<style>
-.main-container {
-  background-color:#d1d9e0;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-# Regression Model
 
 ```{r, echo=FALSE,message=FALSE,warning=FALSE}
 data  <- foreign::read.spss("(2)Data Joachim.sav", 
@@ -80,6 +46,7 @@ We start from a simple model including:
 
 We standardize the variables that we do include into our interactions. 
 Extra, we make sure their are numeric.
+
 ```{r, message=FALSE}
 data$dummy1_group <- as.numeric(scale(data$Condition,scale=TRUE))
 data$moderator1   <- as.numeric(scale(data$Indecisiveness,scale=TRUE))
@@ -89,6 +56,7 @@ summary(data[,c('dummy1_group','moderator1')])
 ```
 
 Here, we build the linear model and check the summary.
+
 ```{r, message=FALSE}
 model <- lm(outcome ~ dummy1_group*moderator1 + age + gender, data=data)
 
@@ -242,6 +210,7 @@ IE_plot1
 ```
 
 Change both moderated labels and linetypes and the range of the y axis.
+
 ```{r, message=FALSE}
 library(reghelper)
 library(ggplot2)
@@ -265,6 +234,7 @@ IE_plot2
 ```
 
 Change all other labels.
+
 ```{r, message=FALSE}
 IE_plot3 <- IE_plot2 + 
   
@@ -283,6 +253,7 @@ IE_plot3
 
 
 ### Simple slope analysis
+
 ```{r, message=FALSE}
 library(interactions)
 sim_slopes(model, 
@@ -304,7 +275,7 @@ johnson_neyman(model = model,
 
 By using the `annotate` function from the `ggplot2` package, we can add text on the moderation figure.
 
-```{r, message=FALSE}
+```{r, message=FALSE,  preview=TRUE}
 IE_plot4 <- IE_plot3 + 
   
           # add information about simple slopes to plot
@@ -322,28 +293,6 @@ IE_plot4
 ```
 
 > Future plans: more detailed information about building and testing a model, more graphic functions, mediation, mediated moderation, multilevel modelling and plotting, etc. 
-
-
-***
-
-&nbsp;
-<hr />
-<p style="text-align: center;">A work by <a href="www.ugent.be/epg/coronastudie">Joachim Waterschoot</a></p>
-<p style="text-align: center;"><span style="color: #808080;"><em>Joachim.Waterschoot@ugent.be</em></span></p>
-
-<!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- Add font awesome icons -->
-<p style="text-align: center;">
-    <a href="https://twitter.com/watjoa" class="fa fa-twitter"></a>
-    <a href="https://www.linkedin.com/in/watjoa/" class="fa fa-linkedin"></a>
-    <a href="https://github.com/watjoa/" class="fa fa-github"></a>
-</p>
-
-&nbsp;
-
-
 
 
 

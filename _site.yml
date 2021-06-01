@@ -1,5 +1,5 @@
-name: "CaviR statistics"
-title: "CaviR"
+name: "Watjoa"
+title: "Watjoa"
 include: ["footer.html"]
 output_dir: "docs"
 navbar:
@@ -7,28 +7,6 @@ navbar:
   logo:
     image: logo.png
   right:
-    - text: "Statistics"
-      menu:
-        - text: "Clustering analysis"
-          href: Clustering.html
-        - text: "---"
-        - text: "Boredom"
-          href: publish_website.html
-        - text: "---"
-        - text: "Motivation Barometer"
-          href: metadata.html
-    - text: "Projects"
-      menu:
-        - text: "Dodentocht"
-          href: publish_article.html
-        - text: "---"
-        - text: "Boredom"
-          href: publish_website.html
-        - text: "---"
-        - text: "Motivation Barometer"
-          href: https://motivationbarometer.com/en/
-   # - text: "Research"
-  #    href: Research.html
     - icon: fab fa-twitter
       href: https://twitter.com/watjoa
     - icon: fab fa-github

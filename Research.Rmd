@@ -220,54 +220,64 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Current
 
-* Vanhaverbeke, Alica (current). longitudinale profielen in middelbare school motivatie. *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
+* Vanhaverbeke, Alica (current). **longitudinale profielen in middelbare school motivatie.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
 
-* Belgrado, Laura (current). mediërende rol van zelfmotivatie tussen emotieregulatie en verveling. *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
+* Belgrado, Laura (current). **mediërende rol van zelfmotivatie tussen emotieregulatie en verveling.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
 
-* Bogaerts, Liesa (current). zelfmotivatie, tweede lockdown, verveling en kwalitatieve codering. *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
+* Bogaerts, Liesa (current). **zelfmotivatie, tweede lockdown, verveling en kwalitatieve codering.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
 
-* Sercu, Jade (current). Ouders en geven van beloningen tijdens vervelende taak. *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
+* Sercu, Jade (current). **Ouders en geven van beloningen tijdens vervelende taak.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
 
-* Van Houtte, Camille (current). De Dodentochtstudie: de ervaring vanuit het oogpunt van de wandelaar via diepte-interviews. *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
+* De Quick, Lotte (current). **mindfulness en verveling over tijd in middelbare leerlingen populatie** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
 
-* Hernandez, Nicaurys (current). Rol van emotieregulatie op verveling en zelfmotivatie tijdens eerste lockdown COVID-19 *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
+* Bruteyn, Sarah (current). **telewerken motivatie zelfmotivatie verveling mindfulness** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
 
-* De Quick, Lotte (current). mindfulness en verveling over tijd in middelbare leerlingen populatie *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
+* Vandecasteele, Liesanne (current). **Rol van persoonlijkheid tov mindfulness** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
 
-* Bruteyn, Sarah (current). telewerken motivatie zelfmotivatie verveling mindfulness *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
+### 2021
 
-* Vandecasteele, Liesanne (current). Rol van persoonlijkheid tov mindfulness *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
-
-### 2020
-
-* De Lille, Maud (2020). De motivatie achter de Dodentocht: een heldentocht of een lijdensweg? *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste) 
+* Hernandez, Nicaurys (2021). **Wegwijs in onze eigen emoties in tijden van een pandemie. Een onderzoek naar zelfmotivatie als mediator in het verband tussen emotieregulatie en verveling.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste) 
 
 <aside>
 [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Masterproef II_MaudDeLille_Waar een wil is, is een weg.pdf)  
 </aside>
 
-* Dewilde, Bjarne (2020). Even stilstaan in het hier en nu: waarom deze taak als vervelend aan- voelt. De rol van mindfulness in onze capaciteit tot zelfmotivatie. *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
+* Van Houtte, Camille (current). **Motivatie als brandstof voor de Dodentocht. Een mixed-method studie met kwantitatieve metingen en kwalitatieve diepte-interviews.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste) 
 
 <aside>
 [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/HUISWERK IN TIJDEN VAN CORONA HET VERBAND TUSSEN SCHOOLMOTIVATIE, ZELFMOTIVATIE EN MINDFULNESS.pdf)  
 </aside>
 
-* Koekelkoren, Juno (2020). Mijn doelen in een deelname aan de Dodentocht: een kwalitatieve analyse *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste) [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/01305553_Juno KOEKELKOREN_Masterproef_Doelgericht in beweging.pdf)  
+### 2020
+
+* De Lille, Maud (2020). **De motivatie achter de Dodentocht: een heldentocht of een lijdensweg?** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste) 
+
+<aside>
+[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Masterproef II_MaudDeLille_Waar een wil is, is een weg.pdf)  
 </aside>
 
-* Wydooghe, Lore (2020). “Hoe motiveer ik mezelf voor een vervelende taak?”: een onderzoek naar de wortels van zelf-motivatie. *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
+* Dewilde, Bjarne (2020). **Even stilstaan in het hier en nu: waarom deze taak als vervelend aan- voelt. De rol van mindfulness in onze capaciteit tot zelfmotivatie.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
+
+<aside>
+[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/HUISWERK IN TIJDEN VAN CORONA HET VERBAND TUSSEN SCHOOLMOTIVATIE, ZELFMOTIVATIE EN MINDFULNESS.pdf)  
+</aside>
+
+* Koekelkoren, Juno (2020). **Mijn doelen in een deelname aan de Dodentocht: een kwalitatieve analyse** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste) [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/01305553_Juno KOEKELKOREN_Masterproef_Doelgericht in beweging.pdf)  
+</aside>
+
+* Wydooghe, Lore (2020). **“Hoe motiveer ik mezelf voor een vervelende taak?”: een onderzoek naar de wortels van zelf-motivatie.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
 
 <aside>
 [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Masterproef - Hoe motiveer je jezelf voor een vervelende taak - Lore Wydooghe.pdf)  
 </aside>
 
-* Zels, Julie (2020). De motivatie achter de Dodentocht: een heldentocht of een lijdensweg? *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
+* Zels, Julie (2020). **De motivatie achter de Dodentocht: een heldentocht of een lijdensweg?** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
 
 <aside>
 [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/De motivatie achter de Dodentocht_JulieZels.pdf)  
 </aside>
 
-* Casteleyn, Demi (2020). “Help, ik doe dit écht niet graag!”: hoe ouders de capaciteit tot zelf-motivatie kunnen versterken." *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
+* Casteleyn, Demi (2020). **“Help, ik doe dit écht niet graag!”: hoe ouders de capaciteit tot zelf-motivatie kunnen versterken."** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
 
 <aside>
 [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/MasterproefII_Demi_Casteleyn.pdf)  
@@ -275,7 +285,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### 2019
 
-* Swinnen, Kato (2019). “Smartphonenende” ouders: hoe beschikbaar zijn ze voor hun kinderen en hoe voeden ze hun kinderen op? *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
+* Swinnen, Kato (2019). **“Smartphonenende” ouders: hoe beschikbaar zijn ze voor hun kinderen en hoe voeden ze hun kinderen op?** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
 
 <aside>
 [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/MASTERPROEF II_Kato Swinnen_Smartphonende ouders Hoe beschikbaar zijn ze voor hun kinderen en hoe voeden ze hun kinderen op.pdf)  
@@ -283,7 +293,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### 2018
 
-* Vermeire, Ephraïm (2018). Mag plezier bestaan in de klas? Een differentiatie van plezier en de samenhang met aspecten van zelfbeheersing in klassikale context. *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
+* Vermeire, Ephraïm (2018).** Mag plezier bestaan in de klas? Een differentiatie van plezier en de samenhang met aspecten van zelfbeheersing in klassikale context.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
 
 <aside>
 [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Ephraïm Vermeire (2018) - Twee vormen van plezier en zelfbeheersing.pdf)  
