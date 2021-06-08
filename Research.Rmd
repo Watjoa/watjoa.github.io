@@ -20,12 +20,6 @@ output:
     highlight_downlit: true
 ---
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-
-
 ## Publications
 
 ### 2021

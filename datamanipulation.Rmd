@@ -28,11 +28,6 @@ div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
 div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding: 20px;}
 </style>
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(eval = FALSE)
-```
-
-
 
 # First steps and tips
 

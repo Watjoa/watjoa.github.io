@@ -2376,6 +2376,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   }</style>
   <!--/radix_placeholder_distill-->
   <script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+  <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2412,7 +2414,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div class="nav-right">
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
-Statistics
+Statistics and coding
  
 <span class="down-arrow">&#x25BE;</span>
 </button>
@@ -2521,7 +2523,12 @@ div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># make sure the variables are all numeric</span>
 <span class='va'>correlation_dataset</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='va'>correlation_dataset</span>,<span class='va'>as.numeric</span><span class='op'>)</span>
 <span class='va'>corrtable</span> <span class='op'>&lt;-</span> <span class='fu'>apa.cor.table</span><span class='op'>(</span><span class='va'>correlation_dataset</span>, show.conf.interval <span class='op'>=</span> <span class='cn'>FALSE</span>,filename<span class='op'>=</span><span class='st'>"cor_APA_t123.doc"</span>, table.number<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
-<span class='va'>corrtablee</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/table.html'>as.table</a></span><span class='op'>(</span><span class='va'>corrtable</span><span class='op'>$</span><span class='va'>table.body</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>The ability to suppress reporting of reporting confidence intervals has been deprecated in this version.
+The function argument show.conf.interval will be removed in a later version.</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>corrtablee</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/table.html'>as.table</a></span><span class='op'>(</span><span class='va'>corrtable</span><span class='op'>$</span><span class='va'>table.body</span><span class='op'>)</span>
 <span class='va'>rangedel</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>4</span>,<span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>corrtablee</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>+</span><span class='fl'>2</span>
 <span class='va'>rangedel</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>3</span>,<span class='va'>rangedel</span><span class='op'>[</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>rangedel</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span>
 <span class='va'>corrtablee</span><span class='op'>&lt;-</span> <span class='va'>corrtablee</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>rangedel</span><span class='op'>)</span>,<span class='op'>]</span>
@@ -2548,6 +2555,174 @@ div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding
            title_format <span class='op'>=</span> <span class='st'>"italic"</span><span class='op'>)</span>
 </code></pre>
 </div>
+<table class=" lightable-paper table table-hover table-condensed table-responsive lightable-classic-2" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 15px; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Variable
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+M
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+SD
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+1
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+2
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+3
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+4
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<ol type="1">
+<li>Extra
+</td>
+<td style="text-align:left;">
+3.58
+</td>
+<td style="text-align:left;">
+0.52
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<ol start="2" type="1">
+<li>Agree
+</td>
+<td style="text-align:left;">
+3.66
+</td>
+<td style="text-align:left;">
+0.53
+</td>
+<td style="text-align:left;">
+.22*
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<ol start="3" type="1">
+<li>Con
+</td>
+<td style="text-align:left;">
+3.43
+</td>
+<td style="text-align:left;">
+0.54
+</td>
+<td style="text-align:left;">
+.06
+</td>
+<td style="text-align:left;">
+.42***
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<ol start="4" type="1">
+<li>Neur
+</td>
+<td style="text-align:left;">
+2.76
+</td>
+<td style="text-align:left;">
+0.80
+</td>
+<td style="text-align:left;">
+.06
+</td>
+<td style="text-align:left;">
+-.19
+</td>
+<td style="text-align:left;">
+-.28**
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<ol start="5" type="1">
+<li>Open
+</td>
+<td style="text-align:left;">
+3.41
+</td>
+<td style="text-align:left;">
+0.58
+</td>
+<td style="text-align:left;">
+.44***
+</td>
+<td style="text-align:left;">
+.22*
+</td>
+<td style="text-align:left;">
+.27**
+</td>
+<td style="text-align:left;">
+.04
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<span style="font-style: italic;">Note. *** p &lt;.001, ** p &lt;. 01, * p &lt; .05</span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+</td>
+</tr>
+</tfoot>
+</table></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol>
 </div>
 <p>The output can be opened in Rstudio or in your browser. When copy it, you can change the layout in your Word file to whatever you like.</p>
 <p>If you want to change the names of the variables, use <code>colnames(correlation_dataset) &lt;- c(NEW_NAMES)</code> after step 1 where you replace <code>NEW_NAMES</code> by a vector of names you prefer.</p>
@@ -2569,6 +2744,129 @@ div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding
            title_format <span class='op'>=</span> <span class='st'>"italic"</span><span class='op'>)</span>
 </code></pre>
 </div>
+<table class=" lightable-paper table table-hover table-condensed table-responsive lightable-classic-2" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 15px; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", "Source Sans Pro", sans-serif; margin-left: auto; margin-right: auto;border-bottom: 0;'>
+<thead>
+<tr>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+Variable
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+M
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+SD
+</th>
+<th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+1
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<ol type="1">
+<li>Extra
+</td>
+<td style="text-align:left;">
+3.58
+</td>
+<td style="text-align:left;">
+0.52
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<ol start="2" type="1">
+<li>Agree
+</td>
+<td style="text-align:left;">
+3.66
+</td>
+<td style="text-align:left;">
+0.53
+</td>
+<td style="text-align:left;">
+.22*
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<ol start="3" type="1">
+<li>Con
+</td>
+<td style="text-align:left;">
+3.43
+</td>
+<td style="text-align:left;">
+0.54
+</td>
+<td style="text-align:left;">
+.06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<ol start="4" type="1">
+<li>Neur
+</td>
+<td style="text-align:left;">
+2.76
+</td>
+<td style="text-align:left;">
+0.80
+</td>
+<td style="text-align:left;">
+.06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+<ol start="5" type="1">
+<li>Open
+</td>
+<td style="text-align:left;">
+3.41
+</td>
+<td style="text-align:left;">
+0.58
+</td>
+<td style="text-align:left;">
+.44***
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<span style="font-style: italic;">Note. *** p &lt;.001, ** p &lt;. 01, * p &lt; .05</span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup>
+</td>
+</tr>
+</tfoot>
+</table></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol>
 </div>
 <h2 id="save-it-as-html">Save it as html</h2>
 <p>You can save the correlation table as an html file, so you can copy it easily into your manuscript.</p>
@@ -2589,7 +2887,7 @@ div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding
 </code></pre>
 </div>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

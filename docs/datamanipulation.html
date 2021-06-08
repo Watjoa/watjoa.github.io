@@ -2412,7 +2412,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div class="nav-right">
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
-Statistics
+Statistics and coding
  
 <span class="down-arrow">&#x25BE;</span>
 </button>
@@ -2580,14 +2580,56 @@ div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># check the first 6 rows of the dataset</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>)</span>
-
-<span class='co'># check the last 6 rows of the dataset</span>
+</code></pre>
+</div>
+<pre><code>  ppnr group gender age    Extra    Agree Con Neur     Open
+1    1     1      1  11 3.909091 3.733333 3.1  2.6 3.111111
+2    3     1      2  10 4.545455 3.933333 2.9  3.4 4.000000
+3    4     1      1  10 3.272727 2.933333 2.7  2.6 2.888889
+4   11     1      2  10 3.181818 4.266667 3.1  3.4 3.111111
+5   12     1      1  10 2.727273 3.733333 3.9  3.0 3.666667
+6   13     1      2  10 4.000000 4.133333 2.7  1.6 2.888889</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># check the last 6 rows of the dataset</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>tail</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>)</span>
-
-<span class='co'># check the descriptive statistics of the dataset</span>
+</code></pre>
+</div>
+<pre><code>    ppnr group gender age    Extra    Agree      Con Neur     Open
+99   116     2      2   9 3.272727 3.533333 3.100000  2.8 2.888889
+100  118     2      2  10 4.090909 3.400000 3.900000  4.0 3.555556
+101  119     2      1   9 3.545455 3.000000 2.800000  3.2 3.555556
+102  121     2      2   9 3.636364 3.533333 3.800000  2.4 3.444444
+103  125     2      1  10 4.454545 4.200000 3.100000  2.0 4.333333
+104  126     2      1  10 3.454545 2.800000 3.222222  2.8 3.222222</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># check the descriptive statistics of the dataset</span>
 <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>)</span>
 </code></pre>
 </div>
+<pre><code>      ppnr            group           gender           age      
+ Min.   :  1.00   Min.   :1.000   Min.   :1.000   Min.   : 9.0  
+ 1st Qu.: 31.75   1st Qu.:1.000   1st Qu.:1.000   1st Qu.:10.0  
+ Median : 65.50   Median :1.000   Median :2.000   Median :10.0  
+ Mean   : 64.88   Mean   :1.462   Mean   :1.519   Mean   :10.2  
+ 3rd Qu.: 98.50   3rd Qu.:2.000   3rd Qu.:2.000   3rd Qu.:11.0  
+ Max.   :126.00   Max.   :2.000   Max.   :2.000   Max.   :12.0  
+                                                                
+     Extra           Agree            Con             Neur      
+ Min.   :2.545   Min.   :2.400   Min.   :2.200   Min.   :1.200  
+ 1st Qu.:3.182   1st Qu.:3.333   1st Qu.:3.050   1st Qu.:2.100  
+ Median :3.636   Median :3.733   Median :3.400   Median :2.800  
+ Mean   :3.582   Mean   :3.659   Mean   :3.432   Mean   :2.764  
+ 3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:3.800   3rd Qu.:3.200  
+ Max.   :4.727   Max.   :4.733   Max.   :4.800   Max.   :5.000  
+ NA&#39;s   :1       NA&#39;s   :3       NA&#39;s   :1       NA&#39;s   :1      
+      Open      
+ Min.   :2.111  
+ 1st Qu.:3.000  
+ Median :3.333  
+ Mean   :3.410  
+ 3rd Qu.:3.778  
+ Max.   :5.000  
+ NA&#39;s   :1      </code></pre>
 </div>
 <h2 id="merge-files-by-rows">Merge files by rows</h2>
 <p>By following code, you can merge different files into one based on matched column names.</p>
@@ -2604,12 +2646,19 @@ div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>data</span><span class='op'>$</span><span class='va'>gender</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>gender</span><span class='op'>)</span>
 <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>gender</span><span class='op'>)</span>
-<span class='va'>data</span><span class='op'>$</span><span class='va'>gender</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>gender</span>,
+</code></pre>
+</div>
+<pre><code>[1] &quot;1&quot; &quot;2&quot;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>data</span><span class='op'>$</span><span class='va'>gender</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>gender</span>,
                       levels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>2</span><span class='op'>)</span>,
                       labels <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'male'</span>,<span class='st'>'female'</span><span class='op'>)</span><span class='op'>)</span>
 <span class='fu'>freq</span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>gender</span><span class='op'>)</span>
 </code></pre>
 </div>
+<pre><code>        n    % val%
+male   50 48.1 48.1
+female 54 51.9 51.9</code></pre>
 </div>
 <p>Check summary of a numerical variable</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2618,6 +2667,8 @@ div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding
 <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>age</span><span class='op'>)</span>
 </code></pre>
 </div>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    9.0    10.0    10.0    10.2    11.0    12.0 </code></pre>
 </div>
 <p><br></p>
 <h1 id="manipulate-dataset">Manipulate dataset</h1>
@@ -2668,7 +2719,7 @@ div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding
 </code></pre>
 </div>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

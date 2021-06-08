@@ -67,9 +67,6 @@ Apart from being a statistician, an employer, an employee, a student or a resear
 
 > Which variables are included and what are the descriptive statistics of these variables (e.g. mean and standard deviation)? How are these variables associated (correlations)? Do they have a good internal consistency? Are variables comparable before starting the cluster analyses? How many missing data is in the dataset and how these should be handled?
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(eval = FALSE)
-```
 
 ## Internal consistency
 

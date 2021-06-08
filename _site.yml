@@ -10,7 +10,7 @@ navbar:
   logo:
     image: logo_bar.png
   right:
-    - text: Statistics
+    - text: Statistics and coding
       menu:
           - text: 'Data manipulation'
             href: datamanipulation.html

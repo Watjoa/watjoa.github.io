@@ -2412,7 +2412,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div class="nav-right">
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
-Statistics
+Statistics and coding
  
 <span class="down-arrow">&#x25BE;</span>
 </button>
@@ -2516,6 +2516,20 @@ To check, ask a summary of your dataset to <strong>check</strong> whether the me
 <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>MDS</span><span class='op'>[</span>,<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span>
 </code></pre>
 </div>
+<pre><code>     item1             item2              item3       
+ Min.   :-3.7327   Min.   :-0.90611   Min.   :-4.156  
+ 1st Qu.:-0.2220   1st Qu.:-0.90611   1st Qu.:-0.493  
+ Median :-0.2220   Median : 0.07153   Median : 0.728  
+ Mean   : 0.0000   Mean   : 0.00000   Mean   : 0.000  
+ 3rd Qu.: 0.9482   3rd Qu.: 1.04918   3rd Qu.: 0.728  
+ Max.   : 0.9482   Max.   : 3.00446   Max.   : 0.728  
+     item4             item5             item6        
+ Min.   :-1.3387   Min.   :-0.8103   Min.   :-2.2700  
+ 1st Qu.:-0.4405   1st Qu.:-0.8103   1st Qu.:-0.5047  
+ Median : 0.4576   Median : 0.1097   Median : 0.3779  
+ Mean   : 0.0000   Mean   : 0.0000   Mean   : 0.0000  
+ 3rd Qu.: 0.4576   3rd Qu.: 0.1097   3rd Qu.: 0.3779  
+ Max.   : 2.2538   Max.   : 2.8698   Max.   : 1.2606  </code></pre>
 </div>
 <h2 id="dissimilarity-matrix">Dissimilarity matrix</h2>
 <p>To make the input of the MDS, a <strong>dissimilarity matrix</strong> is made based on the <em>Euclidean</em> distances.</p>
@@ -2534,6 +2548,14 @@ To check, ask a summary of your dataset to <strong>check</strong> whether the me
 <span class='va'>MDSresult</span>
 </code></pre>
 </div>
+<pre><code>
+Call:
+mds(delta = distMDS)
+
+Model: Symmetric SMACOF 
+Number of objects: 96 
+Stress-1 value: 0.359 
+Number of iterations: 151 </code></pre>
 </div>
 <h2 id="scaling-the-dissimilarities">Scaling the dissimilarities</h2>
 <p>An important MDS issue in practice concerns <strong>the scale level</strong> we want to assign to the dissimilarities.</p>
@@ -2558,38 +2580,40 @@ To check, ask a summary of your dataset to <strong>check</strong> whether the me
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>op</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.interval</span>, plot.type <span class='op'>=</span> <span class='st'>"Shepard"</span>,
+<span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.interval</span>, plot.type <span class='op'>=</span> <span class='st'>"Shepard"</span>,
       main <span class='op'>=</span> <span class='st'>"Shepard Diagram (Interval MDS)"</span>, ylim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.1</span>, <span class='fl'>1.7</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal1</span>, plot.type <span class='op'>=</span> <span class='st'>"Shepard"</span>,
+<span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal1</span>, plot.type <span class='op'>=</span> <span class='st'>"Shepard"</span>,
       main <span class='op'>=</span> <span class='st'>"Shepard Diagram (Ordinal MDS, Primary)"</span>, ylim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.1</span>, <span class='fl'>1.7</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal2</span>, plot.type <span class='op'>=</span> <span class='st'>"Shepard"</span>,
+<span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal2</span>, plot.type <span class='op'>=</span> <span class='st'>"Shepard"</span>,
       main <span class='op'>=</span> <span class='st'>"Shepard Diagram (Ordinal MDS, Secondary)"</span>, ylim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.1</span>, <span class='fl'>1.7</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='va'>p4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.spline</span>, plot.type <span class='op'>=</span> <span class='st'>"Shepard"</span>,
+<span class='va'>p4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.spline</span>, plot.type <span class='op'>=</span> <span class='st'>"Shepard"</span>,
       main <span class='op'>=</span> <span class='st'>"Shepard Diagram (Spline MDS)"</span>, ylim <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.1</span>, <span class='fl'>1.7</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
+<p><img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
 </div>
 <p>Plot the <strong>disparities</strong> distances against the fitted distances.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>op</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.interval</span>, plot.type <span class='op'>=</span> <span class='st'>"resplot"</span>,
+<span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.interval</span>, plot.type <span class='op'>=</span> <span class='st'>"resplot"</span>,
       main <span class='op'>=</span> <span class='st'>"Interval MDS"</span><span class='op'>)</span>
 
-<span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal1</span>, plot.type <span class='op'>=</span> <span class='st'>"resplot"</span>,
+<span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal1</span>, plot.type <span class='op'>=</span> <span class='st'>"resplot"</span>,
       main <span class='op'>=</span> <span class='st'>"Ordinal MDS, Primary"</span><span class='op'>)</span>
 
-<span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal2</span>, plot.type <span class='op'>=</span> <span class='st'>"resplot"</span>,
+<span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal2</span>, plot.type <span class='op'>=</span> <span class='st'>"resplot"</span>,
       main <span class='op'>=</span> <span class='st'>"Ordinal MDS, Secondary"</span><span class='op'>)</span>
 
-<span class='va'>p4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.spline</span>, plot.type <span class='op'>=</span> <span class='st'>"resplot"</span>,
+<span class='va'>p4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.spline</span>, plot.type <span class='op'>=</span> <span class='st'>"resplot"</span>,
        main <span class='op'>=</span>  <span class='st'>"Spline MDS"</span><span class='op'>)</span>
 </code></pre>
 </div>
+<p><img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
 </div>
 <p>Plot the <strong>stress contribution</strong> in of each observation.<br />
 The higher the contribution, the worse the fit.</p>
@@ -2597,38 +2621,40 @@ The higher the contribution, the worse the fit.</p>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>op</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.interval</span>, plot.type <span class='op'>=</span> <span class='st'>"stressplot"</span>,
+<span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.interval</span>, plot.type <span class='op'>=</span> <span class='st'>"stressplot"</span>,
       main <span class='op'>=</span> <span class='st'>"Interval MDS"</span><span class='op'>)</span>
 
-<span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal1</span>, plot.type <span class='op'>=</span> <span class='st'>"stressplot"</span>,
+<span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal1</span>, plot.type <span class='op'>=</span> <span class='st'>"stressplot"</span>,
       main <span class='op'>=</span> <span class='st'>"Ordinal MDS, Primary"</span><span class='op'>)</span>
 
-<span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal2</span>, plot.type <span class='op'>=</span> <span class='st'>"stressplot"</span>,
+<span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal2</span>, plot.type <span class='op'>=</span> <span class='st'>"stressplot"</span>,
       main <span class='op'>=</span> <span class='st'>"Ordinal MDS, Secondary"</span><span class='op'>)</span>
 
-<span class='va'>p4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.spline</span>, plot.type <span class='op'>=</span> <span class='st'>"stressplot"</span>,
+<span class='va'>p4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.spline</span>, plot.type <span class='op'>=</span> <span class='st'>"stressplot"</span>,
        main <span class='op'>=</span>  <span class='st'>"Spline MDS"</span><span class='op'>)</span>
 </code></pre>
 </div>
+<p><img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
 </div>
 <p>The <strong>2D map</strong> of MDS configuration, plotted against the first two largest dimensions, is shown here:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>op</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.interval</span>, plot.type <span class='op'>=</span> <span class='st'>"confplot"</span>,
+<span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.interval</span>, plot.type <span class='op'>=</span> <span class='st'>"confplot"</span>,
       main <span class='op'>=</span> <span class='st'>"Interval MDS"</span><span class='op'>)</span>
 
-<span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal1</span>, plot.type <span class='op'>=</span> <span class='st'>"confplot"</span>,
+<span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal1</span>, plot.type <span class='op'>=</span> <span class='st'>"confplot"</span>,
       main <span class='op'>=</span> <span class='st'>"Ordinal MDS, Primary"</span><span class='op'>)</span>
 
-<span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal2</span>, plot.type <span class='op'>=</span> <span class='st'>"confplot"</span>,
+<span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.ordinal2</span>, plot.type <span class='op'>=</span> <span class='st'>"confplot"</span>,
       main <span class='op'>=</span> <span class='st'>"Ordinal MDS, Secondary"</span><span class='op'>)</span>
 
-<span class='va'>p4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.spline</span>, plot.type <span class='op'>=</span> <span class='st'>"confplot"</span>,
+<span class='va'>p4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.spline</span>, plot.type <span class='op'>=</span> <span class='st'>"confplot"</span>,
        main <span class='op'>=</span>  <span class='st'>"Spline MDS"</span><span class='op'>)</span>
 </code></pre>
 </div>
+<p><img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
 </div>
 <h2 id="linear-restrictions">Linear restrictions</h2>
 <p>The <strong>confirmatory MDS</strong> refers to an external constraint on the configuration matrix. For instance, there could be a substantive underlying theory regarding a decomposition of the dissimilarities, like a circle.</p>
@@ -2636,22 +2662,41 @@ The higher the contribution, the worse the fit.</p>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>fit.basic</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/smacof/man/smacofSym.html'>mds</a></span><span class='op'>(</span><span class='va'>distMDS</span>, type <span class='op'>=</span> <span class='st'>"ordinal"</span><span class='op'>)</span>
 <span class='va'>fit.basic</span>
+</code></pre>
+</div>
+<pre><code>
+Call:
+mds(delta = distMDS, type = &quot;ordinal&quot;)
 
-<span class='va'>fit.circ</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/smacof/man/smacofSphere.html'>smacofSphere</a></span><span class='op'>(</span><span class='va'>distMDS</span>, type <span class='op'>=</span> <span class='st'>"ordinal"</span>, verbose <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+Model: Symmetric SMACOF 
+Number of objects: 96 
+Stress-1 value: 0.19 
+Number of iterations: 39 </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>fit.circ</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/smacof/man/smacofSphere.html'>smacofSphere</a></span><span class='op'>(</span><span class='va'>distMDS</span>, type <span class='op'>=</span> <span class='st'>"ordinal"</span>, verbose <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 <span class='va'>fit.circ</span>
 </code></pre>
 </div>
+<pre><code>
+Call: smacofSphere(delta = distMDS, type = &quot;ordinal&quot;, verbose = FALSE)
+
+Model: Spherical SMACOF 
+Number of objects: 96 
+
+Stress-1 value: 0.212 
+Number of iterations: 104 </code></pre>
 </div>
 <p>By looking at the stress values we see that the restricted solution (stress-1: 0.212) is not much worse than the unrestricted solution (stress-1: 0.19).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>op</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.basic</span>,main<span class='op'>=</span><span class='st'>"unrestricted MDS"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.basic</span>,main<span class='op'>=</span><span class='st'>"unrestricted MDS"</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://strengejacke.github.io/ggeffects/reference/plot.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.circ</span>, main<span class='op'>=</span><span class='st'>"restricted MDS"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>fit.circ</span>, main<span class='op'>=</span><span class='st'>"restricted MDS"</span><span class='op'>)</span>
 </code></pre>
 </div>
+<p><img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-10-1.png" width="624" /></p>
 </div>
 <h2 id="setting-for-2d-plot">Setting for 2D plot</h2>
 <p>First, we extract the coordinates of the columns of our 2D MDS configuration plot.<br />
@@ -2683,6 +2728,13 @@ Next, we add a variable <em>Names</em> to this subset including the names to whi
 <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>coord</span><span class='op'>)</span>
 </code></pre>
 </div>
+<pre><code>              D1          D2 items  Names
+item1 -0.5527530  0.24847540 item1 group1
+item2  0.6731546  0.56734038 item2 group2
+item3 -0.4400060 -0.09707478 item3 group3
+item4  0.3699579 -0.79721826 item4 group4
+item5  0.7943466  0.70409123 item5 group2
+item6 -0.2779827  0.72057760 item6 group1</code></pre>
 </div>
 <p>Different settings are possible.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2701,6 +2753,7 @@ Next, we add a variable <em>Names</em> to this subset including the names to whi
 <span class='va'>p</span>
 </code></pre>
 </div>
+<p><img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-12-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -2713,6 +2766,7 @@ Next, we add a variable <em>Names</em> to this subset including the names to whi
 <span class='va'>p0</span>
 </code></pre>
 </div>
+<p><img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-13-1.png" width="624" data-distill-preview=1 /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -2726,6 +2780,7 @@ Next, we add a variable <em>Names</em> to this subset including the names to whi
 <span class='va'>p1</span>
 </code></pre>
 </div>
+<p><img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-14-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -2739,6 +2794,7 @@ Next, we add a variable <em>Names</em> to this subset including the names to whi
 <span class='va'>p2</span>
 </code></pre>
 </div>
+<p><img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-15-1.png" width="624" /></p>
 </div>
 <p>The different shapes are:</p>
 <center>
@@ -2753,38 +2809,54 @@ Next, we add a variable <em>Names</em> to this subset including the names to whi
                           radius<span class='op'>=</span><span class='fl'>0</span><span class='op'>)</span>
 
 <span class='va'>p3</span>
-
-<span class='co'># add labels to the regions</span>
+</code></pre>
+</div>
+<img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-16-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># add labels to the regions</span>
 <span class='va'>p4</span> <span class='op'>&lt;-</span> <span class='va'>p2</span> <span class='op'>+</span> <span class='fu'>ggforce</span><span class='fu'>::</span><span class='fu'><a href='https://ggforce.data-imaginist.com/reference/geom_mark_hull.html'>geom_mark_hull</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>label <span class='op'>=</span> <span class='va'>Names</span>, color <span class='op'>=</span> <span class='va'>Names</span>,fill<span class='op'>=</span><span class='va'>Names</span><span class='op'>)</span>,
                           concavity <span class='op'>=</span> <span class='fl'>5</span>, 
                           expand<span class='op'>=</span><span class='fl'>0</span>, 
                           radius<span class='op'>=</span><span class='fl'>0</span><span class='op'>)</span>
 
 <span class='va'>p4</span>
-
-<span class='co'># add labels of items</span>
+</code></pre>
+</div>
+<img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-16-2.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># add labels of items</span>
 <span class='va'>p5</span> <span class='op'>&lt;-</span> <span class='va'>p3</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_text.html'>geom_text</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>label<span class='op'>=</span><span class='va'>items</span><span class='op'>)</span>, hjust<span class='op'>=</span><span class='fl'>0</span>, vjust<span class='op'>=</span><span class='fl'>0</span><span class='op'>)</span>
 
 <span class='va'>p5</span>
-
-<span class='co'># add black labels of items</span>
+</code></pre>
+</div>
+<img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-16-3.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># add black labels of items</span>
 <span class='va'>p6</span> <span class='op'>&lt;-</span> <span class='va'>p3</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_text.html'>geom_text</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>label<span class='op'>=</span><span class='va'>items</span><span class='op'>)</span>, hjust<span class='op'>=</span><span class='fl'>0</span>, vjust<span class='op'>=</span><span class='fl'>0</span>, color<span class='op'>=</span><span class='st'>'black'</span><span class='op'>)</span>
 
 <span class='va'>p6</span>
-
-<span class='co'># change colors by your own preference</span>
+</code></pre>
+</div>
+<img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-16-4.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># change colors by your own preference</span>
 <span class='va'>p7</span> <span class='op'>&lt;-</span> <span class='va'>p3</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_manual.html'>scale_color_manual</a></span><span class='op'>(</span>values<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"grey"</span>, <span class='st'>"red"</span>, <span class='st'>"#9633FF"</span>, <span class='st'>"#E2FF33"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
            <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_manual.html'>scale_fill_manual</a></span><span class='op'>(</span>values<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"grey"</span>, <span class='st'>"red"</span>, <span class='st'>"#9633FF"</span>, <span class='st'>"#E2FF33"</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='va'>p7</span>
-
-<span class='co'># use ggplot color pallets. </span>
+</code></pre>
+</div>
+<img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-16-5.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># use ggplot color pallets. </span>
 <span class='va'>p8</span> <span class='op'>&lt;-</span> <span class='va'>p3</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_brewer.html'>scale_color_brewer</a></span><span class='op'>(</span>palette<span class='op'>=</span><span class='st'>"Dark2"</span><span class='op'>)</span> <span class='op'>+</span>
            <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_brewer.html'>scale_fill_brewer</a></span><span class='op'>(</span>palette<span class='op'>=</span><span class='st'>"Dark2"</span><span class='op'>)</span>
 
 <span class='va'>p8</span>
 </code></pre>
 </div>
+<p><img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-16-6.png" width="624" /></p>
 </div>
 <p>The different pallets are:</p>
 <center>
@@ -2799,8 +2871,9 @@ Next, we add a variable <em>Names</em> to this subset including the names to whi
 <span class='va'>p9</span>
 </code></pre>
 </div>
+<p><img src="multidimensionalscaling_files/figure-html5/unnamed-chunk-17-1.png" width="624" /></p>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

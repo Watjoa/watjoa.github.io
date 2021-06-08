@@ -2412,7 +2412,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div class="nav-right">
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
-Statistics
+Statistics and coding
  
 <span class="down-arrow">&#x25BE;</span>
 </button>
@@ -2517,6 +2517,14 @@ Research
 <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>[</span>,<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'dummy1_group'</span>,<span class='st'>'moderator1'</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span>
 </code></pre>
 </div>
+<pre><code>  dummy1_group       moderator1     
+ Min.   :-0.9214   Min.   :-2.6642  
+ 1st Qu.:-0.9214   1st Qu.:-0.7112  
+ Median :-0.9214   Median : 0.1150  
+ Mean   : 0.0000   Mean   : 0.0000  
+ 3rd Qu.: 1.0749   3rd Qu.: 0.5657  
+ Max.   : 1.0749   Max.   : 2.7440  
+                   NA&#39;s   :7        </code></pre>
 </div>
 <p>Here, we build the linear model and check the summary.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2527,6 +2535,235 @@ Research
 <span class='fu'><a href='https://jtools.jacob-long.com/reference/summ.html'>summ</a></span><span class='op'>(</span><span class='va'>model</span>, confint <span class='op'>=</span> <span class='cn'>TRUE</span>, vifs <span class='op'>=</span> <span class='cn'>TRUE</span>, digits<span class='op'>=</span><span class='fl'>3</span>, pvals<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </code></pre>
 </div>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Observations
+</td>
+<td style="text-align:right;">
+97 (7 missing obs. deleted)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Dependent variable
+</td>
+<td style="text-align:right;">
+outcome
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Type
+</td>
+<td style="text-align:right;">
+OLS linear regression
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+F(5,91)
+</td>
+<td style="text-align:right;">
+18.610
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+R²
+</td>
+<td style="text-align:right;">
+0.506
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+Adj. R²
+</td>
+<td style="text-align:right;">
+0.478
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Est.
+</th>
+<th style="text-align:right;">
+2.5%
+</th>
+<th style="text-align:right;">
+97.5%
+</th>
+<th style="text-align:right;">
+t val.
+</th>
+<th style="text-align:right;">
+p
+</th>
+<th style="text-align:right;">
+VIF
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+(Intercept)
+</td>
+<td style="text-align:right;">
+2.620
+</td>
+<td style="text-align:right;">
+0.455
+</td>
+<td style="text-align:right;">
+4.785
+</td>
+<td style="text-align:right;">
+2.403
+</td>
+<td style="text-align:right;">
+0.018
+</td>
+<td style="text-align:right;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+dummy1_group
+</td>
+<td style="text-align:right;">
+-0.889
+</td>
+<td style="text-align:right;">
+-1.078
+</td>
+<td style="text-align:right;">
+-0.699
+</td>
+<td style="text-align:right;">
+-9.303
+</td>
+<td style="text-align:right;">
+0.000
+</td>
+<td style="text-align:right;">
+1.028
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+moderator1
+</td>
+<td style="text-align:right;">
+-0.273
+</td>
+<td style="text-align:right;">
+-0.473
+</td>
+<td style="text-align:right;">
+-0.072
+</td>
+<td style="text-align:right;">
+-2.701
+</td>
+<td style="text-align:right;">
+0.008
+</td>
+<td style="text-align:right;">
+1.152
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+age
+</td>
+<td style="text-align:right;">
+0.055
+</td>
+<td style="text-align:right;">
+-0.153
+</td>
+<td style="text-align:right;">
+0.263
+</td>
+<td style="text-align:right;">
+0.526
+</td>
+<td style="text-align:right;">
+0.600
+</td>
+<td style="text-align:right;">
+1.022
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+gender
+</td>
+<td style="text-align:right;">
+0.257
+</td>
+<td style="text-align:right;">
+-0.146
+</td>
+<td style="text-align:right;">
+0.659
+</td>
+<td style="text-align:right;">
+1.267
+</td>
+<td style="text-align:right;">
+0.209
+</td>
+<td style="text-align:right;">
+1.168
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-weight: bold;">
+dummy1_group:moderator1
+</td>
+<td style="text-align:right;">
+0.193
+</td>
+<td style="text-align:right;">
+0.003
+</td>
+<td style="text-align:right;">
+0.384
+</td>
+<td style="text-align:right;">
+2.015
+</td>
+<td style="text-align:right;">
+0.047
+</td>
+<td style="text-align:right;">
+1.029
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> Standard errors: OLS
+</td>
+</tr>
+</tfoot>
+</table>
 </div>
 <h2 id="diagnostics">Diagnostics</h2>
 <p>At this point, we are able to build our model and to check our results. However, results might be biased or might be inaccurate by some violated assumptions of your model. To make sure your results can be interpeted, make sure you have checked your assumptions. In the following explanations and important considerations, we refer to the code of plotting the assumptions.</p>
@@ -2650,6 +2887,7 @@ Research
 <span class='fu'><a href='https://wilkelab.org/cowplot/reference/plot_grid.html'>plot_grid</a></span><span class='op'>(</span><span class='va'>p</span>,<span class='va'>p1</span>,<span class='va'>p2</span>,<span class='va'>p3</span>,<span class='va'>p4</span>,<span class='va'>p5</span>,<span class='va'>p6</span>,<span class='va'>p7</span>, nrow <span class='op'>=</span> <span class='fl'>4</span><span class='op'>)</span>
 </code></pre>
 </div>
+<p><img src="regressionmodelling_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
 </div>
 <h2 id="visualisation">Visualisation</h2>
 <p>In this part, you find the code of building a moderation plot.</p>
@@ -2663,6 +2901,33 @@ Research
 <span class='va'>modeloutput</span>
 </code></pre>
 </div>
+<pre><code># Predicted values of outcome
+# x = dummy1_group
+
+# moderator1 = -1
+
+x                  | Predicted |       95% CI
+---------------------------------------------
+-0.921358290189597 |      4.84 | [4.45, 5.23]
+1.0749180052212    |      2.68 | [2.32, 3.05]
+
+# moderator1 = 0
+
+x                  | Predicted |       95% CI
+---------------------------------------------
+-0.921358290189597 |      4.39 | [4.14, 4.64]
+1.0749180052212    |      2.62 | [2.34, 2.89]
+
+# moderator1 = 1
+
+x                  | Predicted |       95% CI
+---------------------------------------------
+-0.921358290189597 |      3.94 | [3.59, 4.29]
+1.0749180052212    |      2.55 | [2.15, 2.95]
+
+Adjusted for:
+*    age = 10.20
+* gender =  1.53</code></pre>
 </div>
 <p>These vaues are used to build the moderation plot in the <code>ggplot2</code> package.</p>
 <p>First output:</p>
@@ -2682,6 +2947,7 @@ Research
 <span class='va'>IE_plot1</span>
 </code></pre>
 </div>
+<p><img src="regressionmodelling_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
 </div>
 <p>Change both moderated labels and linetypes and the range of the y axis.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2707,6 +2973,7 @@ Research
 <span class='va'>IE_plot2</span>
 </code></pre>
 </div>
+<p><img src="regressionmodelling_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
 </div>
 <p>Change all other labels.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2726,6 +2993,7 @@ Research
 <span class='va'>IE_plot3</span>
 </code></pre>
 </div>
+<p><img src="regressionmodelling_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
 </div>
 <h3 id="simple-slope-analysis">Simple slope analysis</h3>
 <div class="layout-chunk" data-layout="l-body">
@@ -2737,6 +3005,32 @@ Research
            johnson_neyman <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
 </code></pre>
 </div>
+<pre><code>JOHNSON-NEYMAN INTERVAL 
+
+When moderator1 is OUTSIDE the interval [2.21, 323.44], the slope
+of dummy1_group is p &lt; .05.
+
+Note: The range of observed values of moderator1 is [-2.66, 2.74]
+
+SIMPLE SLOPES ANALYSIS 
+
+Slope of dummy1_group when moderator1 = -1.00 (- 1 SD): 
+
+   Est.   S.E.   t val.      p
+------- ------ -------- ------
+  -1.08   0.14    -7.99   0.00
+
+Slope of dummy1_group when moderator1 =  0.00 (Mean): 
+
+   Est.   S.E.   t val.      p
+------- ------ -------- ------
+  -0.89   0.10    -9.30   0.00
+
+Slope of dummy1_group when moderator1 =  1.00 (+ 1 SD): 
+
+   Est.   S.E.   t val.      p
+------- ------ -------- ------
+  -0.70   0.14    -5.14   0.00</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -2750,6 +3044,13 @@ Research
                sig.color <span class='op'>=</span> <span class='st'>"#00BFC4"</span>, insig.color <span class='op'>=</span> <span class='st'>"#F8766D"</span><span class='op'>)</span>
 </code></pre>
 </div>
+<pre><code>JOHNSON-NEYMAN INTERVAL 
+
+When moderator1 is OUTSIDE the interval [2.21, 323.44], the slope
+of dummy1_group is p &lt; .05.
+
+Note: The range of observed values of moderator1 is [-2.66, 2.74]</code></pre>
+<p><img src="regressionmodelling_files/figure-html5/unnamed-chunk-10-1.png" width="624" /></p>
 </div>
 <p>By using the <code>annotate</code> function from the <code>ggplot2</code> package, we can add text on the moderation figure.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2770,11 +3071,12 @@ Research
 <span class='va'>IE_plot4</span>
 </code></pre>
 </div>
+<p><img src="regressionmodelling_files/figure-html5/unnamed-chunk-11-1.png" width="624" data-distill-preview=1 /></p>
 </div>
 <blockquote>
 <p>Future plans: more detailed information about building and testing a model, more graphic functions, mediation, mediated moderation, multilevel modelling and plotting, etc.</p>
 </blockquote>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

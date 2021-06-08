@@ -22,11 +22,6 @@ output:
 ---
 
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(eval = FALSE)
-```
-
-
 <style type="text/css">
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
