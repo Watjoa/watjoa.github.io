@@ -29,7 +29,6 @@ navbar:
           - text: 'CaviR application'
             href: https://watjoa.shinyapps.io/CaviR/
           - text: 'Regression modelling'
-            icon: fab fa-twitter
             href: https://watjoa.shinyapps.io/CaviRmodels/
     - text: Research
       menu:
