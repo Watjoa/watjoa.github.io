@@ -30,6 +30,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### 2021
 
+* Morbée, J., Haerens, L., *Waterschoot, J.*, & Vansteenkiste, M. (2021). **Which Cyclists Manage to Cope with the Corona Crisis in a Resilient Way? The Role of Motivational Profiles.** *International Journal of Sport and Exercise Psychology* DOI: https://doi.org/10.1080/1612197X.2021.1940241
+
+<aside>
+[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/studies)  
+</aside>
+
 * Schrooyen, C., Soenens, B., *Waterschoot, J.*, Vermote, B., Morbée, S., Beyers, W., Brenning, K., Dieleman, L., Van der Kaap-Deeder, J., & Vansteenkiste, M. (2021). **At Home With the Kids During the COVID-19 Lockdown: A Party or a Prison? Parental Identity as a Resource for Parental Adaptation through Basic Psychological Need Satisfaction.** *Journal of Family Psychology*  
 
 <aside>
@@ -80,9 +86,15 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * *Waterschoot. J.*, Morbée, S., Vermote, B., Brenning, K., Flamant, N., Vansteenkiste, M., & Soenens, B. (in review) **Emotion Regulation in Times of COVID-19: A Person-Centered Approach Based on Self-Determination.** *Journal of Current Psychology*
 
-* Morbée, J., Haerens, L., *Waterschoot, J.*, & Vansteenkiste, M. (in review). **Which Cyclists Manage to Cope with the Corona Crisis in a Resilient Way? The Role of Motivational Profiles.** *Psychology of Sport & Exercise*
-
 * Morbée, S., Vermote, B., *Waterschoot, J.*, Dieleman, L., Soenens, B., Van den Bergh, O., Ryan, R. M., Vanhalst, J., De Muynck, G-J., & Vansteenkiste, M. (submitted). **Adherence to Covid-19 Measures: The Critical Role of Voluntary Motivation on a Short- and Long-Term Basis.** 
+
+* LeGate et al. (submitted) **A Global Experiment on Motivating Social Distancing during the COVID-19 Pandemic**
+
+* Wauters et al. (submitted) **COVID-19 as an additional challenge for parents of a child with a chronic disease** *the Journal of Pediatric Psychology*
+
+* Vermote et al. (submitted) **How do late adults experience meaning during the COVID-19 lockdown? The role of intrinsic goals**
+
+* Brenning et al. (submitted) **Maladaptive Emotion Regulation as a Vulnerability Factor during the COVID-19 Pandemic: A 10-Wave Longitudinal Study**
 
 ### In progress  
 
@@ -226,8 +238,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 * Bogaerts, Liesa (current). **zelfmotivatie, tweede lockdown, verveling en kwalitatieve codering.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
 
-* Sercu, Jade (current). **Ouders en geven van beloningen tijdens vervelende taak.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
-
 * De Quick, Lotte (current). **mindfulness en verveling over tijd in middelbare leerlingen populatie** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
 
 * Bruteyn, Sarah (current). **telewerken motivatie zelfmotivatie verveling mindfulness** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
@@ -236,16 +246,22 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### 2021
 
+* Sercu, Jade (2021). **Hoe motiveer ik mijn kind voor een vervelende taak? De rol van verschillende ouderlijke strategieën met een brede opvatting van types beloning.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
+
+<aside>
+[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Nicaurys_Hernandez_Masterproef_ll_Eerste_Zit_01713091-geconverteerd (1).pdf)  
+</aside>
+
 * Hernandez, Nicaurys (2021). **Wegwijs in onze eigen emoties in tijden van een pandemie. Een onderzoek naar zelfmotivatie als mediator in het verband tussen emotieregulatie en verveling.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste) 
 
 <aside>
-[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Masterproef II_MaudDeLille_Waar een wil is, is een weg.pdf)  
+[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Nicaurys_Hernandez_Masterproef_ll_Eerste_Zit_01713091-geconverteerd (1).pdf)  
 </aside>
 
 * Van Houtte, Camille (current). **Motivatie als brandstof voor de Dodentocht. Een mixed-method studie met kwantitatieve metingen en kwalitatieve diepte-interviews.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste) 
 
 <aside>
-[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/HUISWERK IN TIJDEN VAN CORONA HET VERBAND TUSSEN SCHOOLMOTIVATIE, ZELFMOTIVATIE EN MINDFULNESS.pdf)  
+[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/MasterproefII_CamilleVanHoutte_01405482.pdf)  
 </aside>
 
 ### 2020

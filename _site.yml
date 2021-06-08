@@ -1,22 +1,23 @@
 name: "Watjoa"
 title: "Watjoa"
+theme: "theme.css"
 include: ["footer.html"]
 output_dir: "docs"
 navbar:
   search: true
   logo:
-    image: logo.png
+    image: logo_bar.png
   right:
+    - text: Statistics
+      menu:
+          - text: 'Cluster analysis'
+            href: posts/clustering/Clustering.html
+    - text: Research
+      href: Research.html
     - icon: fab fa-twitter
       href: https://twitter.com/watjoa
     - icon: fab fa-github
       href: https://github.com/watjoa
 base_url: https://watjoa.github.io
-collections:
-  posts:
-      share: [twitter, linkedin]  
-      subscribe: _subscribe.html
-      custom: _custom.html
-      citations: true
 favicon: images/favicon.ico
 output: distill::distill_article

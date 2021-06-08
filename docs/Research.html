@@ -87,8 +87,8 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico"/>
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-06-01"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-06-01"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-06-08"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-06-08"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Watjoa: Scientific curriculum"/>
@@ -104,7 +104,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Scientific curriculum"]},{"type":"character","attributes":{},"value":["2021-06-01"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float","highlight","highlight_downlit"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["haddock"]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Scientific curriculum"]},{"type":"character","attributes":{},"value":["2021-06-08"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth","toc_float","highlight","highlight_downlit"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["haddock"]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2028,6 +2028,348 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 
   </script>
 
+  <style type="text/css">
+  /* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+
+
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #000000;
+    --header-color:    rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(0, 0, 0, 0.8);
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    sans-serif;
+    --mono-font:       monospace;
+    --body-font:       sans-serif;
+    --navbar-font:     sans-serif;  /* websites + blogs only */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.6rem;
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.8rem;
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.8em;
+    --text-color:      rgba(0, 0, 0, 0.5);
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+  </style>
+  <style type="text/css">/* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+  @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:300, 300i&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap');
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #2F3D4E;
+    --header-color:    #2F3D4E;                    /* edited */
+    --body-color:      #404040;                    /* edited */
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    "Noto Serif JP", sans-serif; /* edited */
+    --mono-font:       "IBM Plex Mono", monospace;  /* edited */
+    --body-font:       "Lato", sans-serif;          /* edited */
+    --navbar-font:     "Lato", sans-serif;          /* edited */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.9rem;                      /* edited */
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.95rem;                     /* edited */
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);      
+    --text-size:       0.9rem;                    /* edited */
+    --text-color:      #1a162d;                   /* edited */
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       #1f1f1f;                   /* edited */
+    --text-size:        15px;
+    --hover-color:      #787878;                   /* edited */
+    --bkgd-color:       #fff;                      /* edited */
+  }
+
+  .distill-site-footer {
+    --text-color:       #f9f7fc;                   /* edited */
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #2F3D4E;                 /* edited */
+  }
+
+  /*-- Additional custom styles --*/
+
+  ul > li::marker {
+    color: #ca225e;
+  }
+
+  .distill-site-header { 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+
+  .distill-site-header .logo img{
+    max-height: 40px; /* Makes logo bigger, default was 20px */
+  }
+
+  .distill-site-header {
+    padding-top: 1rem;
+  }
+
+  d-title h1,
+  d-article h2,
+  .posts-list .description h2,
+  .posts-list > h1 {
+      font-weight: 300;
+  }
+
+  d-appendix {
+    background-color: #fdf7f9;
+    border-top: none;
+  }</style>
+  <style type="text/css">
+  /* base style */
+
+  /* FONT FAMILIES */
+
+  :root {
+    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body,
+  .posts-list .post-preview p,
+  .posts-list .description p {
+    font-family: var(--body-font), var(--body-default);
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .posts-list .post-preview h2,
+  .posts-list .description h2 {
+    font-family: var(--heading-font), var(--heading-default);
+  }
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: var(--mono-font), var(--mono-default);
+  }
+
+
+  /*-- TITLE --*/
+  d-title h1,
+  .posts-list > h1 {
+    color: var(--title-color, black);
+  }
+
+  d-title h1 {
+    font-size: var(--title-size, 50px);
+  }
+
+  /*-- HEADERS --*/
+  d-article h1,
+  d-article h2,
+  d-article h3,
+  d-article h4,
+  d-article h5,
+  d-article h6 {
+    color: var(--header-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- BODY --*/
+  d-article > p,  /* only text inside of <p> tags */
+  d-article > ul, /* lists */
+  d-article > ol {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+    font-size: var(--body-size, 1.06rem);
+  }
+
+
+  /*-- CODE --*/
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-size: var(--code-size, 14px);
+  }
+
+  /*-- ASIDE --*/
+  d-article aside {
+    font-size: var(--aside-size, 12px);
+    color: var(--aside-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- FIGURE CAPTIONS --*/
+  figure .caption,
+  figure figcaption,
+  .figure .caption {
+    font-size: var(--fig-cap-size, 13px);
+    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- METADATA --*/
+  d-byline h3 {
+    font-size: var(--heading-size, 0.6rem);
+    color: var(--heading-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-byline {
+    font-size: var(--body-size, 0.8rem);
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  d-byline a,
+  d-article d-byline a {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- TABLE OF CONTENTS --*/
+  .d-contents nav h3 {
+    font-size: var(--heading-size, 18px);
+  }
+
+  .d-contents nav a {
+    font-size: var(--contents-size, 13px);
+  }
+
+  /*-- APPENDIX --*/
+  d-appendix h3 {
+    font-size: var(--heading-size, 15px);
+    color: var(--heading-color, rgba(0, 0, 0, 0.65));
+  }
+
+  d-appendix {
+    font-size: var(--text-size, 0.8em);
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-appendix d-footnote-list a.footnote-backlink {
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  .distill-site-header .title {
+    font-size: var(--title-size, 18px);
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .distill-site-header a,
+  .nav-dropdown .nav-dropbtn {
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    font-size: var(--text-size, 15px);
+  }
+
+  .distill-site-header a:hover,
+  .nav-dropdown:hover .nav-dropbtn {
+    color: var(--hover-color, white);
+  }
+
+  .distill-site-header {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer a:hover {
+    color: var(--hover-color, white);
+  }</style>
   <!--/radix_placeholder_distill-->
   <script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
@@ -2049,7 +2391,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Scientific curriculum","authors":[],"publishedDate":"2021-06-01T00:00:00.000+00:00"}
+{"title":"Scientific curriculum","authors":[],"publishedDate":"2021-06-08T00:00:00.000+00:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2058,12 +2400,23 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a class="logo">
-<img src="logo.png" alt="Logo"/>
+<img src="logo_bar.png" alt="Logo"/>
 </a>
 <a href="index.html" class="title">Watjoa</a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Statistics
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="posts/clustering/Clustering.html">Cluster analysis</a>
+</div>
+</div>
+<a href="Research.html">Research</a>
 <a href="https://twitter.com/watjoa">
 <i class="fab fa-twitter" aria-hidden="true"></i>
 </a>
@@ -2121,6 +2474,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <h2 id="publications">Publications</h2>
 <h3 id="section">2021</h3>
 <ul>
+<li>Morbée, J., Haerens, L., <em>Waterschoot, J.</em>, &amp; Vansteenkiste, M. (2021). <strong>Which Cyclists Manage to Cope with the Corona Crisis in a Resilient Way? The Role of Motivational Profiles.</strong> <em>International Journal of Sport and Exercise Psychology</em> DOI: <a href="https://doi.org/10.1080/1612197X.2021.1940241" class="uri">https://doi.org/10.1080/1612197X.2021.1940241</a></li>
+</ul>
+<aside>
+<a href="download/sciencs/studies">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<ul>
 <li>Schrooyen, C., Soenens, B., <em>Waterschoot, J.</em>, Vermote, B., Morbée, S., Beyers, W., Brenning, K., Dieleman, L., Van der Kaap-Deeder, J., &amp; Vansteenkiste, M. (2021). <strong>At Home With the Kids During the COVID-19 Lockdown: A Party or a Prison? Parental Identity as a Resource for Parental Adaptation through Basic Psychological Need Satisfaction.</strong> <em>Journal of Family Psychology</em></li>
 </ul>
 <aside>
@@ -2167,8 +2526,11 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <h3 id="submitted">Submitted</h3>
 <ul>
 <li><p><em>Waterschoot. J.</em>, Morbée, S., Vermote, B., Brenning, K., Flamant, N., Vansteenkiste, M., &amp; Soenens, B. (in review) <strong>Emotion Regulation in Times of COVID-19: A Person-Centered Approach Based on Self-Determination.</strong> <em>Journal of Current Psychology</em></p></li>
-<li><p>Morbée, J., Haerens, L., <em>Waterschoot, J.</em>, &amp; Vansteenkiste, M. (in review). <strong>Which Cyclists Manage to Cope with the Corona Crisis in a Resilient Way? The Role of Motivational Profiles.</strong> <em>Psychology of Sport &amp; Exercise</em></p></li>
 <li><p>Morbée, S., Vermote, B., <em>Waterschoot, J.</em>, Dieleman, L., Soenens, B., Van den Bergh, O., Ryan, R. M., Vanhalst, J., De Muynck, G-J., &amp; Vansteenkiste, M. (submitted). <strong>Adherence to Covid-19 Measures: The Critical Role of Voluntary Motivation on a Short- and Long-Term Basis.</strong></p></li>
+<li><p>LeGate et al. (submitted) <strong>A Global Experiment on Motivating Social Distancing during the COVID-19 Pandemic</strong></p></li>
+<li><p>Wauters et al. (submitted) <strong>COVID-19 as an additional challenge for parents of a child with a chronic disease</strong> <em>the Journal of Pediatric Psychology</em></p></li>
+<li><p>Vermote et al. (submitted) <strong>How do late adults experience meaning during the COVID-19 lockdown? The role of intrinsic goals</strong></p></li>
+<li><p>Brenning et al. (submitted) <strong>Maladaptive Emotion Regulation as a Vulnerability Factor during the COVID-19 Pandemic: A 10-Wave Longitudinal Study</strong></p></li>
 </ul>
 <h3 id="in-progress">In progress</h3>
 <h4 id="phd-research-self-motivation">PhD-research: Self-Motivation</h4>
@@ -2247,23 +2609,28 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li><p>Vanhaverbeke, Alica (current). <strong>longitudinale profielen in middelbare school motivatie.</strong> <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
 <li><p>Belgrado, Laura (current). <strong>mediërende rol van zelfmotivatie tussen emotieregulatie en verveling.</strong> <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
 <li><p>Bogaerts, Liesa (current). <strong>zelfmotivatie, tweede lockdown, verveling en kwalitatieve codering.</strong> <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
-<li><p>Sercu, Jade (current). <strong>Ouders en geven van beloningen tijdens vervelende taak.</strong> <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
 <li><p>De Quick, Lotte (current). <strong>mindfulness en verveling over tijd in middelbare leerlingen populatie</strong> <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
 <li><p>Bruteyn, Sarah (current). <strong>telewerken motivatie zelfmotivatie verveling mindfulness</strong> <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
 <li><p>Vandecasteele, Liesanne (current). <strong>Rol van persoonlijkheid tov mindfulness</strong> <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</p></li>
 </ul>
 <h3 id="section-3">2021</h3>
 <ul>
+<li>Sercu, Jade (2021). <strong>Hoe motiveer ik mijn kind voor een vervelende taak? De rol van verschillende ouderlijke strategieën met een brede opvatting van types beloning.</strong> <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</li>
+</ul>
+<aside>
+<a href="download/sciencs/masterproeven/Nicaurys_Hernandez_Masterproef_ll_Eerste_Zit_01713091-geconverteerd%20(1).pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+</aside>
+<ul>
 <li>Hernandez, Nicaurys (2021). <strong>Wegwijs in onze eigen emoties in tijden van een pandemie. Een onderzoek naar zelfmotivatie als mediator in het verband tussen emotieregulatie en verveling.</strong> <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</li>
 </ul>
 <aside>
-<a href="download/sciencs/masterproeven/Masterproef%20II_MaudDeLille_Waar%20een%20wil%20is,%20is%20een%20weg.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+<a href="download/sciencs/masterproeven/Nicaurys_Hernandez_Masterproef_ll_Eerste_Zit_01713091-geconverteerd%20(1).pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 </aside>
 <ul>
 <li>Van Houtte, Camille (current). <strong>Motivatie als brandstof voor de Dodentocht. Een mixed-method studie met kwantitatieve metingen en kwalitatieve diepte-interviews.</strong> <em>Niet-gepubliceerde Master Thesis, Universiteit Gent.</em> (Promotor: M. Vansteenkiste)</li>
 </ul>
 <aside>
-<a href="download/sciencs/masterproeven/HUISWERK%20IN%20TIJDEN%20VAN%20CORONA%20HET%20VERBAND%20TUSSEN%20SCHOOLMOTIVATIE,%20ZELFMOTIVATIE%20EN%20MINDFULNESS.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+<a href="download/sciencs/masterproeven/MasterproefII_CamilleVanHoutte_01405482.pdf">Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
 </aside>
 <h3 id="section-4">2020</h3>
 <ul>
