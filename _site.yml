@@ -18,12 +18,19 @@ navbar:
             href: intern_consistency.html
           - text: 'Correlations'
             href: correlations.html
-          - text: 'Regression modeling'
+          - text: 'Regression modelling'
             href: regressionmodelling.html
           - text: 'Cluster analysis'
             href: Clustering.html
           - text: 'Multidimensional scaling'
             href: multidimensionalscaling.html
+    - text: Applications
+      menu:
+          - text: 'CaviR application'
+            href: https://watjoa.shinyapps.io/CaviR/
+          - text: 'Regression modelling'
+            icon: fab fa-twitter
+            href: https://watjoa.shinyapps.io/CaviRmodels/
     - text: Research
       menu:
           - text: 'Motivationbarometer'
