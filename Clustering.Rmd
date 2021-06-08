@@ -10,13 +10,11 @@ author:
     affiliation_url: www.ugent.be
     orcid_id: 0000-0003-0845-9310
 date: 05-22-2021
-categories:
-  - preparing
 output:
   distill::distill_article:
     self_contained: true
     toc: true
-    toc_depth: 2
+    toc_depth: 3
     toc_float: true
     highlight: haddock
     highlight_downlit: true
@@ -68,6 +66,10 @@ Coming from the understanding of *‘p-hacking’*, a researcher could have the 
 Apart from being a statistician, an employer, an employee, a student or a researcher, everyone who works with a dataset should know the data he or she is working on. 
 
 > Which variables are included and what are the descriptive statistics of these variables (e.g. mean and standard deviation)? How are these variables associated (correlations)? Do they have a good internal consistency? Are variables comparable before starting the cluster analyses? How many missing data is in the dataset and how these should be handled?
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
 
 ## Internal consistency
 
@@ -249,6 +251,8 @@ In line, many statistical tests including parameter estimation rely on the Centr
 
 ## Hierarchical K-Means cluster analysis
 
+(under construction)
+
 <div class = "blue">
 
 **What is Hierarchical K-Means clustering?** 
@@ -260,7 +264,7 @@ It is required to report as much information a research could gain, this to info
 
 ## Latent Profile Analysis
 
-
+(under construction)
 
 
 

@@ -1,5 +1,7 @@
-name: "Watjoa"
-title: "Watjoa"
+name: "CaviR"
+title: "CaviR"
+base_url: https://watjoa.github.io
+favicon: images/apple-icon.png
 theme: "theme.css"
 include: ["footer.html"]
 output_dir: "docs"
@@ -10,14 +12,28 @@ navbar:
   right:
     - text: Statistics
       menu:
+          - text: 'Data manipulation'
+            href: datamanipulation.html
+          - text: 'Internal consistency'
+            href: intern_consistency.html
+          - text: 'Correlations'
+            href: correlations.html
+          - text: 'Regression modeling'
+            href: regressionmodelling.html
           - text: 'Cluster analysis'
-            href: posts/clustering/Clustering.html
+            href: Clustering.html
+          - text: 'Multidimensional scaling'
+            href: multidimensionalscaling.html
     - text: Research
-      href: Research.html
+      menu:
+          - text: 'Motivationbarometer'
+            href: https://motivationbarometer.com
+          - text: 'De 100 km Dodentocht'
+            href: https://www.ugent.be/epg/nl/onderzoek/dodentocht-nl
+          - text: 'Curriculum'
+            href: Research.html
     - icon: fab fa-twitter
       href: https://twitter.com/watjoa
     - icon: fab fa-github
       href: https://github.com/watjoa
-base_url: https://watjoa.github.io
-favicon: images/favicon.ico
 output: distill::distill_article

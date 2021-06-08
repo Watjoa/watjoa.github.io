@@ -1,7 +1,5 @@
 ---
-title: "My Website"
-description: |
-  Welcome to the website. I hope you enjoy it!
+title: "'I do not believe elephants exist at all,' declared the sixth blind man. 'I think we are the victims of a cruel joke.'"
 site: distill::distill_website
 ---
 
