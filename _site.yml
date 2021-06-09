@@ -36,10 +36,16 @@ navbar:
             href: https://motivationbarometer.com
           - text: 'De 100 km Dodentocht'
             href: https://www.ugent.be/epg/nl/onderzoek/dodentocht-nl
-          - text: 'Curriculum'
-            href: Research.html
+          # - text: 'Curriculum'
+          #   href: Research.html
     - icon: fab fa-twitter
       href: https://twitter.com/watjoa
+    - icon: fab fa-researchgate
+      href: https://www.researchgate.net/profile/Joachim-Waterschoot
+    - icon: fas fa-graduation-cap
+      href: https://scholar.google.be/citations?user=F-fOgBoAAAAJ&hl=nl
+    - icon: fab fa-linkedin
+      href: https://www.linkedin.com/in/watjoa/
     - icon: fab fa-github
       href: https://github.com/watjoa
 output: distill::distill_article

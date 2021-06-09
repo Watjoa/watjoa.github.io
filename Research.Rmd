@@ -92,7 +92,27 @@ output:
 
 ### In progress  
 
-#### PhD-research: Self-Motivation
+* Fysieke activiteit (Melanie Beeckman, **_in progress_**)
+
+* Associations between Men & Virus (Joachim, **_in progress_**)
+
+* Vaccin vignettenstudie (Sofie, **_in progress_**)
+
+* Speekselstudie (Marlies, **_in progress_**)
+
+* Conspiracy theories (Mathias, **_in progress_**)
+
+* Vaccin longitudinaal (Pascaline, **_in progress_**)
+
+* Fysiologische metingen Needs, Stress, ER (Joachim, Jessica, **_in progress_**)
+
+* Steekproefspecifieke studie: studenten  (Branko, **_in progress_**)
+
+* Kerstmiscenarios (Joachim, **_in progress_**)
+
+* Aelterman, Soenens, Vansteenkiste (**_in progress_**): **Effects of Teachers’ Style of Rule Setting on Students’ Psychological Needs and Behavioral Responses: An Experimental Vignette Study**
+
+### Planned
 
 * Experiments Motivational Self-Regulation: **“It’s up to you”: a multi-method approach towards the validation and the effectiveness of self-motivating strategies.**
 
@@ -108,53 +128,41 @@ output:
 
 * Lennia, Bart, Maarten, Rafael. Motivational profiles in business students
 
-#### The MotivationBarometer
+* GEES dataset: vakgroep gezondheidspsychologie (paper 1)
 
-* Fysieke activiteit (Melanie Beeckman)
+* GEES dataset: vakgroep gezondheidspsychologie (paper 2)
 
-* GEES dataset: vakgroep gezondheidspsychologie (paper 1; Crombez)
+* How pre-COVID19 rated personality shapes well-being
 
-* GEES dataset: vakgroep gezondheidspsychologie (paper 2; Crombez)
+* The relative stability and predictive validity of maladaptive identity aspects
 
-* How pre-COVID 19 rated personality shapes well-being (persoonlijkheid)
+* Does the COVID-19 pandemic change our personality? An individual-level test of the scar model
 
-* The relative stability and predictive validity of maladaptive identity aspects (persoonlijkheid)
+* Jongerenstudie (cross-sectioneel)
 
-* Does the COVID-19 pandemic change our personality? An individual-level test of the scar model (persoonlijkheid)
+* Vaccin vignettenstudie
 
-* Jongerenstudie (Wim/Bart)
+* Adolescentendata: longitudinaal (november 2020)
 
-* Associations between Men & Virus (Joachim)
+* Steekproefspecifieke studie: studenten 
 
-* Vaccin vignettenstudie (Sofie)
+* Steekproefspecifieke studie: telewerkers 
 
-* Speekselstudie (Marlies)
+* LifeCraft experiment
 
-* Conspiracy theories (Mathias)
+* Difference risk perception and concerns Multilevel
 
-* Vaccin longitudinaal (Pascaline)
+* Need-crafting: 10 wave studie
 
-* Fysiologische metingen Needs, Stress, ER (Joachim, Jessica)
+* Moederdag data
 
-* Steekproefspecifieke studie: studenten  (Branko)
+* Studentendata: Artevelde, Vivès, Odisee
 
-* Kerstmiscenarios (Joachim)
+* Descriptieve evolutie van de motivatie doorheen de COVID-19 crisis in Vlaanderen
 
-* Steekproefspecifieke studie: telewerkers (Daphne, Anja VDB)
+* Descriptieve evolutie van de needs doorheen de COVID-19 crisis in Vlaanderen
 
-* LifeCraft experiment (Daphne)
-
-* Need-crafting: 10 wave studie (Daphne)
-
-* Moederdag data (Joachim)
-
-* Adolescentendata: longitudinaal (Joachim)
-
-* Studentendata: Artevelde, Vivès, Odisee (Joachim)
-
-* Descriptieve evolutie van de needs doorheen de COVID-19 crisis in Vlaanderen (JOSOF)
-
-* De rol van overheidscommunicatie in de COVID-19 crisis in Vlaanderen (JOSOF)
+* De rol van overheidscommunicatie in de COVID-19 crisis in Vlaanderen
 
 <br>
 
@@ -436,7 +444,7 @@ output:
 [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Nicaurys_Hernandez_Masterproef_ll_Eerste_Zit_01713091-geconverteerd (1).pdf)  
 </aside>
 
-* Van Houtte, Camille (current). **Motivatie als brandstof voor de Dodentocht. Een mixed-method studie met kwantitatieve metingen en kwalitatieve diepte-interviews.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste) 
+* Van Houtte, Camille (2021). **Motivatie als brandstof voor de Dodentocht. Een mixed-method studie met kwantitatieve metingen en kwalitatieve diepte-interviews.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste) 
 
 <aside>
 [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/MasterproefII_CamilleVanHoutte_01405482.pdf)  
@@ -487,7 +495,7 @@ output:
 
 ### 2018
 
-* Vermeire, Ephraïm (2018).** Mag plezier bestaan in de klas? Een differentiatie van plezier en de samenhang met aspecten van zelfbeheersing in klassikale context.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
+* Vermeire, Ephraïm (2018)**Mag plezier bestaan in de klas? Een differentiatie van plezier en de samenhang met aspecten van zelfbeheersing in klassikale context.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)  
 
 <aside>
 [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Ephraïm Vermeire (2018) - Twee vormen van plezier en zelfbeheersing.pdf)  
