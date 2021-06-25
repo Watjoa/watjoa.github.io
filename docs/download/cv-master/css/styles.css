@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet");
 
 /* Main text is monserrat*/
 body {
@@ -12,7 +12,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "PT Sans", serif;
   color: #000;
 }
 

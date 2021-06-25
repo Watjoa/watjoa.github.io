@@ -26,9 +26,9 @@ output:
 
 * Morbée, J., Haerens, L., *Waterschoot, J.*, & Vansteenkiste, M. (2021). **Which Cyclists Manage to Cope with the Corona Crisis in a Resilient Way? The Role of Motivational Profiles.** *International Journal of Sport and Exercise Psychology* DOI: https://doi.org/10.1080/1612197X.2021.1940241
 
-<!-- <aside> -->
-<!-- [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/studies)   -->
-<!-- </aside> -->
+<aside>
+[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/studies/sUc8WN-Which cyclists manage to cope with the corona crisis in a resilient way The role of motivational profiles.pdf)
+</aside>
 
 * Schrooyen, C., Soenens, B., *Waterschoot, J.*, Vermote, B., Morbée, S., Beyers, W., Brenning, K., Dieleman, L., Van der Kaap-Deeder, J., & Vansteenkiste, M. (2021). **At Home With the Kids During the COVID-19 Lockdown: A Party or a Prison? Parental Identity as a Resource for Parental Adaptation through Basic Psychological Need Satisfaction.** *Journal of Family Psychology*  
 
@@ -169,6 +169,14 @@ output:
 ## Public reports
 
 ### 2021
+
+* Motivation Barometer (June 25, 2021). **Seduce, persuade and/or inform? How to deal with vaccine doubters?** (Report No. 31). Ghent & Louvain, Belgium. 
+
+<aside>
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/Dutch/RAPPORT 31.pdf)  
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/French/RAPPORT 31_FR.pdf)  
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 31_ENG.pdf)  
+</aside>
 
 * Motivation Barometer (May 10, 2021). **Update on vaccination, motivation, and mental health during a transitional phase** (Report No. 30). Ghent & Louvain, Belgium. 
 
@@ -435,7 +443,7 @@ output:
 * Sercu, Jade (2021). **Hoe motiveer ik mijn kind voor een vervelende taak? De rol van verschillende ouderlijke strategieën met een brede opvatting van types beloning.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste)
 
 <aside>
-[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Nicaurys_Hernandez_Masterproef_ll_Eerste_Zit_01713091-geconverteerd (1).pdf)  
+[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/masterproef 2 Sercu Jade 01501290.pdf)  
 </aside>
 
 * Hernandez, Nicaurys (2021). **Wegwijs in onze eigen emoties in tijden van een pandemie. Een onderzoek naar zelfmotivatie als mediator in het verband tussen emotieregulatie en verveling.** *Niet-gepubliceerde Master Thesis, Universiteit Gent.* (Promotor: M. Vansteenkiste) 

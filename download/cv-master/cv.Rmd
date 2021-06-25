@@ -96,10 +96,9 @@ contact_info %>%
   glue_data("- <i class='fa fa-{icon}'></i> {contact}")
 ```
 
-Research {#research}
---------------------------------------------------------------------------------
+<!-- Research {#research} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-See all publications, posters and talks at: <br /> [watjoa.com/research](https://watjoa.github.io/watjoa/Research.html)
 
 <!-- Software {#open-source} -->
 <!-- -------------------------------------------------------------------------------- -->
@@ -109,27 +108,32 @@ See all publications, posters and talks at: <br /> [watjoa.com/research](https:/
 Languages {#languages}
 --------------------------------------------------------------------------------
 
-French: native, English: fluent, Dutch: intermediate
+English: fluent, German: beginner, French: native, Dutch: intermediate
 
 
-<!-- Skills {#skills} -->
+<!-- Disclaimer {#disclaimer} -->
 <!-- -------------------------------------------------------------------------------- -->
 
-<!-- ```{r} -->
-<!-- build_skill_bars(skills) -->
-<!-- ``` -->
+<!-- <!-- Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).  --> 
 
+<!-- <!-- The source code is available at [github.com/AntoineSoetewey/cv](https://github.com/AntoineSoetewey/cv). --> 
 
-Disclaimer {#disclaimer}
+<!-- Last updated on `r format(Sys.time(), '%B %d, %Y')`.  -->
+
+Skills {#skills}
 --------------------------------------------------------------------------------
 
-<!-- Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).  -->
+```{r}
+build_skill_bars(skills)
+```
 
-<!-- The source code is available at [github.com/AntoineSoetewey/cv](https://github.com/AntoineSoetewey/cv). -->
+R packages {#skills}
+--------------------------------------------------------------------------------
 
-Last updated on `r format(Sys.time(), '%B %d, %Y')`. 
+![CaviR](https://watjoa.github.io/CaviR/reference/figures/logo.png){width=70%}
 
-
+- Complete statistical procedures by content and layout 
+- Repo: [github.com/Watjoa/CaviR/](https://github.com/Watjoa/CaviR/)
 
 Main
 ================================================================================
@@ -137,9 +141,9 @@ Main
 Joachim Waterschoot {#title}
 --------------------------------------------------------------------------------
 
-```{r}
-print_text_block(text_blocks, 'intro')
-```
+<!-- # ```{r} -->
+<!-- # print_text_block(text_blocks, 'intro') -->
+<!-- # ``` -->
 
 
 
@@ -151,10 +155,17 @@ print_section(position_data, 'education')
 ```
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
-<br>
-<br>
-<br>
-<br>
+
+Research {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'research_positions')
+```
+
+See full list on: [watjoa.github.io/Research](https://watjoa.github.io/Research.html)
+
+
 
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
@@ -169,31 +180,28 @@ Teaching Experience {data-icon=chalkboard-teacher}
 print_section(position_data, 'teaching_positions')
 ```
 
-Writing {data-icon=newspaper}
---------------------------------------------------------------------------------
 
-```{r}
-print_section(position_data, 'writing_positions')
-```
 
-Industry Experience {data-icon=suitcase}
---------------------------------------------------------------------------------
 
-<!-- ::: aside -->
-<!-- ```{r} -->
-<!-- print_text_block(text_blocks, 'industy_experience_aside') -->
-<!-- ``` -->
-<!-- ::: -->
 
-```{r}
-print_section(position_data, 'industry_positions')
-```
-
-<!-- Research {data-icon=book} -->
+<!-- Writing {data-icon=newspaper} -->
 <!-- -------------------------------------------------------------------------------- -->
 
 <!-- ```{r} -->
-<!-- print_section(position_data, 'research_positions') -->
+<!-- print_section(position_data, 'writing_positions') -->
+<!-- ``` -->
+
+<!-- Industry Experience {data-icon=suitcase} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- <!-- ::: aside --> 
+<!-- <!-- ```{r} --> 
+<!-- <!-- print_text_block(text_blocks, 'industy_experience_aside') --> 
+<!-- <!-- ``` --> 
+<!-- <!-- ::: --> 
+
+<!-- ```{r} -->
+<!-- print_section(position_data, 'industry_positions') -->
 <!-- ``` -->
 
 <!-- Software {data-icon=laptop} -->

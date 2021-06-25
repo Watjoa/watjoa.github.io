@@ -1,6 +1,7 @@
-name: "CaviR"
-title: "CaviR"
+name: "Watjoa"
+title: "Watjoa"
 base_url: https://watjoa.github.io
+google_analytics: "G-RCC5WGPXW3"
 favicon: images/apple-icon.png
 theme: "theme.css"
 include: ["footer.html"]
@@ -12,23 +13,11 @@ navbar:
   right:
     - text: Statistics and coding
       menu:
-          - text: 'Data manipulation'
-            href: datamanipulation.html
-          - text: 'Internal consistency'
-            href: intern_consistency.html
-          - text: 'Correlations'
-            href: correlations.html
-          - text: 'Regression modelling'
-            href: regressionmodelling.html
-          - text: 'Cluster analysis'
-            href: Clustering.html
-          - text: 'Multidimensional scaling'
-            href: multidimensionalscaling.html
-    - text: Applications
-      menu:
-          - text: 'CaviR application'
+          - text: 'CaviR package'
+            href: https://watjoa.github.io/CaviR/
+          - text: 'General application'
             href: https://watjoa.shinyapps.io/CaviR/
-          - text: 'Regression modelling'
+          - text: 'Regression application'
             href: https://watjoa.shinyapps.io/CaviRmodels/
     - text: Research
       menu:
@@ -36,8 +25,12 @@ navbar:
             href: https://motivationbarometer.com
           - text: 'De 100 km Dodentocht'
             href: https://www.ugent.be/epg/nl/onderzoek/dodentocht-nl
-          # - text: 'Curriculum'
-          #   href: Research.html
+    - text: Curriculum
+      menu:
+          - text: 'Curriculum Vitae'
+            href: download/cv-master/cv.html
+          - text: 'Scientific curriculum'
+            href: Research.html
     - icon: fab fa-twitter
       href: https://twitter.com/watjoa
     - icon: fab fa-researchgate
