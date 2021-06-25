@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet");
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:300,300i&display=swap');
 
 /* Main text is monserrat*/
 body {
@@ -12,7 +12,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "PT Sans", serif;
+  font-family: "Noto Serif JP", sans-serif;
   color: #000;
 }
 
