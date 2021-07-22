@@ -76,99 +76,19 @@ output:
 [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/studies/1-s2.0-S0022096519301110-main.pdf) 
 </aside>
    
-### Submitted   
-
-* *Waterschoot. J.*, Morbée, S., Vermote, B., Brenning, K., Flamant, N., Vansteenkiste, M., & Soenens, B. (in review) **Emotion Regulation in Times of COVID-19: A Person-Centered Approach Based on Self-Determination.** *Journal of Current Psychology*
-
-* Morbée, S., Vermote, B., *Waterschoot, J.*, Dieleman, L., Soenens, B., Van den Bergh, O., Ryan, R. M., Vanhalst, J., De Muynck, G-J., & Vansteenkiste, M. (submitted). **Adherence to Covid-19 Measures: The Critical Role of Voluntary Motivation on a Short- and Long-Term Basis.** 
-
-* LeGate et al. (submitted) **A Global Experiment on Motivating Social Distancing during the COVID-19 Pandemic**
-
-* Wauters et al. (submitted) **COVID-19 as an additional challenge for parents of a child with a chronic disease** *the Journal of Pediatric Psychology*
-
-* Vermote et al. (submitted) **How do late adults experience meaning during the COVID-19 lockdown? The role of intrinsic goals**
-
-* Brenning et al. (submitted) **Maladaptive Emotion Regulation as a Vulnerability Factor during the COVID-19 Pandemic: A 10-Wave Longitudinal Study**
-
-### In progress  
-
-* Fysieke activiteit (Melanie Beeckman, **_in progress_**)
-
-* Associations between Men & Virus (Joachim, **_in progress_**)
-
-* Vaccin vignettenstudie (Sofie, **_in progress_**)
-
-* Speekselstudie (Marlies, **_in progress_**)
-
-* Conspiracy theories (Mathias, **_in progress_**)
-
-* Vaccin longitudinaal (Pascaline, **_in progress_**)
-
-* Fysiologische metingen Needs, Stress, ER (Joachim, Jessica, **_in progress_**)
-
-* Steekproefspecifieke studie: studenten  (Branko, **_in progress_**)
-
-* Kerstmiscenarios (Joachim, **_in progress_**)
-
-* Aelterman, Soenens, Vansteenkiste (**_in progress_**): **Effects of Teachers’ Style of Rule Setting on Students’ Psychological Needs and Behavioral Responses: An Experimental Vignette Study**
-
-### Planned
-
-* Experiments Motivational Self-Regulation: **“It’s up to you”: a multi-method approach towards the validation and the effectiveness of self-motivating strategies.**
-
-* Qualitative research of goals Dodentocht: **A Taxonomical Research on Goals to participate a 100 km walk**
-
-* Quantitative research of Dodentocht: **‘Walking a mile in one’s shoes’: the role of motivational profiles in the experience and performance of a 100 km walking tour**  
-
-* OBL project secondary school: **Towards a refined insight in the shifts in adolescents’ motivational profiles: A longitudinal study**
-
-* Experimental study of parents: **Parental effects of reward on children’s motivation compared to autonomy-support and psychological control.**
-
-* Rafael, Lennia, Bart, Maarten,.. Motivational profiles in dangerous sections in Peru
-
-* Lennia, Bart, Maarten, Rafael. Motivational profiles in business students
-
-* GEES dataset: vakgroep gezondheidspsychologie (paper 1)
-
-* GEES dataset: vakgroep gezondheidspsychologie (paper 2)
-
-* How pre-COVID19 rated personality shapes well-being
-
-* The relative stability and predictive validity of maladaptive identity aspects
-
-* Does the COVID-19 pandemic change our personality? An individual-level test of the scar model
-
-* Jongerenstudie (cross-sectioneel)
-
-* Vaccin vignettenstudie
-
-* Adolescentendata: longitudinaal (november 2020)
-
-* Steekproefspecifieke studie: studenten 
-
-* Steekproefspecifieke studie: telewerkers 
-
-* LifeCraft experiment
-
-* Difference risk perception and concerns Multilevel
-
-* Need-crafting: 10 wave studie
-
-* Moederdag data
-
-* Studentendata: Artevelde, Vivès, Odisee
-
-* Descriptieve evolutie van de motivatie doorheen de COVID-19 crisis in Vlaanderen
-
-* Descriptieve evolutie van de needs doorheen de COVID-19 crisis in Vlaanderen
-
-* De rol van overheidscommunicatie in de COVID-19 crisis in Vlaanderen
-
 <br>
 
 ## Public reports
 
 ### 2021
+
+* Motivation Barometer (14 July 2021). **Obliging health professionals to be vaccinated: a good idea? Ghent & Leuven, Belgium.** (Report No. 32). Ghent & Louvain, Belgium. 
+
+<aside>
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/Dutch/RAPPORT 32.pdf)  
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/French/RAPPORT 32_FR.pdf)  
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 32_ENG.pdf)  
+</aside>
 
 * Motivation Barometer (June 25, 2021). **Seduce, persuade and/or inform? How to deal with vaccine doubters?** (Report No. 31). Ghent & Louvain, Belgium. 
 
