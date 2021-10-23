@@ -1,8 +1,7 @@
 ---
 title: "About me"
 #subtitle: "De eerste resultaten"
-author: "Joachim Waterschoot - `r format(Sys.time(), '%d %B %Y')`"
-logo: "logo_ugent_dodentocht.png"
+author: "Joachim Waterschoot - `r format(Sys.time(), '%d %B %Y')`" 
 output:
   html_document:
     toc: yes
@@ -52,11 +51,6 @@ text-align: center;
 <div class = "col-md-8">
 </div>
 </div>
-
-
-
-# Welcome
-***
 
 
 # Education <i class="fa fa-graduation-cap" aria-hidden="true"></i>
