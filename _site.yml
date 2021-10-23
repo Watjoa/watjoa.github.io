@@ -1,44 +1,7 @@
-name: "Watjoa"
-title: "Watjoa"
-base_url: https://watjoa.github.io
-google_analytics: "G-RCC5WGPXW3"
-favicon: images/apple-icon.png
-theme: "theme.css"
-include: ["footer.html"]
+name: "Dodentochtstudie"
 output_dir: "docs"
-navbar:
-  search: true
-  logo:
-    image: logo_bar.png
-  right:
-    - text: Statistics and coding
-      menu:
-          - text: 'CaviR package'
-            href: https://watjoa.github.io/CaviR/
-          - text: 'General application'
-            href: https://watjoa.shinyapps.io/CaviR/
-          - text: 'Regression application'
-            href: https://watjoa.shinyapps.io/CaviRmodels/
-    - text: Research
-      menu:
-          - text: 'Motivationbarometer'
-            href: https://motivationbarometer.com
-          - text: 'De 100 km Dodentocht'
-            href: https://www.ugent.be/epg/nl/onderzoek/dodentocht-nl
-    - text: Curriculum
-      menu:
-          - text: 'Curriculum Vitae'
-            href: download/cv-master/cv.html
-          - text: 'Scientific curriculum'
-            href: Research.html
-    - icon: fab fa-twitter
-      href: https://twitter.com/watjoa
-    - icon: fab fa-researchgate
-      href: https://www.researchgate.net/profile/Joachim-Waterschoot
-    - icon: fas fa-graduation-cap
-      href: https://scholar.google.be/citations?user=F-fOgBoAAAAJ&hl=nl
-    - icon: fab fa-linkedin
-      href: https://www.linkedin.com/in/watjoa/
-    - icon: fab fa-github
-      href: https://github.com/watjoa
-output: distill::distill_article
+left:
+  - text: "Dodentochtstudie"
+    href: index.html
+output:
+  html_document
