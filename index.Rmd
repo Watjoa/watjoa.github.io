@@ -130,7 +130,7 @@ include_graphics('unnamed.jpg')
 </div>
 </div>
 
-# Scientific Curriculum   <i class="fa fa-clipboard" aria-hidden="true"></i>
+# Scientific Curriculum <i class="fa fa-clipboard" aria-hidden="true"></i>
 ***
 
 ## Publications
