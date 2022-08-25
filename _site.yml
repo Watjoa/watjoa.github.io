@@ -1,2 +1,16 @@
 name: "Watjoa"
+navbar:
+  title: "WatJoa"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "CV in short"
+      href: download/cv-master/cv.html
+  right:
+    - icon: fa-twitter
+      href: https://twitter.com/watjoa
+    - icon: fa-linkedin
+      href: https://github.com/watjoa/
+    - icon: fa-github
+      href: https://www.linkedin.com/in/watjoa/
 output_dir: "docs"
