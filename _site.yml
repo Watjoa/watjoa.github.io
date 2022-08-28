@@ -4,9 +4,13 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+    - text: "Motivationbarometer"
+      icon: fa-tachometer
+      href: motivationbarometer.html
+
+  right:
     - text: "CV in short"
       href: download/cv-master/cv.html
-  right:
     - icon: fa-twitter
       href: https://twitter.com/watjoa
     - icon: fa-linkedin

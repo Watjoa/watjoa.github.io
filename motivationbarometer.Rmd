@@ -1,0 +1,544 @@
+---
+title: "Motivationbarometer"
+author: "Latest update - `r format(Sys.time(), '%d %B %Y')`" 
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    theme: yeti
+---
+
+<style type="text/css">
+body{
+  font-size: 9pt;
+}
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
+div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding: 20px;}
+div.grey { background-color:#ebebeb; color: white; border-radius: 5px; padding: 20px;}
+
+</style>
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+
+<!-- setwd('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/watjoa.github.io') -->
+
+<script>
+   $(document).ready(function() {
+     $head = $('#header');
+     $head.prepend('<img src=\"Barometer_Final-zondertekst-transparant.png\" style=\"float: right;width: 200px;\"/>')
+   });
+</script>
+
+# Awards <i class="fa fa-trophy" aria-hidden="true"></i>
+***
+
+<div class = "blue">
+<div class = "row">
+<div class = "col-md-8">
+
+**October 21, 2021**
+
+
+The 'Royal Flemish Academy of Belgium' (KVAB) and the 'Young Academy' annually hand out the **'Distinctions for Scientific Communication'** to scientists with an exceptional merit in scientific communication. The Year Prizes are awarded to researchers who have devoted themselves intensively over the past two years to a concrete project in the field of science communication. 
+
+Text on the website: *Maarten Vansteenkiste, Joachim Waterschoot and Sofie Morbée are awarded the Annual Scientific Communication Prize for their communication on the motivation barometer in the context of the coronapandemic. The motivation barometer has gradually developed into an important policy instrument. There is also strong appreciation for the accompanying excellent website on which the findings are disseminated to a very wide audience through dozens of accessible reports, opinion pieces and media interventions, and which provides an insight into the scientific process.*
+
+[Watch... <i class="fa fa-youtube-play" aria-hidden="true"></i>](https://www.youtube.com/watch?v=Q_h7re70y_U&feature=emb_title)
+<br>
+[Read more...](https://kvab.be/nl/prijzen/jaarprijzen-wetenschapscommunicatie)
+
+</div>
+<div class = "col-md-4">
+<center>
+![ ](unnamed.png)
+</center>
+</div>
+
+</div>
+</div>
+
+
+<br> 
+<br> 
+
+
+# Public reports <i class="fa fa-file-text" aria-hidden="true"></i>
+***
+
+<center>
+*Overview of motivation across the COVID-19 pandemic in Belgium with published reports.*
+![](figures_reports-1.png)
+</center>
+
+## 2022
+
+<div class = "row">
+<div class = "col-md-10">
+40\. Motivation Barometer (1 February 2022). **The CST, vaccination obligation, 1G policy, or everything on the rocks?** (Report No. 40). Ghent, Leuven, Louvain, Bruxelles, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 40_ENG.pdf) 
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+39\. Motivation Barometer (19 January 2022). **Motivation, well-being and vaccination attitudes in Omikron times** (Report No. 39). Ghent, Leuven, Louvain, Bruxelles, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 39_ENG.pdf)
+</div>
+</div>
+
+## 2021
+
+<div class = "row">
+<div class = "col-md-10">
+38\. Motivation Barometer (21 December 2021). **Omicron, childhood vaccination and end-of-year celebrations: what do we think?** (Report No. 38). Ghent, Leuven, Louvain, Bruxelles, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 38_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+37\. Motivation Barometer (8 December 2021). **There is still support for the measures, but no longer for the corona policy** (Report No. 37). Ghent & Louvain, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 37_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+36\. Motivation Barometer (16 November 2021). **On the eve of stricter measures: Attitudes toward the new measures and the vaccine pass** (Report No. 36). Ghent & Louvain, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 36_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+35\. Motivation Barometer (12 November 2021). **How risk-aware and motivated is the population anymore and what is the role of the corona pass in this?** (Report No. 35). Ghent & Louvain, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 35_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+34\. Motivation Barometer (September 9, 2021). **Is there still motivational support for the measures in various regions?** (Report No. 34). Ghent & Louvain, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 34_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+33\. Motivation Barometer (August 17, 2021). **Update on vaccination, motivation and mental health during a transition phase.** (Report No. 33). Ghent & Louvain, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 33_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+32\. Motivation Barometer (July 14, 2021). **Obliging health professionals to be vaccinated: a good idea?** (Report No. 32). Ghent & Louvain, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 32_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+31\. Motivation Barometer (June 23, 2021). **Seduce, persuade and/or inform? How to deal with vaccine doubters?** (Report No. 31). Ghent & Louvain, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 31_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+30\. Motivation Barometer (May 10, 2021). **Update on vaccination, motivation, and mental health during a transitional phase** (Report No. 30). Ghent & Louvain, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 30_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+29\. Motivation Barometer (April 20, 2021). **Does the prospect of feedbacks motivate the population?** (Report No. 29). Ghent & Louvain, Belgium.www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 29_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+28\. Motivation Barometer (April 6, 2021). **Vaccination: preferences become clear!** (Report No. 28). Ghent & Louvain, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 28_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+27\. Motivation Barometer (April 1, 2021). **Saliva testing in schools: impact on mental health, motivation and behavior** (Report No. 27). Ghent & Louvain, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 27_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+26\. Motivation Barometer (March 24, 2021). **Is there motivational willingness for stricter measures?** (Report No. 26). Ghent & Louvain, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 26_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+25\. Motivation Barometer (March 2, 2021). **The corona numbers: motivation matters!** (Report No. 25). Ghent & Louvain, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 25_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+24\. Motivation Barometer (February 14, 2021). **How can we reinvigorate motivation?** (Report No. 24). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 24_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+23\. Motivation Barometer (February 11, 2021). **(Re)building trust: vaccination and the actors of the pandemic** (Report No. 23). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 23_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+22\. Motivation Barometer (February 5, 2021). **Movement as a source of well-being** (Report No. 22). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 22_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+21\. Motivation Barometer (January 29, 2021). **At our limits end and yet persevering** (Report No. 21). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 21_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+20\. Motivation Barometer (January 15, 2021). **What are the psychological conditions to vaccination?** (Report No. 20). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 20_ENG.pdf)
+</div>
+</div>
+
+## 2020
+
+<div class = "row">
+<div class = "col-md-10">
+19\. Motivation Barometer (December 23, 2020). **Christmas 2020** (Report No. 19). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 19_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+18\. Motivation Barometer (December 14, 2020). **Vaccination willingness and motivation** (Report No. 18). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 18_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+17\. Motivation Barometer (23 November 2020). **What makes for a happy Christmas in 2020?** (Report No. 17). Gent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 17_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+16\. Motivation Barometer (October 27, 2020). **Taking a closer look at some assumptions about behavior and motivation** (Report No. 16). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 16_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+15\. Motivation Barometer (October 14, 2020). **Even hard nuts can be cracked in a motivational way!** (Report No. 15). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 15_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+14\. Motivation Barometer (September 30, 2020). **What do citizens think of coronabadges and the -barometer? A closer look at some motivational tools** (Report No. 14). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 14_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+13\. Motivation Barometer (September 17, 2020). **What do people think are meaningful alternatives to the current bubble concept? The psychological effects of flex bubbles and a social carte blanche compared** (Report No. 13). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 13_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+12\. Motivation Barometer (August 19, 2020). **The population is no longer motivated. How can we create a motivational framework** (Report No. 12). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 12_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+11\. Motivation Barometer (July 16, 2020). **How to maintain high motivation for tracking during this summertime? The role of risk perception, fear, and obligation** (Report No. 11). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 11_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+10\. Motivation Barometer (July 1, 2020). **What makes for an invigorating and rewarding summer vacation in corona times?** (Report No. 10). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 10_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+9\. Motivation Barometer (May 19, 2020). **Discomforts of face masks: how we wear them with a smile by encouraging voluntary responsibility** (Report No. 9). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 9_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+8\. Motivation Barometer (May 14, 2020). **Student years are the time of your life! Even during corona?** (Report No. 8). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 8_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+7\. Motivation Barometer (May 12, 2020). **Does ‘bubbling’ on Mother’s Day boost our connectedness and motivation?** (Report No. 7). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 7_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+6\. Motivation Barometer (May 5, 2020). **Motivation rises slightly. Government continue the positive momentum of motivational communication!** (Report No. 6). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 6_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+5\. Motivation Barometer (April 26, 2020). **Fatigue during the collective marathon strikes. Evolutions in motivation, mental health and (de)motivating government communication** (Report No. 5). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 5_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+4\. Motivation Barometer (April 21, 2020). **Motivational willingness for the public marathon is dwindling: the leadership compass as a guide to motivational communication** (Report No. 4). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 4_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+3\. Motivation Barometer (April 14, 2020). **Psychological vitamins in times of corona fatigue** (Report No. 3). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 3_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+2\. Motivation Barometer (April 8, 2020). **Is our motivation to adhere to the measures flattening? The importance of clear and logical communication** (Report No. 2). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 2_ENG.pdf)
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-10">
+1\. Motivation Barometer (March 30, 2020). **How long will we hold on to these measures? Our motivation is strong at the moment!** (Report No. 1). Ghent, Belgium. www.motivationbarometer.com
+</div>
+<div class = "col-md-2">
+[NL <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[FR <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+[ENG <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/reports/English/RAPPORT 1_ENG.pdf)
+</div>
+</div>
+
+<br> 
+<br> 
+
+
+
+
