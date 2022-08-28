@@ -328,9 +328,12 @@ Research internship: The Role of Competence-related Attentional Bias and Resilie
 1\. De Muynck, G. J., Soenens, B., Waterschoot, J., Degraeuwe, L., Broek, G. V., & Vansteenkiste, M. (2019). **Towards a more refined insight in the critical motivating features of choice: An experimental study among recreational rope skippers.** *Psychology of Sport and Exercise, 45,*101561
 </div>
 <div class = "col-md-2">
-[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/studies/1-s2.0-S1469029218304990-main.pdf)
+[Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/barometer_material/1. Methodology.pdf)
 </div>
 </div>       
+
+[HOWLA <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/studies/1-s2.0-S1469029218304990-main.pdf)
+
 
 <br> 
 <br> 
