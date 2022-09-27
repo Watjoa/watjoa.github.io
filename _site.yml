@@ -4,9 +4,6 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Motivationbarometer"
-      icon: fa-tachometer
-      href: motivationbarometer.html
 
   right:
     - text: "CV in short"
