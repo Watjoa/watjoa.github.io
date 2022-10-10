@@ -4,6 +4,9 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+    - text: "Overview"
+      href: Vitae.html
+      icon: fa-graduation-cap
 
   right:
     - text: "CV in short"
