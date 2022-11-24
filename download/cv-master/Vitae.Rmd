@@ -1,0 +1,163 @@
+---
+name: Joachim
+surname: Waterschoot
+position: "PhD Candidate"
+address: "Faculty of Psychology and Educational Science, Ghent University"
+#phone: +1 22 3333 4444
+www: shilaan.rbind.io
+email: "joachim.waterschoot@ugent.be"
+twitter: Watjoa
+github: Watjoa
+#orcid: 'https://orcid.org/0000-0003-0845-9310' #refer to osf in back-end
+#linkedin: joachim.waterschoot@ugent.be #refer to email in back-end 
+profilepic: image.jpg
+headcolor: "035AA6"
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    page_total: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(fontawesome)
+#Note: this template uses fontawesome v4
+#https://fontawesome.com/v4/icons/
+```
+
+# Education
+
+**Faculty of Psychology and Educational Sciences, Ghent University** \hfill Expected 2023   
+PhD candidate in Motivational Psychology, Department of Developmental, Personality and Social Psychology
+
+**Faculty of Sciences, Ghent University** \hfill 2020   
+MSc in Statistical Data Analysis, Department of Applied Mathematics, Computer Science, and Statistics
+
+**Faculty of Psychology and Educational Sciences, Ghent University** \hfill 2017  
+MSc in Experimental and Theoretical Psychology
+
+# Research interests  
+
+Motivation; Basic Psychological Needs; Health; Well-being; Boredom; Risk perception;
+
+
+# Publications
+
+## Main journal articles
+
+1. **Alzahawi, S.** & Monin, B. (2022). There Is No Psychology Without Inferential Statistics. *Behavioral and Brain Sciences, 45*, E2. [**doi: 10.1017/S0140525X2100056X**](https://www.doi.org/10.1017/S0140525X2100056X)
+
+2. Vani, P., **Alzahawi, S.**, Dannals, J., & Halevy, N. (2022). Strategic Mindsets and Support for Social Change: Impact Mindset Explains Support for Black Lives Matter across Racial Groups. *Personality and Social Psychology Bulletin*. [**doi: 10.1177/01461672221099710**](https://www.doi.org/10.1177/01461672221099710)
+
+
+
+<!-- \newpage -->
+
+
+# Presentations
+
+## Talks (\* indicates presenter)
+
+**Alzahawi, S.\*** *A Beginner's Guide to Version Control: Using GitHub in R*.  [`r fa("globe", fill = "#035AA6")`](https://shilaan.rbind.io/talks/version-control/)
+
+- Stanford Center for Open and Reproducible Science (CORES) Spring Lecture Series \hfill 2022
+
+**Alzahawi, S.\***, & Monin, B. *Lay Perceptions of Scientific Findings: Swayed by the Crowd?* [`r fa("globe", fill = "#035AA6")`](https://shilaan.rbind.io/talks/crowd-science/)
+
+- Meta-Research Innovation Center at Stanford (METRICS) International Forum \hfill 2022
+- Toronto Workshop on Reproducibility  \hfill 2022
+- Psychological Science Accelerator Conference (PSACON) \hfill 2021
+- Rising Scholars Conference, Harvard Business School    \hfill 2021
+- International Efforts to Improve Psychological Science Symposium, Taiwan Psychological Association \hfill 2021
+
+Vani, P.\*, **Alzahawi, S.**, Dannals, J., & Halevy, N. *Strategic Mindsets and Support for Social Change: Impact Mindset Explains Support for Black Lives Matter across Racial Groups*.  
+
+- Annual Meeting of the Academy of Management (AOM), Seattle \hfill 2022
+- Society for Personality and Social Psychology, San Francisco \hfill 2022
+- International Association for Conflict Management \hfill 2021
+
+<!-- \newpage -->
+
+<!-- ## Talks (continued) -->
+
+Hartmann, H.\*, Liu, M.\*, Elsherif, M.\*, **Alzahawi, S.\***, Aldoh, A.\*, Azevedo, F.\*, & Leech, G. *Replications & Reversals in Social Sciences*.
+
+- Conference of the Association for Interdisciplinary Metaresearch and Open Science (aimos) \hfill 2021
+
+**Alzahawi, S.\*** *Writing Reproducible Manuscripts in R*. [`r fa("globe", fill = "#035AA6")`](https://shilaan.rbind.io/talks/reporting/)   
+
+- University of Amsterdam Lecture Series on Good Research Practices, The Netherlands  \hfill 2021 
+- Stanford Center for Open and Reproducible Science (CORES) Fall Lecture Series \hfill 2021
+- International Association for Conflict Management 2021  \hfill 2021
+- Stanford Data Science for Social Good Program (DSSG)  \hfill 2021
+- Stanford Center for Open and Reproducible Science (CORES) launch event  \hfill 2021
+
+Halevy, N.\*, **Alzahawi, S.**, & Dannals, J. (2019). *Strategic Thinking in Everyday Life: A Social-Cognitive Approach*.  
+
+- International Association for Conflict Management, Dublin, Ireland \hfill 2019
+- International Conference on Social Dilemmas, Sedona, AZ \hfill 2019
+
+## Chaired symposium
+
+**Alzahawi, S.**, Greer, L., & Neale, M.A. *The Future of Negotiations Research*.  
+
+- Academy of Management, Boston, MA. Selected as Showcase Symposium (top 10%) \hfill 2019
+
+<!-- # Presentations (continued) -->
+
+## Podcasts
+
+The Motivation Barometer: Risk perception. *Motivation Barometer* [`r fa("globe", fill = "#035AA6")`](https://anchor.fm/open-update/episodes/Interview-Meng-Liu-and-Shilaan-Alzahawi-FORRT-project-e1lcg7q) \hfill 2022  
+
+Multi-Country Replication Approaches in Psychology and Behavioral Sciences. *Junior Researcher Program* \hfill 2021
+
+# Teaching experience
+
+Head Teaching Assistant, Managing Groups and Teams, Stanford MBA \hfill Fall 2022  
+Negotiations, Stanford MBA, MSx \hfill Fall 2020, Winter 2020, Fall 2022  
+Head Organizer, Data Science for Social Good Program, Stanford Data Science \hfill Spring-Summer 2022   
+Managing Groups and Teams, Stanford MBA \hfill Fall 2019, Fall 2021  
+Technical Mentor, Data Science for Social Good Program, Stanford Data Science \hfill Spring-Summer 2021  
+Acting with Power, Stanford MBA \hfill Spring 2021  
+Data and Decisions, Stanford MBA \hfill Winter 2020  
+Guest Lecturer, Conflict Management and Negotiation, Stanford MBA \hfill Fall 2020  
+Innovating in the Behavior Change Market, INSEAD MBA \hfill Spring 2018  
+International Relations, Erasmus University College \hfill Summer 2015  
+Foundations of Law, Erasmus University College \hfill Spring 2015  
+Qualitative Research II: Content Analysis, Erasmus University College \hfill Spring 2015  
+Qualitative Research I: Interviews, Erasmus University College \hfill Winter 2014  
+Highlights of Sociology, Erasmus University College \hfill Winter 2014  
+Introduction to Psychology, Erasmus University College \hfill Fall 2014  
+
+# Fellowships, honors, awards
+
+Stanford Data Science Scholarship \hfill 2022-2024  
+
+# Professional memberships
+
+Academy of Management  
+Psychological Science Accelerator  
+Society for Judgment and Decision Making  
+Society for Personality and Social Psychology  
+Society for the Improvement of Psychological Science 
+
+\newpage
+
+# Academic service, volunteering, consulting
+
+Tutorial Reviewer, Advances in Methods and Practices in Psychological Science (AMPPS) \hfill 2022-present  
+
+# Languages
+
+Dutch, French, English
+R, R Markdown, SPSS, Shiny, Git/GitHub, \LaTeX, HTML, CSS, SAS, Mplus, Plone, Tscope
+
+# Previous research and teaching positions 
+
+INSEAD-Sorbonne Behavioral Lab, INSEAD Marketing Department \hfill 2017-2018  
+Harvard Psychology Department and Kennedy School of Government \hfill Summer 2017  
+Decision Processes Lab, Wharton School of Business \hfill Fall 2016  
+Erasmus School of Economics \hfill Summer 2013, 2015-2016  
+Social and Behavioral Sciences Department, Erasmus University College \hfill 2014-2015  
+

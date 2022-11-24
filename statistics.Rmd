@@ -1,0 +1,65 @@
+---
+title: "Statistics"
+author: "Latest update - `r format(Sys.time(), '%d %B %Y')`"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+    theme: journal
+    highlight: textmate
+  pdf_document:
+    toc: yes
+---
+
+<style type="text/css">
+body{
+  font-size: 10pt;
+}
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
+div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding: 20px;}
+div.grey { background-color:#ebebeb; color: white; border-radius: 5px; padding: 20px;}
+
+</style>
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+
+<div class = "blue">
+<div class = "row">
+<div class = "col-md-8">
+Online statistical application: https://watjoa.shinyapps.io/CaviR/
+
+Regression modelling: https://watjoa.shinyapps.io/CaviRmodels/
+
+</div>
+<div class = "col-md-4">
+
+<center>
+
+![ ](logo.png)
+
+
+</center>
+
+</div>
+</div>
+</div>

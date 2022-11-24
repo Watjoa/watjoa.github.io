@@ -1,13 +1,12 @@
 ---
-title: "About me"
+title: "Vitae"
 author: "Latest update - `r format(Sys.time(), '%d %B %Y')`"
 output:
   html_document:
     toc: yes
     toc_float: yes
     theme: yeti
-  pdf_document:
-    toc: yes
+    highlight: textmate
 ---
 
 <style type="text/css">
@@ -44,18 +43,6 @@ div.grey { background-color:#ebebeb; color: white; border-radius: 5px; padding: 
 
 <!-- setwd('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/watjoa.github.io') -->
 
-<script>
-   $(document).ready(function() {
-     $head = $('#header');
-     $head.prepend('<img src=\"160998782_10220757348058422_5853221715334650212_n.jpg\" style=\"float: right;width: 200px;\"/>')
-   });
-</script>
-
-<br>
-<br>
-<br>
-<br>
-<br>
 
 # Education <i class="fa fa-graduation-cap" aria-hidden="true"></i>
 ***
@@ -64,10 +51,13 @@ div.grey { background-color:#ebebeb; color: white; border-radius: 5px; padding: 
 <div class = "col-md-2">
 *2017 - current*
 </div>
-<div class = "col-md-10">
-**PhD researcher in Developmental and Motivational Psychology**, Ghent University Ghent, Belgium. 
-
-Thesis: The capacity of self-motivation: A multi-method investigation of the components, benefits and antecedents of motivational crafting (Supervisors: Prof. Maarten Vansteenkiste and Prof. Bart Soenens)   
+<div class = "col-md-7">
+**PhD researcher in Developmental and Motivational Psychology**  
+Thesis: The capacity of self-motivation: A multi-method investigation of the components, benefits and antecedents of motivational crafting.  
+Supervisors: Prof. Maarten Vansteenkiste and Prof. Bart Soenens
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium.
 </div>
 </div>
 
@@ -75,11 +65,13 @@ Thesis: The capacity of self-motivation: A multi-method investigation of the com
 <div class = "col-md-2">
 *2017 - 2020*
 </div>
-<div class = "col-md-10">
-**MSc in Statistical Data Analysis**, Ghent University Ghent, Belgium. 
-
-Thesis: “It is not the quantity of motivation that matters”: a statistical comparison between Cluster analysis and Latent profile analysis (Supervisors: Prof. Jan De Neve and Prof. Wim Beyers) [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Waterschoot_Joachim_MaStat.pdf)
- 
+<div class = "col-md-7">
+**MSc in Statistical Data Analysis**  
+Thesis: “It is not the quantity of motivation that matters”: a statistical comparison between Cluster analysis and Latent profile analysis  
+Supervisors: Prof. Jan De Neve and Prof. Wim Beyers [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Waterschoot_Joachim_MaStat.pdf)
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium.
 </div>
 </div>
 
@@ -87,68 +79,19 @@ Thesis: “It is not the quantity of motivation that matters”: a statistical c
 <div class = "col-md-2">
 *2012 - 2017*
 </div>
-<div class = "col-md-10">
-**MSc in Experimental and Theoretical Psychology**, Ghent University Ghent, Belgium. 
-
-Thesis: Effect of Experimentally Induced Choice on Motivation in Middle Childhood: The Moderating Role of Teacher and Student Characteristics (Supervisor: Prof. Bart Soenens)  [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Thesis_JoachimWaterschoot.pdf)
-
-Research internship: The Role of Competence-related Attentional Bias and Resilience in Restoring Thwarted Feelings of Competence at the Department of Developmental Psychology, Ghent University (Supervisor: Prof. Maarten Vansteenkiste) [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/EPO_JoachimWaterschoot_01201353.pdf)
+<div class = "col-md-7">
+**MSc in Experimental and Theoretical Psychology**  
+Thesis: Effect of Experimentally Induced Choice on Motivation in Middle Childhood: The Moderating Role of Teacher and Student Characteristics  
+Supervisor: Prof. Bart Soenens [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/Thesis_JoachimWaterschoot.pdf)  
+  
+Research internship: The Role of Competence-related Attentional Bias and Resilience in Restoring Thwarted Feelings of Competence at the Department of Developmental Psychology, Ghent University  
+Supervisor: Prof. Maarten Vansteenkiste [Download <i class="fa fa-file-pdf-o" aria-hidden="true"></i>](download/sciencs/masterproeven/EPO_JoachimWaterschoot_01201353.pdf)
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium.
 </div>
 </div>
 
-<br> 
-<br> 
-
-<!-- # Statistics and Coding <i class="fa fa-line-chart" aria-hidden="true"></i> -->
-<!-- *** -->
-<!-- <center> -->
-
-<!-- ![ ](logo.png) -->
-
-
-<!-- </center> -->
-
-<!-- Online statistical application: https://watjoa.shinyapps.io/CaviR/  -->
-
-<!-- Regression modelling: https://watjoa.shinyapps.io/CaviRmodels/  -->
-
-<!-- </div> -->
-<!-- </div> -->
-<!-- <div class = "col-md-4"> -->
-<!-- <div class = "blue"> -->
-<!-- ## Award <i class="fa fa-trophy" aria-hidden="true"></i> -->
-<!-- <center> -->
-<!-- ![ ](unnamed.png) -->
-<!-- </center> -->
-
-<!-- <br>  -->
-
-<!-- **October 21, 2021** -->
-
-
-<!-- The 'Royal Flemish Academy of Belgium' (KVAB) and the 'Young Academy' annually hand out the **'Distinctions for Scientific Communication'** to scientists with an exceptional merit in scientific communication. The Year Prizes are awarded to researchers who have devoted themselves intensively over the past two years to a concrete project in the field of science communication.  -->
-
-<!-- [Watch...](https://www.youtube.com/watch?v=Q_h7re70y_U&feature=emb_title) -->
-<!-- <br> -->
-<!-- [Read more...](https://kvab.be/nl/prijzen/jaarprijzen-wetenschapscommunicatie) -->
-
-<!-- </div> -->
-<!-- </div> -->
-<!-- <div class = "col-md-4"> -->
-<!-- <div class = "blue"> -->
-
-<!-- ## Motivation barometer <i class="fa fa-tachometer" aria-hidden="true"></i> -->
-<!-- <center> -->
-<!-- ![ ](Barometer_Final-zondertekst-transparant.png) -->
-<!-- </center> -->
-
-<!-- <br>  -->
-
-<!-- [Read more...](https://motivationbarometer.com/en/) -->
-
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
 
 <br> 
 <br> 
@@ -156,18 +99,27 @@ Research internship: The Role of Competence-related Attentional Bias and Resilie
 # Scientific Curriculum <i class="fa fa-clipboard" aria-hidden="true"></i>
 ***
 
-## Chapters
 
-<div class = "row">
-<div class = "col-md-10">
-Vansteenkiste, M., Soenens, B., & Waterschoot, J. (2018). **Catalyzing Intrinsic and Internalized Motivation: The Role of Basic Psychological Needs and Their Support.** In O'Donnell, A. et al. (Eds.), The Oxford Handbook of Educational Psychology. Oxford University Press. https://doi.org/10.1093/oxfordhb/9780199841332.013.41</div>
-<div class = "col-md-2">
-[Download not available]
-</div>
-</div>
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(DT)
+```
 
-<br>
- 
+```{r data}
+set.seed(42)
+df <- readxl::read_excel('/Users/joachimwaterschoot/Downloads/test.xlsx')
+df$ref <- as.character(df$ref)
+df$journal <- as.character(df$journal)
+df$end <- as.character(df$end)
+df[is.na(df)] <- ""
+df$reference <- paste(df$ref,df$journal,df$end,sep=" ")
+
+df <- df[,c('lijst','reference','keyword','keyword2')]
+
+```
+
+
 ## Publications
 
 ### 2022
@@ -360,6 +312,18 @@ Vansteenkiste, M., Soenens, B., & Waterschoot, J. (2018). **Catalyzing Intrinsic
 
 <br> 
 
+## Chapters
+
+<div class = "row">
+<div class = "col-md-10">
+Vansteenkiste, M., Soenens, B., & Waterschoot, J. (2018). **Catalyzing Intrinsic and Internalized Motivation: The Role of Basic Psychological Needs and Their Support.** In O'Donnell, A. et al. (Eds.), The Oxford Handbook of Educational Psychology. Oxford University Press. https://doi.org/10.1093/oxfordhb/9780199841332.013.41</div>
+<div class = "col-md-2">
+[Download not available]
+</div>
+</div>
+
+<br>
+ 
 ## Public reports 
 
 <center>
@@ -935,13 +899,193 @@ Poster presented at the ISSBD Conference (International Society for the Study of
 # Teaching <i class="fa fa-users" aria-hidden="true"></i>
 ***
 
+## Experience
+
+<div class = "row">
+<div class = "col-md-2">
+*2020 - current*
+</div>
+<div class = "col-md-7">
+**Motivation Psychology**: Lecture on Interest Theory   
+Educational Master 
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium.
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+*2017 - current*
+</div>
+<div class = "col-md-7">
+**Academic Skills**: Supervision, teaching and evaluation of the courses  
+2nd Bachelor, Psychology 
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium.
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+*2017 - current*
+</div>
+<div class = "col-md-7">
+**Psychology of the Lifespan**: assigments evaluation of the course  
+3d Bachelor, Psychology 
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium.
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+*2019 - current*
+</div>
+<div class = "col-md-7">
+**Developmental Psychology**: supervision, organizing, teaching and evaluating of practical sessions and examination of the course.  
+1st Bachelor, Psychology and 2nd Bachelor, Educational Sciences 
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium.
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+*2017 - 2018*
+</div>
+<div class = "col-md-7">
+**Recent Theories on Developmental Psychology**: supervision, organizing, teaching and evaluating of practical sessions and examination of the course.  
+2nd Bachelor, Psychology
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University Ghent, Belgium.
+</div>
+</div>
+
+## Lectures  
+
+<div class = "row">
+<div class = "col-md-2">
+*07/06/2022*
+</div>
+<div class = "col-md-7">
+Presentation on Methods, Motivation Barometer, Interdisciplinary Symposium
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> KVAB, Brussels, Belgium
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+*7-9/12/2021*
+</div>
+<div class = "col-md-7">
+'De Belgische bevolking als leerling in de klas: de uitdagingen voor de overheid als leerkracht tijdens COVID-19', studiedag.
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Arteveldehogeschool, Ghent, Belgium
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+*09/02/2021*
+</div>
+<div class = "col-md-7">
+gastcollege 'de motivatiebarometer', studiedag.
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> VIVES hogeschool, Kortrijk, Belgium
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+*10/12/2020*
+</div>
+<div class = "col-md-7">
+'De Belgische bevolking als leerling in de klas: de uitdagingen voor de overheid als leerkracht tijdens COVID-19', studiedag.
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Arteveldehogeschool, Kortrijk, Belgium
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+*05/03/2020*
+</div>
+<div class = "col-md-7">
+'Wanneer de mentale brandstof de motor doet wandelen: presentatie Dodentochtstudie', open publiek.
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University, Ghent, Belgium. 
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+*11/02/2020*
+</div>
+<div class = "col-md-7">
+'Wanneer de mentale brandstof de motor doet wandelen: presentatie Dodentochtstudie op de werkvloer', HR groep.
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Kortrijk, Belgium. 
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+*15/10/2019*
+</div>
+<div class = "col-md-7">
+Lecture on 'An integrative overview of motivation'.
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> The Hult International Business School, London, UK. 
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+*20/03/2018*
+</div>
+<div class = "col-md-7">
+'Motivation from a Self-Determination theory perspective', students, teachers and parents.
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Da Vinci Campus, Ronse, Belgium. 
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-md-2">
+*12/03/2015*
+</div>
+<div class = "col-md-7">
+'A Choice Experiment among elementary school children', students Occupational Science.
+</div>
+<div class = "col-md-3">
+<i class="fa fa-map-marker" aria-hidden="true"></i> Artevelde School, Ghent, Belgium. 
+</div>
+</div>
+
+<br> 
+<br> 
+
 ## Master theses supervision
 
 ### Current
 
 <div class = "row">
 <div class = "col-md-10">
-25\. ?? (current). **Hoe is de motivatie en het psychologisch welzijn bij studenten geëvolueerd tussen 2020 (pre-corona) en 2022 (post-corona)?** *Niet-gepubliceerde Master Thesis, Universiteit Gent. (Promotor: M. Vansteenkiste)*
+25\. Marie Vankeirsbilck (current). **Hoe is de motivatie en het psychologisch welzijn bij studenten geëvolueerd tussen 2020 (pre-corona) en 2022 (post-corona)?** *Niet-gepubliceerde Master Thesis, Universiteit Gent. (Promotor: M. Vansteenkiste)*
 </div>
 <div class = "col-md-2">
 [In progress]
@@ -950,7 +1094,7 @@ Poster presented at the ISSBD Conference (International Society for the Study of
 
 <div class = "row">
 <div class = "col-md-10">
-24\. ?? (current). **“Hoe kan ik mezelf motiveren?” De ontwikkeling van een interventie in een studentenpopulatie.** *Niet-gepubliceerde Master Thesis, Universiteit Gent. (Promotor: M. Vansteenkiste)*
+24\. Dimitri Sevens (current). **“Hoe kan ik mezelf motiveren?” De ontwikkeling van een interventie in een studentenpopulatie.** *Niet-gepubliceerde Master Thesis, Universiteit Gent. (Promotor: M. Vansteenkiste)*
 </div>
 <div class = "col-md-2">
 [In progress]
@@ -1175,143 +1319,7 @@ Poster presented at the ISSBD Conference (International Society for the Study of
 <br> 
 <br> 
 
-## Lectures  
 
-<div class = "row">
-<div class = "col-md-2">
-*07/06/2022*
-</div>
-<div class = "col-md-7">
-Presentation on Methods, Motivation Barometer, Interdisciplinary Symposium
-</div>
-<div class = "col-md-3">
-<i class="fa fa-map-marker" aria-hidden="true"></i> KVAB, Brussels, Belgium
-</div>
-</div>
-
-
-<div class = "row">
-<div class = "col-md-2">
-*13/12/2021*
-</div>
-<div class = "col-md-7">
-Lecture on Interest Theory, Motivation Psychology
-</div>
-<div class = "col-md-3">
-<i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University, Ghent, Belgium
-</div>
-</div>
-
-<div class = "row">
-<div class = "col-md-2">
-*7-9/12/2021*
-</div>
-<div class = "col-md-7">
-'De Belgische bevolking als leerling in de klas: de uitdagingen voor de overheid als leerkracht tijdens COVID-19', studiedag.
-</div>
-<div class = "col-md-3">
-<i class="fa fa-map-marker" aria-hidden="true"></i> Arteveldehogeschool, Ghent, Belgium
-</div>
-</div>
-
-<div class = "row">
-<div class = "col-md-2">
-*03/05/2021*
-</div>
-<div class = "col-md-7">
-Lecture on Interest Theory, Motivation Psychology
-</div>
-<div class = "col-md-3">
-<i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University, Ghent, Belgium
-</div>
-</div>
-
-<div class = "row">
-<div class = "col-md-2">
-*09/02/2021*
-</div>
-<div class = "col-md-7">
-gastcollege 'de motivatiebarometer', studiedag.
-</div>
-<div class = "col-md-3">
-<i class="fa fa-map-marker" aria-hidden="true"></i> VIVES hogeschool, Kortrijk, Belgium
-</div>
-</div>
-
-<div class = "row">
-<div class = "col-md-2">
-*10/12/2020*
-</div>
-<div class = "col-md-7">
-'De Belgische bevolking als leerling in de klas: de uitdagingen voor de overheid als leerkracht tijdens COVID-19', studiedag.
-</div>
-<div class = "col-md-3">
-<i class="fa fa-map-marker" aria-hidden="true"></i> Arteveldehogeschool, Kortrijk, Belgium
-</div>
-</div>
-
-<div class = "row">
-<div class = "col-md-2">
-*05/03/2020*
-</div>
-<div class = "col-md-7">
-'Wanneer de mentale brandstof de motor doet wandelen: presentatie Dodentochtstudie', open publiek.
-</div>
-<div class = "col-md-3">
-<i class="fa fa-map-marker" aria-hidden="true"></i> Ghent University, Ghent, Belgium. 
-</div>
-</div>
-
-<div class = "row">
-<div class = "col-md-2">
-*11/02/2020*
-</div>
-<div class = "col-md-7">
-'Wanneer de mentale brandstof de motor doet wandelen: presentatie Dodentochtstudie op de werkvloer', HR groep.
-</div>
-<div class = "col-md-3">
-<i class="fa fa-map-marker" aria-hidden="true"></i> Kortrijk, Belgium. 
-</div>
-</div>
-
-<div class = "row">
-<div class = "col-md-2">
-*15/10/2019*
-</div>
-<div class = "col-md-7">
-Lecture on 'An integrative overview of motivation'.
-</div>
-<div class = "col-md-3">
-<i class="fa fa-map-marker" aria-hidden="true"></i> The Hult International Business School, London, UK. 
-</div>
-</div>
-
-<div class = "row">
-<div class = "col-md-2">
-*20/03/2018*
-</div>
-<div class = "col-md-7">
-'Motivation from a Self-Determination theory perspective', students, teachers and parents.
-</div>
-<div class = "col-md-3">
-<i class="fa fa-map-marker" aria-hidden="true"></i> Da Vinci Campus, Ronse, Belgium. 
-</div>
-</div>
-
-<div class = "row">
-<div class = "col-md-2">
-*12/03/2015*
-</div>
-<div class = "col-md-7">
-'A Choice Experiment among elementary school children', students Occupational Science.
-</div>
-<div class = "col-md-3">
-<i class="fa fa-map-marker" aria-hidden="true"></i> Artevelde School, Ghent, Belgium. 
-</div>
-</div>
-
-<br> 
-<br> 
 
 # Media <i class="fa fa-newspaper-o" aria-hidden="true"></i>
 ***

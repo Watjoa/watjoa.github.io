@@ -1,16 +1,16 @@
-name: "Watjoa"
+name: "Joachim Waterschoot"
 navbar:
-  title: "WatJoa"
+  title: "Joachim Waterschoot"
   left:
-    - text: "Home"
+    - text: "PhD"
       href: index.html
-    - text: "Overview"
-      href: Vitae.html
-      icon: fa-graduation-cap
-
+    # - text: "Vitae"
+    #   href: Vitae.html
+    #   icon: fa-graduation-cap
+    # - text: "CV"
+    #   icon: fa fa-download
+    #   href: download/cv-master/Vitae.pdf
   right:
-    - text: "CV in short"
-      href: download/cv-master/cv.html
     - icon: fa-twitter
       href: https://twitter.com/watjoa
     - icon: fa-linkedin
