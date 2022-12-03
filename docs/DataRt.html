@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Joachim Waterschoot" />
+
+
+<title>Data Rt</title>
+
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Joachim Waterschoot</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">PhD</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Data Rt
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="DataRt.html">
+        <span class="fa fa-code"></span>
+         
+        Online
+      </a>
+    </li>
+    <li>
+      <a href="https://watjoa.github.io/DataRt.pdf">
+        <span class="fa fa-download"></span>
+         
+        PDF
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://twitter.com/watjoa">
+    <span class="fa fa-twitter"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/watjoa/">
+    <span class="fa fa-linkedin"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/watjoa/">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Data Rt</h1>
+<h3 class="subtitle">Syntax, tips and tricks to work in R</h3>
+<h4 class="author">Joachim Waterschoot<a href="#fn1"
+class="footnote-ref" id="fnref1"><sup>1</sup></a></h4>
+<h4 class="date">Latest update - 03 December 2022</h4>
+
+</div>
+
+
+<style type="text/css">
+body{
+  font-size: 10pt;
+}
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
+div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding: 20px;}
+div.grey { background-color:#ebebeb; color: white; border-radius: 5px; padding: 20px;}
+
+</style>
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+<!-- # IntRo -->
+<!-- <div class = "row"> -->
+<!-- <div class = "col-md-4"> -->
+<!-- <div class = "blue"> -->
+<!-- ![ ](logo.png) -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- **Invited research visit** <br> -->
+<!-- Online statistical application: https://watjoa.shinyapps.io/CaviR/ <br>  -->
+<!-- Regression modelling: https://watjoa.shinyapps.io/CaviRmodels/ -->
+<!-- <i class="fa fa-map-marker" aria-hidden="true"></i> NTNY, Trondheim, Norway <br> -->
+<!-- <i class="fa fa-users" aria-hidden="true"></i> Jolene... -->
+<!-- <br> -->
+<!-- ddd -->
+<!-- <br> -->
+<!-- [Link to research group](https://kvab.be/nl/prijzen/jaarprijzen-wetenschapscommunicatie) -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<div style="page-break-after: always;"></div>
+<div id="get-r-and-your-data-ready" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Get R and youR data
+Ready</h1>
+<div id="get-ready" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Get ready</h2>
+<p>To work with R, you need packages, including useful functions. By
+<strong>installing</strong> these packages on your computer, you can
+make use of these functions. Indeed, they are already written out for
+you and you install the package so you can make use of them.</p>
+<p>At each start of a new R session (e.g., after shutting down your
+computer), you have to load the packages you want to use. Instead of
+using <code>library(X)</code> for each package, you can make a list so
+they can be loaded all at once.</p>
+<p>Following packages are required for (1), (2) and (3):</p>
+<pre class="r"><code># my list of packages
+x&lt;-c(&#39;readxl&#39;,&#39;haven&#39;,&#39;psych&#39;,&#39;sjPlot&#39;,&#39;writexl&#39;,&#39;foreign&#39;)
+
+# do this only once
+install.packages(x) 
+
+# do this at the start of each session
+lapply(x, require, character.only = TRUE) 
+
+# use this for only one package
+library(PACKAGE_NAME)</code></pre>
+<p>Also important is that R knowns in which folder you want to work. By
+following code, you set your work directory in which R can find the
+required datasets and also can save the files you want to save.</p>
+<pre class="r"><code>setwd(&quot;/Users/joachimwaterschoot/Downloads/Analyses&quot;)</code></pre>
+</div>
+<div id="welcome-data" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Welcome, data!</h2>
+<p>Datasets can be loaded in every format. Beware, these functions also
+include more options (e.g., a specific tab in an excel file). More
+information can be found on the page of the packages (search for the
+function in Google)</p>
+<pre class="r"><code>df &lt;- readRDS(&#39;FILE.rds&#39;)
+df &lt;- read_xlsx(&#39;FILE.xlsx&#39;)
+df &lt;- read.spss(&quot;FILE.sav&quot;,
+                use.value.labels = FALSE,
+                to.data.frame=TRUE)</code></pre>
+<p>After data is loaded, you can check whether it occurred correctly. Do
+this by checking the column names and the dimension (number of rows X
+number of columns).</p>
+<pre class="r"><code>names(df)
+dim(df)
+head(df,10)
+View(df)
+View(head(dffull,10)) # check first 10 rows</code></pre>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div id="work-with-the-dataset" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> WoRk with the
+dataset</h1>
+<div id="preparatory-work" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Preparatory work</h2>
+<p>To reverse a numeric value or to change specific values to another
+value in a column, you can use the recode function:</p>
+<pre class="r"><code>library(dplyr)
+df$item_r &lt;- as.factor(recode(df$item, &#39;1&#39;=&#39;5&#39;, &#39;2&#39;=&#39;4&#39;,&#39;3&#39;=&#39;3&#39;,&#39;4&#39;=&#39;2&#39;,&#39;5&#39;=&#39;1&#39;))</code></pre>
+<p>When it is only a numeric columns, a trick to be used is to subtract
+that column from the highest value + 1.<br />
+Here, a 1-5 scale is reversed by subtracting it from 6. By doing this, 5
+becomes 1, 4 becomes 2, etc.</p>
+<pre class="r"><code>df$item_r &lt;- 6-as.numeric(df$item)</code></pre>
+<p>When you want to add information to a dataset (e.g., df), based on
+another dataset (e.g., df_other), you can use the <code>match()</code>
+function to first match values of the same variable in the same datasets
+(e.g., participation number).</p>
+<pre class="r"><code>df$VARIABLE1 &lt;- df_other$VARIABLE2[match(df$ID,df_other$df)]</code></pre>
+<p>Rename only one column</p>
+<pre class="r"><code>names(df)[names(df) == &#39;old.var.name&#39;] &lt;- &#39;new.var.name&#39;</code></pre>
+</div>
+<div id="putting-variables-in-the-right-format" class="section level2"
+number="2.2">
+<h2><span class="header-section-number">2.2</span> Putting variables in
+the right format</h2>
+<p>Importantly, you want to have variables in the right format. This is
+important before starting analyses.</p>
+<pre class="r"><code># formatting into numeric variable
+df$VARIABLE1 &lt;- as.numeric(df$VARIABLE1)
+
+# formatting into a categorical variable
+df$VARIABLE2 &lt;- as.factor(df$VARIABLE2)
+# check the levels
+levels(df$VARIABLE2)
+# provide different labels to the levels
+levels(df$VARIABLE2) &lt;- c(&#39;LEVEL1&#39;,&#39;LEVEL2&#39;)</code></pre>
+</div>
+<div id="make-variables" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Make variables</h2>
+<p>In the <code>keys.list</code>, you make an overview of which items
+belong to which variable. Do this for only those containing at least 2
+items or more.</p>
+<pre class="r"><code>keys.list &lt;- list(
+  VARIABLE1 = c(&quot;ITEM1&quot;,&quot;ITEM2&quot;),
+  VARIABLE2 = c(&quot;ITEM1&quot;,&quot;ITEM2&quot;)
+)</code></pre>
+<p>This list will be used in the following code to calculate your
+variables and to add them in the described order to the dataset. You
+only have to run this.</p>
+<p><strong>! Beware:</strong> <code>df</code> refers to the name of your
+dataset</p>
+<pre class="r"><code>columns &lt;- unlist(keys.list, use.names=FALSE) 
+scaleitems &lt;- df[,columns] 
+scaleitems &lt;- sapply(scaleitems, as.numeric) 
+df &lt;- df[, ! names(df) %in% columns, drop = F]
+
+keys &lt;- make.keys(scaleitems,keys.list)
+scores &lt;- psych::scoreFast(keys, scaleitems, impute=&quot;none&quot;)
+
+means &lt;- as.data.frame(scores)
+colnames(means) &lt;- sub(&quot;-A.*&quot;, &quot;&quot;, colnames(means))
+
+df &lt;- cbind(df, scaleitems,means)</code></pre>
+<p>The <code>sjt.itemanalysis</code> function provide a nice overview of
+the internal consistencies of your variables.</p>
+<div class="blue">
+<ul>
+<li>overview of items<br />
+</li>
+<li>percentage of missing values<br />
+</li>
+<li>standard deviation<br />
+</li>
+<li>skewness: the higher, the skewer</li>
+<li>item difficulty: should range between .20 and .80. Ideal value is
+<code>p+(1-p)/2</code> (mostly between .50 and .80)</li>
+<li>item discrimination: acceptable cut-off of .20. The closer to 1, the
+better.</li>
+<li>Cronbach’s Alpha if item was removed from scale<br />
+</li>
+<li>mean (or average) inter-item correlation: acceptable between .20 and
+.40</li>
+<li>Cronbach’s Alpha: acceptable cut-off of .70</li>
+</ul>
+</div>
+<pre class="r"><code>sjt.itemanalysis(df[,c(keys.list$VARIABLE1)])
+sjt.itemanalysis(df[,c(keys.list$VARIABLE2)])</code></pre>
+</div>
+</div>
+<div id="save-a-dataset" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Save a dataset</h1>
+<pre class="r"><code>saveRDS(df,&#39;NAME.rds&#39;) # R format
+write_csv(df,&#39;NAME.csv&#39;) # csv format
+write_xlsx(df,&#39;NAME.xlsx&#39;) # excel format
+write_sav(df,&#39;NAME.sav&#39;) # SPSS format</code></pre>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="power" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Power</h1>
+<p>A very nice online tool to use is <a
+href="https://webpower.psychstat.org/wiki/models/index"
+class="uri">https://webpower.psychstat.org/wiki/models/index</a></p>
+</div>
+<div id="correlations-num-x-num" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Correlations (num x
+num)</h1>
+<div id="cross-sectional" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Cross-sectional</h2>
+<p>The following packages are required:</p>
+<pre class="r"><code>library(devtools)
+# install_github(&#39;watjoa/CaviR&#39;) # in case you have not installed the package yet
+library(CaviR)
+library(qgraph)</code></pre>
+<p>As no packages were available providing a clean output of a
+correlation table, including descriptive statistics, I function was
+constructed in the <code>CaviR</code> package. By using this, a clean
+table will appear which can be copied wright away in excel, word,
+etc.</p>
+<pre class="r"><code># make a subset of the dataframe &#39;cordf&#39; including the preferred variables
+cordf &lt;- df[,c(&#39;VARIABLE1&#39;,&#39;VARIABLE2&#39;)]
+# run the correlation table
+coRtable(cordf)</code></pre>
+<p>Make a useful netwerk plot based on the variables in the correlation
+table.</p>
+<pre class="r"><code>corMat &lt;- cor(cordf, use = &quot;pairwise.complete.obs&quot;) # Correlate data
+Graph_lasso &lt;- qgraph(corMat, graph = &quot;glasso&quot;,
+                      layout = &quot;spring&quot;, tuning = 0.25,
+                      labels = colnames(corMat),
+                      sampleSize = nrow(cordf))</code></pre>
+</div>
+<div id="multilevel" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Multilevel</h2>
+<p>The same <code>CaviR</code> package can be used for multilevel
+correlations (up until <strong>2 levels</strong>). The upper diagonal
+will present the correlations within levels of the grouping variable.
+The lower diagonal will do this across groups.</p>
+<pre class="r"><code>dataset &lt;- df[,c(&#39;VARIABLE1&#39;,&#39;VARIABLE2&#39;, &#39;NummerP&#39;)]
+group &lt;- &#39;NummerP&#39;
+
+multicoR(dataset, group=group)</code></pre>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div id="frequencies-cat-x-cat" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Frequencies (cat x
+cat)</h1>
+<p>Following packages are required:</p>
+<pre class="r"><code>x&lt;-c(&#39;sjPlot&#39;)
+lapply(x, require, character.only = TRUE)</code></pre>
+<p>When you want to check whether, for instance, more male are present
+in a specific group, you can get a clean contingency table with a
+chi-square test by following code. Of course, you can work with all the
+different options as you wish:</p>
+<pre class="r"><code>tab_xtab(df$VAR1,df$VAR2,
+         show.cell.prc = FALSE,
+         show.row.prc = TRUE,
+         show.col.prc = FALSE,
+         show.legend = TRUE,
+         show.na = FALSE,
+         show.summary=TRUE)</code></pre>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="manova-num-x-cat" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> MANOVA (num x cat)</h1>
+<p>Following packages are required:</p>
+<pre class="r"><code>x&lt;-c(&#39;stats&#39;,&#39;effectsize&#39;,&#39;emmeans&#39;,&#39;psych&#39;,&#39;multcomp&#39;)
+lapply(x, require, character.only = TRUE)</code></pre>
+<p>You need to list all outcomes you want to have involved in your
+MANOVA <code>(OUTCOME1, OUTCOME2)</code>, together with the group
+variables <code>(VAR1)</code>. Also, covariates can be added by doing
+<code>VAR1 + COVAR1</code>. Here, we specified to have the Wilk’s Lambda
+value in our MANOVA. This can be changed (see specific options of the
+function online). The <code>eta_squared()</code> function provides
+effect sizes.</p>
+<pre class="r"><code>root.manova &lt;- manova(cbind(OUTCOME1,OUTCOME2) ~ VAR1, data = df)
+summary(root.manova,test=&quot;Wilks&quot;)
+summary.aov(root.manova)
+eta_squared(root.manova)</code></pre>
+<p>When having significant effects, you probably want to check the
+descriptive differences. The <code>describeBy</code> function can do
+this for multiple variables <code>OUTCOME1 + OUTCOME2</code> and even
+multiple grouping variables <code>VAR1 + VAR2</code>. The function
+contains more options (see online information).</p>
+<pre class="r"><code>describeBy(OUTCOME1 + OUTCOME2 ~ VAR1 + VAR2,
+           mat=TRUE,type=3,digits=2,
+           data = df)</code></pre>
+<p>When having more than 2 levels in your grouping variable, you
+probably want to perform multiple comparison post-hoc analyses to check
+how all levels differ from each other in terms of significance. The
+<code>emmeans</code> function is really useful and also provides the
+comparison based on letters.</p>
+<pre class="r"><code>cld(emmeans(lm(OUTCOME1~VAR1,data=df), 
+            list(pairwise ~ VAR1), adjust = &quot;tukey&quot;), 
+    alpha=0.05,Letters=letters,adjust=&quot;tukey&quot;)</code></pre>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="regression-modelling" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Regression
+modelling</h1>
+<p>Following packages are required:</p>
+<pre class="r"><code>x&lt;-c(&#39;sjPlot&#39;,&#39;lme4&#39;,&#39;lmerTest&#39;,&#39;performance&#39;,&#39;effectsize&#39;,
+     # for visualizations
+     &#39;reghelper&#39;,&#39;interactions&#39;,&#39;ggeffects&#39;,&#39;ggplot2&#39;)
+lapply(x, require, character.only = TRUE)</code></pre>
+<p>Before building our model, we need to make sure that all our input is
+ok.<br />
+For instance, we want to have dummy or effect codings instead of factor
+variables. Here, we work with the example of a factor with 3 levels,
+resulting in 2 dummy codings:</p>
+<pre class="r"><code>df$dummy1 &lt;- as.factor(df$VAR1)
+levels(df$dummy1) &lt;- c(0,1,0)
+df$dummy1 &lt;- as.numeric(df$dummy1)
+
+df$dummy2 &lt;- as.factor(df$VAR1)
+levels(df$dummy2) &lt;- c(0,0,1)
+df$dummy2 &lt;- as.numeric(df$dummy2)</code></pre>
+<p>or you want to use effect codings.</p>
+<p>To my opinion, this is the most useful one to do as things are
+centered in our interpretation. When using dummy, you need to interpret
+the main effect of a particular variable ‘when all other coefficients
+are kept stable’. In the case of a dummy coding, this means that this
+refers to the main effect in presence of the reference value of the
+dummy coding. When doing effect coding, this is not the case and you
+have a more clear interpretation of the main effect.</p>
+<pre class="r"><code>df$dummy1 &lt;- ifelse(df$VAR1 == &quot;group2&quot;, 1, 0)
+df$dummy2 &lt;- ifelse(df$VAR1 == &quot;group3&quot;, 1, 0)
+df$dummy3 &lt;- ifelse(df$VAR1 == &quot;group4&quot;, 1, 0)</code></pre>
+<p>Also important is to center numeric variables. When centering, you
+keep the standard deviation. When standardizing, this is forced to 1.
+This is a choice, but I, personally, like it when the initial variance
+is kept in terms of interpretating the results.</p>
+<pre class="r"><code>df$VAR1.c &lt;- as.numeric(scale(df$VAR1,scale=FALSE,center=TRUE))</code></pre>
+<p>Time to build your model (e.g., 4 main effects and 1 two-way
+interaction):</p>
+<pre class="r"><code>model &lt;- lm(OUTCOME~ VAR1.c + VAR2.c + VAR3.c*VAR4.c, data=df)</code></pre>
+<p>Check the output of the model:</p>
+<pre class="r"><code>summary(model)</code></pre>
+<p>Check standardized coefficients for the sake of interpretation and
+reporting:</p>
+<pre class="r"><code>standardize_parameters(model, method = &quot;basic&quot;)</code></pre>
+<p>Check effect sizes, which always should be done next to
+<em>p</em>-values:</p>
+<pre class="r"><code>eta_squared(model)</code></pre>
+<p>There are also function to have a clear html output of your
+model:</p>
+<pre class="r"><code>tab_model(model)</code></pre>
+<p>Important is to check to what your model does satisfy all models. A
+nice way to do this is using the <code>check_model</code> function,
+however this might take a while (especially in more complex models). You
+can check all diagnostics separately (which may be faster):</p>
+<div class="blue">
+<p><strong>Model assumptions: </strong></p>
+<ol style="list-style-type: decimal">
+<li><strong>Linearity</strong>: is my model linear?</li>
+</ol>
+<ul>
+<li><em>Check?</em>: (1) is the point cloud at random and (2) is the
+blue line in plot 2 similar to the horizontal line in <em>plot
+2</em>?<br />
+</li>
+<li><em>Violation?</em>: consider another relationship (e.g. cubric,
+curvilinear)</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Normality</strong>: is the distribution of my parameters /
+residuals normal?</li>
+</ol>
+<ul>
+<li><em>Check?</em>: do I have a Q-Q plot in <em>plot 3</em> where all
+datapoints are as close too the diagonal? Is the distribution as similar
+as possible to the normal distribution in <em>plot 8</em>?<br />
+</li>
+<li><em>Violation?</em>: consider transformations of your parameters or
+check which variable is necessary to add to the model</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Homoscedasticity</strong>: is the spread of my data across
+levels of my predictor the same?</li>
+</ol>
+<ul>
+<li><em>Check?</em>: (1) is the point cloud at random and (2) is the
+blue line in plot 2 similar to the horizontal line in <em>plot 2</em>?
+(3) Is there a pattern in <em>plot 4</em>?<br />
+</li>
+<li><em>Violation?</em>: in case of heteroscedasticity, you will have
+inconsistency in calculation of standard errors and parameter estimation
+in the model. This results in biased confidence intervals and
+significance tests.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li><p><strong>Independence</strong>: are the errors in my model related
+to each other?</p></li>
+<li><p><strong>Influential outliers</strong>: are there outliers
+influential to my model?</p></li>
+</ol>
+<ul>
+<li><em>Check?</em>: is the blue line in <em>plot 7</em> curved?<br />
+</li>
+<li><em>Violation?</em>: this could be problematic for estimating
+parameters (e.g. mean) and sum of squared and biased results.</li>
+</ul>
+</div>
+<pre class="r"><code>check_model(model) #might take a while
+
+check_normality(model)
+check_outliers(model)
+check_heteroscedasticity(model)
+multicollinearity(model)</code></pre>
+<div id="significant-interactions" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Significant
+interactions</h2>
+<p>When working with interaction effects, you want to check standardized
+simple slopes (can be done for 2- and 3-way effects). The John-Newman
+plot is interesting to check for which values of the moderator your
+interaction is significant (nice for interpretation):</p>
+<pre class="r"><code>sim_slopes(model,
+           pred = VAR3.c,
+           modx=VAR4.c,
+           #  modx.values=c(-1.17,-0.42,0.34,1.10), 
+                    # if you want to have values for specific levels
+           # mod2 = VAR5.c, # in case of 3-way interaction
+           # mod2.values = VAR5.c,
+           centered=&quot;all&quot;,
+           jnplot = TRUE)</code></pre>
+<p>Following code can be used for <strong>a fast check</strong> of how
+you interaction looks like.<br />
+Beware, the x-axis variable needs to be numeric!</p>
+<pre class="r"><code>graph_model(model,
+            y=OUTCOME, 
+            x=VAR3.c, 
+            lines=VAR4.c,
+            #split=VAR5.c # inc ase of 3-way interaction
+            errorbars = &#39;SE&#39;,
+            bargraph=FALSE)+
+  coord_cartesian(ylim=c(1,5))+
+  theme_classic()+
+  labs(
+    title = &#39;TITLE&#39;,
+    subtitle = &#39;SUBTITLE&#39;, 
+    x = &quot;X AXIS&quot;,
+    y = &quot;Y AXIS&quot;,
+    color=&quot;MODERATOR&quot;
+  )</code></pre>
+<p>Following code can be used for <strong>a complete check</strong> of
+how you interaction looks like, including the presentation of simple
+slopes on your figure.</p>
+<p>First, we get a dataframe including predicted values based on our
+model. In the <code>ggeffect</code> function, you can specify the
+numeric levels you want to have predicted values.</p>
+<pre class="r"><code>predictions &lt;- data.frame(ggeffect(model, 
+                                   c(&#39;VAR3.c[-1,0,1]&#39;,
+                                     &#39;VAR4.c[meansd]&#39;) # you can specify values here
+)) </code></pre>
+<p>Here, we make sure that our x-axis is numeric and our moderator
+levels are categorical.</p>
+<pre class="r"><code>predictions$x &lt;- as.numeric(predictions$x)
+predictions$group &lt;- as.factor(predictions$group)</code></pre>
+<p>Here, we have an extended code for a nice two-way interaction figure.
+As the figure will show up in the <em>Plots</em> tab in Rstudio, you can
+save it as png or as pdf.</p>
+<pre class="r"><code>ggplot(predictions, 
+       aes(x, predicted, color=group, linetype=group)) +
+  geom_line(size=0.8)+
+  geom_point(size=1, shape=19)+
+  
+  # set up different linetypes for black/white printing
+  scale_linetype_manual(&#39;MODERATOR&#39;, #give name to moderator
+                        labels=c(&#39;-1 SD&#39;,&#39;Mean&#39;,&#39;+1 SD&#39;), # as an example
+                        values = c(&quot;dotted&quot;,&quot;dashed&quot;,&quot;solid&quot;))+ # as an example
+  
+  # set up different colors 
+  scale_color_manual(&#39;MODERATOR&#39;,
+                     labels=c(&#39;-1 SD&#39;,&#39;Mean&#39;,&#39;+1 SD&#39;),
+                     values = c(&quot;#18a1cd&quot;,&quot;#1d81a2&quot;,&quot;#15607a&quot;))+ #check google for hex code
+  
+  # provide textual info on simple slopes in figure
+  #x is the position on the x-axis
+  #y is the position on the y-axis (check predictions dataset for highest values)
+  #label is the simple slope coefficient
+  annotate(&quot;text&quot;, x=1, y=4.37, label=&quot;.59 ***&quot;,fontface =1, color = &quot;black&quot;,angle=0)+
+  annotate(&quot;text&quot;, x=1, y=3.91, label=&quot;.49 ***&quot;,fontface =1, color = &quot;black&quot;,angle=0)+
+  annotate(&quot;text&quot;, x=1, y=3.45, label=&quot;.38 ***&quot;,fontface =1, color = &quot;black&quot;,angle=0)+
+  
+  # settings for a theme
+  theme(
+    legend.position = &#39;top&#39;,
+    legend.title = element_blank(),
+    axis.title.x = element_blank(),
+    plot.caption = element_text(color = &quot;black&quot;  ),
+    text=element_text(   family=&quot;Helvetica&quot;),
+    strip.placement = &quot;outside&quot;)+
+  
+  # info regarding y axis
+  scale_y_continuous(limits = c(1,5),  # range
+                     breaks = seq(1,5, by = 1))+ # 1 to 5 by steps of 1
+  
+  # info regarding x axis
+  scale_x_continuous(breaks=c(-1,0,1), # range
+                     labels=c(&#39;-1&#39;,&#39;0&#39;,&#39;1&#39;), # labels
+                     expand = c(0.2, 0))+ # space on the left and right side of the figure
+  
+  # ggplot theme
+  theme_bw() +
+  
+  # info regarding legend
+  theme(legend.key.size = unit(1, &#39;cm&#39;),
+        legend.box = &#39;vertical&#39;)+
+  
+  # labels for the axes
+  labs(
+    title = &#39;TITLE&#39;,
+    subtitle = &#39;SUBTITLE&#39;,
+    x = &#39;X AXIS&#39;,
+    y = &#39;Y AXIS&#39;)</code></pre>
+<div class="blue">
+<p>The three-way interaction figure is a little bit more complicated.
+This will be added soon.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div id="long-and-wide" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Long and wide</h1>
+<div id="wide-to-long" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Wide to long</h2>
+<p>First, we make a list of those variables we want to restructure.</p>
+<pre class="r"><code>longlist &lt;- list(
+  VAR1=c(&#39;VAR1_1&#39;,&#39;VAR1_2&#39;,&#39;VAR1_3&#39;,&#39;VAR1_4&#39;),
+  VAR2=c(&#39;VAR2_1&#39;,&#39;VAR2_2&#39;,&#39;VAR2_3&#39;,&#39;VAR2_4&#39;)
+)</code></pre>
+<p>The list is used in the code below:</p>
+<pre class="r"><code>dflong &lt;- reshape(data = df, # name of the dataset
+                  idvar = &quot;ID&quot;, # group variable including dependent variance
+                  varying = longlist,
+                  direction=&quot;long&quot;,
+                  v.names = names(longlist),
+                  sep=&quot;_&quot;)</code></pre>
+</div>
+<div id="long-to-wide" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Long to wide</h2>
+<p>Complete the following function:</p>
+<pre class="r"><code>dfwide &lt;- reshape(dflong, # name of the dataset
+                  idvar = &quot;ID&quot;,  # name of the grouping variable including dependent variance
+                  timevar = &quot;time&quot;, # time variable
+                  direction = &quot;wide&quot;)
+
+head(dfwide) # check whether the function did what you expected</code></pre>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div id="multilevel-modeling" class="section level1" number="10">
+<h1><span class="header-section-number">10</span> Multilevel
+Modeling</h1>
+<p>Following packages are required:</p>
+<pre class="r"><code>x&lt;-c(&#39;sjPlot&#39;,&#39;lme4&#39;,&#39;lmerTest&#39;,&#39;performance&#39;,&#39;effectsize&#39;,
+     # for visualizations
+     &#39;reghelper&#39;,&#39;interactions&#39;,&#39;ggeffects&#39;,&#39;ggplot2&#39;)
+lapply(x, require, character.only = TRUE)</code></pre>
+<p>Before building our model, we need to make sure that all our input is
+ok.<br />
+For instance, we want to have dummy or effect codings instead of factor
+variables. Here, we work with the example of a factor with 3 levels,
+resulting in 2 dummy codings:</p>
+<pre class="r"><code>df$dummy1 &lt;- as.factor(df$VAR1)
+levels(df$dummy1) &lt;- c(0,1,0)
+df$dummy1 &lt;- as.numeric(df$dummy1)
+
+df$dummy2 &lt;- as.factor(df$VAR1)
+levels(df$dummy2) &lt;- c(0,0,1)
+df$dummy2 &lt;- as.numeric(df$dummy2)</code></pre>
+<p>or you want to use effect codings.</p>
+<p>To my opinion, this is the most useful one to do as things are
+centered in our interpretation. When using dummy, you need to interpret
+the main effect of a particular variable ‘when all other coefficients
+are kept stable’. In the case of a dummy coding, this means that this
+refers to the main effect in presence of the reference value of the
+dummy coding. When doing effect coding, this is not the case and you
+have a more clear interpretation of the main effect.</p>
+<pre class="r"><code>df$effect1 &lt;- as.factor(df$VAR1)
+levels(df$effect1) &lt;- c(-1,1,0)
+df$effect1 &lt;- as.numeric(df$effect1)
+
+df$effect2 &lt;- as.factor(df$VAR1)
+levels(effect2) &lt;- c(-1,0,1)
+df$effect2 &lt;- as.numeric(df$effect2)</code></pre>
+<p>Also important is to center numeric variables. When centering, you
+keep the standard deviation. When standardizing, this is forced to 1.
+This is a choice, but I, personally, like it when the initial variance
+is kept in terms of interpretating the results.</p>
+<pre class="r"><code>dflong$VAR1.c &lt;- as.numeric(scale(dflong$VAR1,scale=FALSE,center=TRUE))</code></pre>
+<p>Time to build your model (e.g., 4 main effects and 1 two-way
+interaction):</p>
+<pre class="r"><code>ML_model &lt;- lmer(OUTCOME~ VAR1.c + VAR2.c + VAR3.c*VAR4.c + (1|ID), data=dflong) # remark the random effect we added</code></pre>
+<p>Check the output of the model:</p>
+<pre class="r"><code>summary(model)</code></pre>
+<p>Check standardized coefficients for the sake of interpretation and
+reporting:</p>
+<pre class="r"><code>standardize_parameters(model, method = &quot;basic&quot;)</code></pre>
+<p>Check effect sizes, which always should be done next to
+<em>p</em>-values:</p>
+<pre class="r"><code>eta_squared(model)</code></pre>
+<p>There are also function to have a clear html output of your
+model:</p>
+<pre class="r"><code>tab_model(model)</code></pre>
+<p>Important is to check to what your model does satisfy all models. A
+nice way to do this is using the <code>check_model</code> function,
+however this might take a while (especially in more complex models). You
+can check all diagnostics separately (which may be faster):</p>
+<div class="blue">
+<p><strong>Model assumptions: </strong></p>
+<ol style="list-style-type: decimal">
+<li><strong>Linearity</strong>: is my model linear?</li>
+</ol>
+<ul>
+<li><em>Check?</em>: (1) is the point cloud at random and (2) is the
+blue line in plot 2 similar to the horizontal line in <em>plot
+2</em>?<br />
+</li>
+<li><em>Violation?</em>: consider another relationship (e.g. cubric,
+curvilinear)</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Normality</strong>: is the distribution of my parameters /
+residuals normal?</li>
+</ol>
+<ul>
+<li><em>Check?</em>: do I have a Q-Q plot in <em>plot 3</em> where all
+datapoints are as close too the diagonal? Is the distribution as similar
+as possible to the normal distribution in <em>plot 8</em>?<br />
+</li>
+<li><em>Violation?</em>: consider transformations of your parameters or
+check which variable is necessary to add to the model</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Homoscedasticity</strong>: is the spread of my data across
+levels of my predictor the same?</li>
+</ol>
+<ul>
+<li><em>Check?</em>: (1) is the point cloud at random and (2) is the
+blue line in plot 2 similar to the horizontal line in <em>plot 2</em>?
+(3) Is there a pattern in <em>plot 4</em>?<br />
+</li>
+<li><em>Violation?</em>: in case of heteroscedasticity, you will have
+inconsistency in calculation of standard errors and parameter estimation
+in the model. This results in biased confidence intervals and
+significance tests.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li><p><strong>Independence</strong>: are the errors in my model related
+to each other?</p></li>
+<li><p><strong>Influential outliers</strong>: are there outliers
+influential to my model?</p></li>
+</ol>
+<ul>
+<li><em>Check?</em>: is the blue line in <em>plot 7</em> curved?<br />
+</li>
+<li><em>Violation?</em>: this could be problematic for estimating
+parameters (e.g. mean) and sum of squared and biased results.</li>
+</ul>
+</div>
+<pre class="r"><code>check_model(model) #might take a while
+
+check_normality(model)
+check_outliers(model)
+check_heteroscedasticity(model)
+multicollinearity(model)</code></pre>
+<div id="significant-interactions-1" class="section level2"
+number="10.1">
+<h2><span class="header-section-number">10.1</span> Significant
+interactions</h2>
+<p>When working with interaction effects, you want to check standardized
+simple slopes (can be done for 2- and 3-way effects). The John-Newman
+plot is interesting to check for which values of the moderator your
+interaction is significant (nice for interpretation):</p>
+<pre class="r"><code>sim_slopes(model,
+           pred = VAR3.c,
+           modx=VAR4.c,
+           #  modx.values=c(-1.17,-0.42,0.34,1.10), 
+                  # if you want to have values for specific levels
+           # mod2 = VAR5.c, # in case of 3-way interaction
+           # mod2.values = VAR5.c,
+           centered=&quot;all&quot;,
+           jnplot = TRUE)</code></pre>
+<p>Following code can be used for <strong>a fast check</strong> of how
+you interaction looks like.<br />
+Beware, the x-axis variable needs to be numeric!</p>
+<pre class="r"><code>graph_model(model,
+            y=OUTCOME, 
+            x=VAR3.c, 
+            lines=VAR4.c,
+            #split=VAR5.c # inc ase of 3-way interaction
+            errorbars = &#39;SE&#39;,
+            bargraph=FALSE)+
+  coord_cartesian(ylim=c(1,5))+
+  theme_classic()+
+  labs(
+    title = &#39;TITLE&#39;,
+    subtitle = &#39;SUBTITLE&#39;, 
+    x = &quot;X AXIS&quot;,
+    y = &quot;Y AXIS&quot;,
+    color=&quot;MODERATOR&quot;
+  )</code></pre>
+<p>Following code can be used for <strong>a complete check</strong> of
+how you interaction looks like, including the presentation of simple
+slopes on your figure.</p>
+<p>First, we get a dataframe including predicted values based on our
+model. In the <code>ggeffect</code> function, you can specify the
+numeric levels you want to have predicted values.</p>
+<pre class="r"><code>predictions &lt;- data.frame(ggeffect(model, 
+                                   c(&#39;VAR3.c[-1,0,1]&#39;,
+                                     &#39;VAR4.c[meansd]&#39;) # you can specify values here
+)) </code></pre>
+<p>Here, we make sure that our x-axis is numeric and our moderator
+levels are categorical.</p>
+<pre class="r"><code>predictions$x &lt;- as.numeric(predictions$x)
+predictions$group &lt;- as.factor(predictions$group)</code></pre>
+<p>Here, we have an extended code for a nice two-way interaction figure.
+As the figure will show up in the <em>Plots</em> tab in Rstudio, you can
+save it as png or as pdf.</p>
+<pre class="r"><code>ggplot(predictions, 
+       aes(x, predicted, color=group, linetype=group)) +
+  geom_line(size=0.8)+
+  geom_point(size=1, shape=19)+
+  
+  # set up different linetypes for black/white printing
+  scale_linetype_manual(&#39;MODERATOR&#39;, #give name to moderator
+                        labels=c(&#39;-1 SD&#39;,&#39;Mean&#39;,&#39;+1 SD&#39;), # as an example
+                        values = c(&quot;dotted&quot;,&quot;dashed&quot;,&quot;solid&quot;))+ # as an example
+  
+  # set up different colors 
+  scale_color_manual(&#39;MODERATOR&#39;,
+                     labels=c(&#39;-1 SD&#39;,&#39;Mean&#39;,&#39;+1 SD&#39;),
+                     values = c(&quot;#18a1cd&quot;,&quot;#1d81a2&quot;,&quot;#15607a&quot;))+ #check google for hex code
+  
+  # provide textual info on simple slopes in figure
+  #x is the position on the x-axis
+  #y is the position on the y-axis (check predictions dataset for highest values)
+  #label is the simple slope coefficient
+  annotate(&quot;text&quot;, x=1, y=4.37, label=&quot;.59 ***&quot;,fontface =1, color = &quot;black&quot;,angle=0)+
+  annotate(&quot;text&quot;, x=1, y=3.91, label=&quot;.49 ***&quot;,fontface =1, color = &quot;black&quot;,angle=0)+
+  annotate(&quot;text&quot;, x=1, y=3.45, label=&quot;.38 ***&quot;,fontface =1, color = &quot;black&quot;,angle=0)+
+  
+  # settings for a theme
+  theme(
+    legend.position = &#39;top&#39;,
+    legend.title = element_blank(),
+    axis.title.x = element_blank(),
+    plot.caption = element_text(color = &quot;black&quot;  ),
+    text=element_text(   family=&quot;Helvetica&quot;),
+    strip.placement = &quot;outside&quot;)+
+  
+  # info regarding y axis
+  scale_y_continuous(limits = c(1,5),  # range
+                     breaks = seq(1,5, by = 1))+ # 1 to 5 by steps of 1
+  
+  # info regarding x axis
+  scale_x_continuous(breaks=c(-1,0,1), # range
+                     labels=c(&#39;-1&#39;,&#39;0&#39;,&#39;1&#39;), # labels
+                     expand = c(0.2, 0))+ # space on the left and right side of the figure
+  
+  # ggplot theme
+  theme_bw() +
+  
+  # info regarding legend
+  theme(legend.key.size = unit(1, &#39;cm&#39;),
+        legend.box = &#39;vertical&#39;)+
+  
+  # labels for the axes
+  labs(
+    title = &#39;TITLE&#39;,
+    subtitle = &#39;SUBTITLE&#39;,
+    x = &#39;X AXIS&#39;,
+    y = &#39;Y AXIS&#39;)</code></pre>
+<div class="yellow">
+<p>The three-way interaction figure is a little bit more complicated.
+This will be added soon.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div id="structural-modelling" class="section level1" number="11">
+<h1><span class="header-section-number">11</span> Structural
+Modelling</h1>
+<p>For this part, we need the <code>lavaan</code> package.</p>
+<p>As we cannot formulate interaction effects right away in the model,
+we calculate them first, outside the model. Of course, this is only
+relevant when you want to include an interaction effect.</p>
+<pre class="r"><code>df$VAR1VAR2 &lt;- df$VAR1.c * df$VAR2.c # variables are centered!
+
+# write the model
+
+SEM &lt;- &#39;
+OUTCOME1 ~ VAR1 + VAR2 + VAR1VAR2
+OUTCOME2 ~ VAR1 + VAR2 + VAR1VAR2
+&#39;
+
+# run the model
+fit &lt;- sem(model = SEM, data = df)
+
+options(max.print=1000000) #useful when output is large
+
+# check output of the model
+summary(fit,
+        fit.measures = TRUE,
+        standardize = TRUE,
+        rsquare = TRUE)
+
+# useful when fit of model is not good:
+modificationIndices(fit, sort.=TRUE, minimum.value=3)</code></pre>
+<p>A useful online tool to visualize structural equation model
+ishttps://app.diagrams.net/</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="mediation" class="section level1" number="12">
+<h1><span class="header-section-number">12</span> Mediation</h1>
+<p>Here, you can find a simple example of a code to construct a
+mediation model, including one predictor (PRED), a mediator (MED) and an
+outcome (OUTCOME). Also, we included the calculation of the indirect and
+the total effect.</p>
+<pre class="r"><code>model &lt;- 
+&#39;
+# predictor -&gt; mediator
+MED ~ a*PRED 
+
+# predictor + mediator --&gt; outcome
+OUTCOME ~ c*PRED + b*MED
+
+# calculation of an indirect effect
+ab := a*b
+
+# calculating total effect
+total := c + (a*b)
+&#39;
+
+fit &lt;- sem(model, data = df)
+summary(fit, 
+        fit.measures = TRUE, 
+        standardized = TRUE, 
+        rsquare = TRUE)
+modificationIndices(fit, sort.=TRUE, minimum.value=3)</code></pre>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="multilevel-sem" class="section level1" number="13">
+<h1><span class="header-section-number">13</span> Multilevel SEM</h1>
+<p>Only up to 2 levels in R (currently)</p>
+<pre class="r"><code>dflong$VAR1VAR2 &lt;- dflong$VAR1.c * dflong$VAR2.c # variables are centered!
+
+# write the model
+ML_SEM &lt;- &#39;
+level:1
+OUTCOME1 ~ VAR1 + VAR2 + VAR1VAR2
+OUTCOME2 ~ VAR1 + VAR2 + VAR1VAR2
+
+level:2
+OUTCOME1 ~ VAR1 + VAR2 + VAR1VAR2
+OUTCOME2 ~ VAR1 + VAR2 + VAR1VAR2
+&#39;
+
+# run the model
+fit &lt;- sem(model = ML_SEM, 
+           data = dflong, 
+           cluster = &quot;ID&quot;, # group variable including dependent variance
+           optim.method = &quot;em&quot;)
+
+options(max.print=1000000) #useful when output is large
+
+# check the output
+summary(fit,
+        fit.measures = TRUE,
+        standardize = TRUE,
+        rsquare = TRUE)
+
+# useful when fit of model is not good:
+modificationIndices(fit, sort.=TRUE, minimum.value=3)</code></pre>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="cross-lagged-panel-model" class="section level1" number="14">
+<h1><span class="header-section-number">14</span> Cross-lagged panel
+model</h1>
+<pre class="r"><code>model &lt;- 
+&#39;
+VAR1_T2 + VAR2_T2 ~ VAR1_T1 + VAR2_T1
+&#39;
+
+fit &lt;- sem(model, data = df)
+summary(fit, 
+        fit.measures = TRUE, 
+        standardized = TRUE, 
+        rsquare = TRUE)
+modificationIndices(fit, sort.=TRUE, minimum.value=3)</code></pre>
+</div>
+<div id="ri-clpm" class="section level1" number="15">
+<h1><span class="header-section-number">15</span> RI-CLPM</h1>
+<p>Flournoy wrote an amazingly useful package to generate a syntax for a
+RI-CLPM in the <code>riclpmr</code> package.</p>
+<pre class="r"><code>library(devtools)
+# install_github(&#39;jflournoy/riclpmr&#39;) # in case you have not installed the package yet
+library(riclpmr)
+library(lavaan)</code></pre>
+<p>Select the variables from your <strong>wide</strong> dataset.</p>
+<pre class="r"><code>data_riclpm &lt;- dfwide[,c(&quot;ID&quot;, # also important to include the grouping avriable
+                         &#39;VARIABLEX_1&#39;,&#39;VARIABLEX_2&#39;,&#39;VARIABLEX_3&#39;,&#39;VARIABLEX_4&#39;,
+                         &#39;VARIABLEY_1&#39;,&#39;VARIABLEY_2&#39;,&#39;VARIABLEY_3&#39;,&#39;VARIABLEY_4&#39;)]
+
+# give different column names to make the output of the model more readable
+colnames(data_riclpm) &lt;- c(&quot;id&quot;,
+                           &#39;x1&#39;,&#39;x2&#39;,&#39;x3&#39;,&#39;x4&#39;,
+                           &#39;y1&#39;,&#39;y2&#39;,&#39;y3&#39;,&#39;y4&#39;)
+
+data_riclpm &lt;- data_riclpm[ , -c(1)] #remove ID
+ 
+# refer which columns belong to a specific variable
+var_groups &lt;- list(
+  x=c(&#39;x1&#39;,&#39;x2&#39;,&#39;x3&#39;,&#39;x4&#39;),
+  y=c(&#39;y1&#39;,&#39;y2&#39;,&#39;y3&#39;,&#39;y4&#39;)
+)</code></pre>
+<p>Just run the following code. Herein, a constrained and an
+unconstrained model are performed and compared (via ANOVA). Based on
+which model provides the best fit of the data, you can check the output
+of the model.</p>
+<pre class="r"><code># construct contraint model
+model_text &lt;- riclpmr::riclpm_text(var_groups,
+                                   constrain_over_waves = TRUE,
+                                   constrain_ints = &quot;free&quot;)
+
+fit_constraints &lt;- riclpmr::lavriclpm(riclpmModel = model_text, 
+                                      data = data_riclpm,
+                                      missing = &#39;fiml&#39;, 
+                                      meanstructure = T, 
+                                      int.ov.free = T)
+# construct unconstraint model
+model_text &lt;- riclpmr::riclpm_text(var_groups,
+                                   constrain_over_waves = FALSE,
+                                   constrain_ints = &quot;free&quot;)
+
+fit_noconstraints &lt;- riclpmr::lavriclpm(riclpmModel = model_text, 
+                                        data = data_riclpm,
+                                        missing = &#39;fiml&#39;, 
+                                        meanstructure = T, 
+                                        int.ov.free = T)
+
+# run this to compare constraint and unconstraint model in terms of data fit
+anova(fit_constraints,fit_noconstraints)
+
+# Check the output of the chosenmodel
+summary(fit_constraints,
+        fit.measures = TRUE,
+        standardize = TRUE,
+        rsquare = TRUE)</code></pre>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="basic-visualizations" class="section level1" number="16">
+<h1><span class="header-section-number">16</span> Basic
+visualizations</h1>
+<p>Run this code to make a descriptive bar plot</p>
+<pre class="r"><code>aggregate &lt;- as.data.frame(aggregate(df$OUTCOME,by=list(df$GROUP), 
+                                     mean, na.rm=TRUE))
+
+ggplot(aggregate, 
+       aes(x = VAR1, y = OUTCOME1)) +
+  geom_bar(stat=&quot;identity&quot;,width = 0.7,
+           position=position_dodge())+
+  ylim(1,5)+
+  theme(
+    legend.position = &#39;right&#39;,
+    legend.title = element_blank(),
+    axis.title.x = element_blank(),
+    plot.caption = element_text(color = &quot;black&quot;  ),
+    text=element_text(   family=&quot;Helvetica&quot;,size=7)
+  )+  
+  theme_classic(base_size=10)+ # fontsize in figure
+  labs(
+    y=&quot;Y AXIS&quot;,
+    x=&quot;X AXIS&quot;
+  )</code></pre>
+<p>Run this code to make a descriptive line plot</p>
+<pre class="r"><code>aggregate &lt;- as.data.frame(aggregate(df$OUTCOME,by=list(df$GROUP), 
+                                     mean, na.rm=TRUE))
+
+ggplot(aggregate, 
+       aes(x = VAR1, y = OUTCOME1)) +
+  geom_point(colour = &quot;#007f7f&quot;)+
+  geom_line(colour = &quot;#007f7f&quot;, size = 1) +
+  ylim(1,5)+
+  theme(
+    legend.position = &#39;right&#39;,
+    legend.title = element_blank(),
+    axis.title.x = element_blank(),
+    plot.caption = element_text(color = &quot;black&quot;  ),
+    text=element_text(   family=&quot;Helvetica&quot;,size=7)
+  )+  
+  theme_classic(base_size=10)+ # fontsize in figure
+  labs(
+    y=&quot;Y AXIS&quot;,
+    x=&quot;X AXIS&quot;
+  )</code></pre>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="two-step-cluster-analysis" class="section level1" number="17">
+<h1><span class="header-section-number">17</span> Two-step cluster
+analysis</h1>
+<p>Following packages are required:</p>
+<pre class="r"><code>x&lt;-c(&#39;factoextra&#39;,&#39;cowplot&#39;,&#39;cluster&#39;,&#39;NbClust&#39;,&#39;questionr&#39;,&#39;tidyr&#39;,&#39;vcd&#39;)
+lapply(x, require, character.only = TRUE)</code></pre>
+<div id="preparatory-steps" class="section level2" number="17.1">
+<h2><span class="header-section-number">17.1</span> Preparatory
+steps</h2>
+<p>First, we standardize all cluster variables make a subset of our
+dataframe, only and only including the cluster variables. This dataset
+will be used to perform some validation techniques in order to select
+the most accurate number of clusters. In this example, we use three
+cluster variables.</p>
+<pre class="r"><code># standardization
+df$VAR1.sc &lt;- as.numeric(scale(df$VAR1,scale=TRUE))
+df$VAR2.sc &lt;- as.numeric(scale(df$VAR2,scale=TRUE))
+df$VAR3.sc &lt;- as.numeric(scale(df$VAR3,scale=TRUE))
+
+# make a subset (only including complete cases here)
+df_clust &lt;- na.omit(df[,c(&quot;VAR1.sc&quot;,&quot;VAR2.sc&quot;,&quot;VAR3.sc&quot;)])</code></pre>
+</div>
+<div id="validation-before-clustering" class="section level2"
+number="17.2">
+<h2><span class="header-section-number">17.2</span> Validation before
+clustering</h2>
+<p>Before we actually want to cluster, we already can have an indication
+to what extent ‘our data is clusterable’. This is done using the Hopkin
+statistic (Lawson &amp; Jurs, 1990), which can be interpreted as a
+‘chance of finding meaningful clusters’. When this is 0.50, this means
+there is an equally high chance of observing meaningful clusters as
+finding meaningless clusters. The higher, the better.</p>
+<p>In our experience, we noticed that, when having a Hopkin statistic
+of, for instance, 0.52 or 0.56, the validation techniques of finding the
+optimal number of clusters indeed were inconclusive.</p>
+<pre class="r"><code># original dataset
+res.o &lt;- get_clust_tendency(df_clust,
+                            n = nrow(df_clust)-1,
+                            graph=FALSE)
+H_dataset &lt;- round(res.o$hopkins_stat,3)
+
+# random dataset
+random_dffull &lt;- as.data.frame(apply(df_clust,2,
+                                     function(x){runif(length(x),
+                                                       min(x),
+                                                       max(x))}
+))
+
+# testing tendency
+res.r &lt;- get_clust_tendency(random_dffull, 
+                            n = nrow(random_dffull)-1,
+                            graph=FALSE)
+
+H_random &lt;- round(res.r$hopkins_stat,3)
+
+# make table for output
+table_H &lt;- cbind(H_dataset,H_random)
+colnames(table_H) &lt;- c(&#39;df_clust&#39;,&#39;random dataset&#39;)
+rownames(table_H) &lt;- &#39;Hopkin statistic&#39;
+table_H</code></pre>
+</div>
+<div id="validation-during-clustering" class="section level2"
+number="17.3">
+<h2><span class="header-section-number">17.3</span> Validation during
+clustering</h2>
+<p>The following set of code will end up in four figures showing a
+particular type of validation for a number of clusters. Indeed, we want
+to have all four of them, as we want to make a considered decision on
+how many clusters are in our dataset. This does not mean that all four
+types of validations will point towards the same number of clusters
+(sometimes it does, indicating strong evidence for a particular number).
+Therefore, you need to consider all types and explain in your reporting
+why you choose for a particular number of clusters.</p>
+<p>The validation techniques are:</p>
+<div class="blue">
+<ol style="list-style-type: decimal">
+<li><em>Elbow method</em>: the number of clusters with both a minimum of
+within-cluster variation and a maximum of between-cluster
+variation<br />
+</li>
+<li><em>the Average Silhouette method</em>: the number of clusters with
+the highest average silhouette, indicating the best quality of
+clustering (Kaufman &amp; Rousseeuw, 1990)<br />
+</li>
+<li><em>the Gap statistic method</em>: the number of clusters with the
+highest Gap-statistic (Tibshirani et al., 2001)<br />
+</li>
+<li><em>Majority rule</em>: a summary of 30 indices reporting the most
+optimal number of clusters using the ‘NbClust’ function (Charrad et
+al.,2014), including the CH index (Calinski and Harabasz, 1974)<br />
+</li>
+</ol>
+</div>
+<p>Just run this. There is no need for any adaptation from your side.
+Later on, I will put all of this into a single function, but now you can
+just copy and run this list:</p>
+<pre class="r"><code>wss &lt;- function(k) {
+  hkmeans(dffull, k,
+          hc.metric=&quot;euclidian&quot;,
+          hc.method=&#39;ward.D2&#39;,
+          iter.max = 10,
+          km.algorithm = &quot;Hartigan-Wong&quot;)$tot.withinss
+}
+k.values &lt;- 1:10
+wss_values &lt;- map_dbl(k.values, wss)
+elbowmethod &lt;- as.data.frame(t(rbind(k.values,wss_values)))
+
+avg_sil &lt;- function(k) {
+  km.res &lt;- hkmeans(dffull, k,
+                    hc.metric=&quot;euclidian&quot;,
+                    hc.method=&#39;ward.D2&#39;,
+                    iter.max = 10,
+                    km.algorithm = &quot;Hartigan-Wong&quot;)
+  ss &lt;- silhouette(km.res$cluster, dist(dffull, method = &quot;euclidean&quot;))
+  mean(ss[, 3])
+}
+
+
+hkm.res &lt;- hkmeans(dffull, k=3,
+                   hc.metric=&quot;euclidian&quot;,
+                   hc.method=&#39;ward.D2&#39;,
+                   iter.max = 10,
+                   km.algorithm = &quot;Hartigan-Wong&quot;)
+ss &lt;- silhouette(hkm.res$cluster, dist(dffull, method = &quot;euclidean&quot;))
+ss &lt;- cbind(ss[,1],ss[,2],ss[,3])
+ss &lt;- as.data.frame(ss)
+colnames(ss) &lt;- c(&#39;cluster&#39;,&#39;neighbor&#39;,&#39;silhouette&#39;)
+ss &lt;- with(ss, ss[order(cluster, silhouette,decreasing = TRUE),])
+ss$cluster &lt;- as.factor(ss$cluster)
+ss$ppnr &lt;- 1:dim(ss)[1]
+ss &lt;- ss[order(match(ss$cluster, c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;))),]
+
+averagesilhplotplot &lt;- ggplot(data=ss, 
+                              aes(x=ppnr, y=silhouette,fill=cluster, order=cluster)) +
+  geom_bar(stat=&quot;identity&quot;,width = 0.7,
+           position=position_dodge())+
+  scale_fill_manual(&quot;Cluster&quot;, 
+                    values = c(&quot;1&quot;=&quot;#2f3c4d&quot;,&quot;2&quot;=&quot;#ad131b&quot;,&quot;3&quot;=&quot;#cc6a0e&quot;))+
+  theme(
+    legend.position = &#39;right&#39;,
+    legend.spacing.x = unit(1, &#39;mm&#39;),
+    axis.title.x = element_blank(),
+    plot.caption = element_text(color = &quot;black&quot;)
+  )+
+  theme_minimal()+
+  ylab(&quot;Silhouette width&quot;)+
+  labs(subtitle = &quot;Silhouette coefficients by cases&quot; ) +
+  xlab(&quot;Cases&quot;)
+
+minnumber &lt;- 1
+maxnumber &lt;- 10
+dataset &lt;- dffull
+
+uncertacompytable&lt;-c()
+for (i in minnumber:maxnumber) {
+  km.res &lt;- hkmeans(dataset, i,
+                    hc.metric=&quot;euclidian&quot;,
+                    hc.method=&#39;ward.D2&#39;,
+                    iter.max = 10,
+                    km.algorithm = &quot;Hartigan-Wong&quot;)
+  sum_i &lt;- km.res$betweenss + km.res$tot.withinss
+  number_i &lt;- i
+  ss_i &lt;- cbind(km.res$tot.withinss, km.res$betweenss,sum_i,number_i)
+  ss_i &lt;- as.data.frame(ss_i)
+  ss_i &lt;- round(ss_i,2)
+  colnames(ss_i) &lt;- c(&#39;within&#39;,&#39;between&#39;,&#39;sum&#39;,&quot;clusters&quot;)
+  uncertacompytable &lt;- rbind(uncertacompytable,ss_i)
+}
+
+uncertacompytable$within &lt;- (uncertacompytable[,1]/uncertacompytable[,3])*100
+uncertacompytable$between &lt;- (uncertacompytable[,2]/uncertacompytable[,3])*100
+uncertacompytablee &lt;- uncertacompytable[,c(&quot;clusters&quot;,&#39;within&#39;,&#39;between&#39;)]
+uncertacompytablee &lt;- round(uncertacompytablee,2)
+data_longtable &lt;- gather(uncertacompytablee, type, variance, c(&#39;within&#39;,&#39;between&#39;),
+                         factor_key=TRUE)
+
+varianceplot &lt;-ggplot(data=data_longtable, aes(x=clusters, y=variance, fill=type)) +
+  geom_bar(stat=&quot;identity&quot;,width = 0.7,
+           
+           position=position_dodge(),color=&#39;black&#39;)+
+  scale_fill_manual(&quot;Variance&quot;,
+                    values = c(&quot;within&quot; = &quot;#2f3c4d&quot;,
+                               &quot;between&quot; = &quot;#ad131b&quot;))+
+  theme(
+    legend.spacing.x = unit(1, &#39;mm&#39;),
+    axis.title.x = element_blank(),
+    plot.caption = element_text(color = &quot;black&quot;)
+  )+
+  scale_y_continuous(labels = function(x) paste0(x, &quot;%&quot;))+
+  scale_x_continuous(name=&quot;K clusters&quot;, breaks=c(1:15))+
+  theme_minimal()+
+  theme(legend.position = &#39;top&#39;)+
+  labs(subtitle = &quot;Between- and Within variance&quot;)
+
+k.values &lt;- 2:10
+
+avg_sil_values &lt;- map_dbl(k.values, avg_sil)
+
+averagesilh &lt;- as.data.frame(t(rbind(k.values,avg_sil_values)))
+
+averagesilhplot &lt;- ggplot(data=averagesilh, aes(x=k.values, y=avg_sil_values)) +
+  geom_line(stat=&quot;identity&quot;,width = 0.7,
+            position=position_dodge(),color=&#39;black&#39;)+
+  geom_point()+
+  theme(
+    legend.position = &#39;right&#39;,
+    legend.spacing.x = unit(1, &#39;mm&#39;),
+    axis.title.x = element_blank(),
+    plot.caption = element_text(color = &quot;black&quot;)
+  )+
+  scale_x_continuous(name=&quot;K clusters&quot;, breaks=c(1:10))+
+  theme_minimal()+
+  ylab(&quot;Average Silhouettes&quot;)+
+  labs(subtitle = &quot;Average silhouette method&quot;)
+
+gapstatisticplot &lt;- fviz_nbclust(dffull,
+                                 hkmeans,  
+                                 k.max = 10, 
+                                 linecolor = &quot;black&quot;, 
+                                 method=&quot;gap_stat&quot;, nboot=50) +
+  labs(title=NULL, subtitle = &quot;Gap statistic&quot;, xlab=&#39;K clusters&#39;) +theme_minimal()
+
+otherind &lt;- NbClust(dffull, distance = &quot;euclidean&quot;,
+                    min.nc = 3, max.nc = 7,
+                    method = &quot;ward.D2&quot;, index =&quot;all&quot;)
+
+
+bestnc &lt;- as.data.frame(t(otherind$Best.nc))
+bestnc$Number_clusters &lt;- as.factor(bestnc$Number_clusters)
+summ.bestnc &lt;- as.data.frame(summary(bestnc$Number_clusters))
+clusters &lt;- rownames(summ.bestnc)
+summ.bestnc &lt;- cbind(summ.bestnc,clusters)
+colnames(summ.bestnc) &lt;- c(&#39;Frequency&#39;,&quot;clusters&quot;)
+summ.bestnc$clusters &lt;- as.numeric(summ.bestnc$clusters)
+summaryplot &lt;- ggplot(data=summ.bestnc, aes(x=clusters, y=Frequency)) +
+  geom_bar(stat=&quot;identity&quot;,width = 0.7,
+           position=position_dodge(),fill=&quot;#2f3c4d&quot;)+
+  theme(
+    legend.position = &#39;right&#39;,
+    legend.spacing.x = unit(1, &#39;mm&#39;),
+    axis.title.x = element_blank(),
+    plot.caption = element_text(color = &quot;black&quot;)
+  )+
+  theme_minimal()+
+  ylab(&quot;Frequency of indices&quot;)+
+  scale_y_continuous(breaks = seq(0, max(summ.bestnc$Frequency), by = 1))+
+  scale_x_continuous(name=&quot;Clusters&quot;, breaks=c(0:10))+
+  xlab(&quot;Clusters&quot;)+
+  ggtitle(&#39;Summary frequency 30 indices&#39;)
+
+# the figures into one figure
+plot_grid(varianceplot,averagesilhplot, 
+          gapstatisticplot,summaryplot,nrow = 2)</code></pre>
+</div>
+<div id="after-having-decided-the-number-of-clusters"
+class="section level2" number="17.4">
+<h2><span class="header-section-number">17.4</span> After having decided
+the number of clusters</h2>
+<p>After all validation techniques, you can choose the number of
+clusters and perform the <code>hkmeans</code> function.</p>
+<pre class="r"><code># function for two-step clustering procedure
+hkm &lt;- hkmeans(df[,c(&quot;VAR1.sc&quot;,&quot;VAR2.sc&quot;,&quot;VAR3.sc&quot;)], 
+               k = 3, # chosen number of clusters
+               hc.metric=&quot;euclidian&quot;,
+               hc.method=&#39;ward.D2&#39;,
+               iter.max = 10,
+               km.algorithm = &quot;Hartigan-Wong&quot;)
+
+# assign cluster variable to your dataset
+df$clusters &lt;- as.factor(hkm$cluster)
+
+# check proportions of participants into the clusters
+freq(df1$clusters)</code></pre>
+<p>Using the following code, we can have a barplot. Here, we work with
+the standardized cluster variables, although it might be interesting to
+have a figure with the raw values as the standardized variables make
+relative differences. Then, we need to make sure that we also interpret
+the absolute values (lower values do not mean low values!):</p>
+<pre class="r"><code># calculate means of variables by cluster levels
+hkmdata &lt;- as.data.frame((aggregate(df[,c(&quot;VAR1.sc&quot;,&quot;VAR2.sc&quot;,&quot;VAR3.sc&quot;)], 
+                                    by=list(cluster=df$clusters), 
+                                    mean)))
+
+# restructure into long format
+data_long &lt;- gather(hkmdata, type, measurement,
+                    names(df1[,c(&quot;VAR1.sc&quot;,&quot;VAR2.sc&quot;,&quot;VAR3.sc&quot;)]), 
+                    factor_key=TRUE)
+# change column names
+colnames(data_long) &lt;- c(&#39;Clusters&#39;,&#39;Type&#39;,&#39;Value&#39;)
+
+# make sure they have the right format
+data_long$Clusters &lt;- as.numeric(data_long$Clusters)
+data_long$Type &lt;- as.factor(data_long$Type)
+
+# if you want to change the order of the clusters, this can be done here:
+data_long$Clusters &lt;- as.character(data_long$Clusters)
+data_long$Clusters &lt;- as.factor(data_long$Clusters)
+levels(data_long$Clusters) &lt;- c(&quot;3&quot;,&quot;4&quot;,&quot;1&quot;,&quot;2&quot;,&quot;5&quot;) # preferred order
+data_long$Clusters &lt;- as.character(data_long$Clusters)
+data_long$Clusters &lt;- as.numeric(data_long$Clusters)
+
+# figure
+ggplot(data=data_long, 
+       aes(x=Clusters, y=Value, fill=Type, linetype=Type)) +
+  geom_bar(stat=&quot;identity&quot;,width = 0.7,
+           position=position_dodge(),
+           color=&#39;black&#39;)+
+  
+  # y axis
+  scale_y_continuous(limits = c(-2.2,2.2))+
+
+  # provide color to bars
+  scale_fill_manual(&quot;Type of motvation&quot;, # name of cluster variables 
+                    
+                     # labels for cluster variables
+                    labels=c(&#39;Autonomous&#39;,&#39;Controlled&#39;,
+                             &#39;Distrust&#39;,&#39;Effort-based&#39;),
+                    
+                    # colors for cluster variables
+                    values=c(&#39;#2e2e2e&#39;,&#39;#858585&#39;,
+                             &#39;#cecece&#39;,&#39;#ffffff&#39;) )+
+  
+  # provide different linetype to bars (useful for black/white printing)
+  scale_linetype_manual(&quot;Type of Motvation&quot;, # name of cluster variables 
+                        
+                        # labels for cluster variables
+                        labels=c(&#39;Autonomous&#39;,&#39;Controlled&#39;,
+                                 &#39;Distrust&#39;,&#39;Effort-based&#39;),
+                        
+                        # linetypes for cluster variables
+                        values=c(&#39;dotted&#39;,&#39;dotdash&#39;,
+                                 &#39;dashed&#39;,&#39;solid&#39;) )+
+  
+  # settings for x-axis
+   scale_x_continuous(name=&quot;Cluster&quot;,  # name for x axis
+                      breaks=c(1:3), # &#39;breaks&#39; = number of clusters
+                      
+                      # labels for clusters. 
+                      # Here you can add the proportions
+                      # underneath the name, using \n
+                      labels= c( &quot;Cluster 1\n20%&quot;, 
+                                 &quot;Cluster 2\n20%&quot;,
+                                 &quot;Cluster 3\n20%&quot;))+
+  
+  # settings for layout
+  theme(
+    legend.position = &#39;right&#39;,
+    legend.spacing.x = unit(1, &#39;mm&#39;),
+    axis.title.x = element_blank(),
+    plot.caption = element_text(color = &quot;black&quot;)
+  )+
+  
+  # ggplot theme
+  theme_bw()</code></pre>
+<p>Based on the output of the figure - which can help in interpreting
+the content of a cluster - now you can provide labels to the clusters in
+the dataset itself. This variable can be used in between-cluster
+analyses (can be done using frequency tables or (M)ANOVA)</p>
+<pre class="r"><code>levels(df$clusters) &lt;- c(&#39;NAME_clus1&#39;,&#39;NAME_clus2&#39;,&#39;NAME_clus3&#39;,
+                         &#39;NAME_clus4&#39;,&#39;NAME_clus5&#39;)</code></pre>
+</div>
+<div id="validation-after-clustering" class="section level2"
+number="17.5">
+<h2><span class="header-section-number">17.5</span> Validation after
+clustering</h2>
+<p>Even after we chose the number of clusters and even labelled them, we
+can perform a validation technique to check the ‘stability’ of the
+clusters. Basically, it performed the clustering analyses on one part of
+the dataset, and uses the K-mean values as the input of a clustering
+analysis on the other part of the dataset:</p>
+<pre class="r"><code># divide dataset into two parts: subset A and B
+set.seed(7)
+ss &lt;- sample(1:2,size=nrow(df),replace=TRUE,prob=c(0.5,0.5))
+subsetA &lt;- df[ss==1,]
+subsetB &lt;- df[ss==2,]
+
+# perform clustering analysis in both parts
+hkmA &lt;- hkmeans(subsetA[,c(&quot;VAR1.sc&quot;,&quot;VAR2.sc&quot;,&quot;VAR3.sc&quot;)], 
+                k = 3,
+                hc.metric=&quot;euclidian&quot;,
+                hc.method=&#39;ward.D2&#39;,
+                iter.max = 10,
+                km.algorithm = &quot;Hartigan-Wong&quot;)
+
+hkmB &lt;- hkmeans(subsetB[,c(&quot;VAR1.sc&quot;,&quot;VAR2.sc&quot;,&quot;VAR3.sc&quot;)], 
+                k = 3,
+                hc.metric=&quot;euclidian&quot;,
+                hc.method=&#39;ward.D2&#39;,
+                iter.max = 10,
+                km.algorithm = &quot;Hartigan-Wong&quot;)
+
+# use the output of the cluster analysis in each subset as the initial starting points 
+# for a clustering analysis in the other subset
+kmeanAB &lt;- kmeans(subsetA[,c(&quot;VAR1.sc&quot;,&quot;VAR2.sc&quot;,&quot;VAR3.sc&quot;)], 
+                  # here we refer to the values of the cluster analyses 
+                  # in the other subset
+                  hkmB$centers,  
+                  iter.max=10, 
+                  nstart=1,
+                  algorithm = &quot;Hartigan-Wong&quot;)
+subsetA$AB &lt;- as.factor(kmeanAB$cluster) # assign it to the subset
+
+kmeanBA &lt;- kmeans(subsetB[,c(&quot;VAR1.sc&quot;,&quot;VAR2.sc&quot;,&quot;VAR3.sc&quot;)], 
+                  hkmA$centers, 
+                  iter.max=10, 
+                  nstart=1,
+                  algorithm = &quot;Hartigan-Wong&quot;)
+subsetB$BA &lt;- as.factor(kmeanBA$cluster)</code></pre>
+<p>So, when this is done, we want to have an indication of how good the
+clustering in a different part of the dataset results in a good
+clustering in another part of the dataset. The stability is checked with
+a Cohen’s Kappa-index k testing the correspondence between the
+subsample-clustering results and the clustering results forming from the
+original clustering procedure. An acceptable cluster stability is
+assumed when k is .60 or higher (Asendorpf et al., 2001). The final
+results of the clustering procedure will be presented in a barplot with
+the standardized cluster variables as a function of the cluster
+classification.</p>
+<p>Beware, we might need to restructure the table to make sure we have
+the same clusters being compared.</p>
+<pre class="r"><code># check in subset A
+mytableAB &lt;- with(subsetA, table(clusters,AB))
+mytableAB # table. When ok, do nothing. 
+
+# When not oke, change order of columns:
+colnames(mytableAB) &lt;- c(&quot;1&quot;,&quot;2&quot;,&quot;4&quot;,&quot;3&quot;)
+mytableAB &lt;- mytableAB[ , c(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;)]
+
+# computer Kappa
+Kappa(mytableAB)
+
+# repeat for subset B:
+mytableBA &lt;- with(subsetB, table(clusters,BA))
+mytableBA# table. When ok, do nothing. 
+
+# When not oke, change order of columns:
+colnames(mytableBA) &lt;- c(&quot;1&quot;,&quot;3&quot;,&quot;4&quot;,&quot;2&quot;)
+mytableBA &lt;- mytableBA[ , c(&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;)]
+
+Kappa(mytableBA)</code></pre>
+</div>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>Department of Developmental, Personality and Social
+Psychology, Ghent University, <a
+href="mailto:joachim.waterschoot@ugent.be"
+class="email">joachim.waterschoot@ugent.be</a><a href="#fnref1"
+class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

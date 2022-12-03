@@ -4,12 +4,16 @@ navbar:
   left:
     - text: "PhD"
       href: index.html
-    # - text: "Vitae"
-    #   href: Vitae.html
-    #   icon: fa-graduation-cap
-    # - text: "CV"
-    #   icon: fa fa-download
-    #   href: download/cv-master/Vitae.pdf
+    # - text: "Self-Motivation"
+    #   href: selfmotivation.html
+    - text: "Data Rt"
+      menu:
+      - text: "Online"
+        href: DataRt.html
+        icon: fa fa-code
+      - text: "PDF"
+        href: https://watjoa.github.io/DataRt.pdf
+        icon: fa fa-download
   right:
     - icon: fa-twitter
       href: https://twitter.com/watjoa

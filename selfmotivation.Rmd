@@ -1,6 +1,6 @@
 ---
-title: "The Motivation Barometer:"
-subtitle: "An In-depth Investigation of the Role of Motivation and Need-based Experiences in Predicting Behavior and Well-being during the COVID-19 Crisis in Belgium"
+title: "Self-motivation"
+subtitle: "definition"
 author: "Latest update - `r format(Sys.time(), '%d %B %Y')`"
 output:
   html_document:
@@ -115,7 +115,6 @@ The global aim of the current dissertation is to provide an evidence-based overv
 <br>
 
 ### Poster
-
 
 <div class = "row">
 <div class = "col-md-4">
