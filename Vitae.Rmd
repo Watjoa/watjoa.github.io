@@ -10,10 +10,10 @@ output:
     theme: cosmo #yeti
     highlight: textmate
     number_sections: false
-  pdf_document:
-    toc: yes
-    latex_engine: xelatex
-    number_sections: false
+  # pdf_document:
+  #   toc: yes
+  #   latex_engine: xelatex
+  #   number_sections: false
 always_allow_html: true
 mainfont: Helvetica
 classoption:
