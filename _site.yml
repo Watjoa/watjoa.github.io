@@ -2,21 +2,11 @@ name: "Joachim Waterschoot"
 navbar:
   title: "Joachim Waterschoot"
   left:
-    - text: "PhD"
-      href: index.html
-    # - text: "Self-Motivation"
-    #   href: selfmotivation.html
-    - text: "Data Rt"
-      menu:
-      - text: "Online"
-        href: DataRt.html
-        icon: fa fa-code
-      - text: "PDF"
-        href: https://watjoa.github.io/DataRt.pdf
-        icon: fa fa-download
+    - text: "Curriculum"
+      href: Vitae.html
+    - text: "CaviR"
+      href: https://watjoa.github.io/CaviR-statistics/
   right:
-    - icon: fa-twitter
-      href: https://twitter.com/watjoa
     - icon: fa-linkedin
       href: https://github.com/watjoa/
     - icon: fa-github
