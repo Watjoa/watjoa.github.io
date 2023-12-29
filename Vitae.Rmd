@@ -6,7 +6,9 @@ author:
 output:
   html_document:
     toc: yes
-    toc_float: yes
+    toc_float:
+      collapsed: false
+    toc_depth: 2
     theme: cosmo #yeti
     highlight: textmate
     number_sections: false
