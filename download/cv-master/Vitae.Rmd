@@ -1,17 +1,16 @@
 ---
 name: Joachim
 surname: Waterschoot
-position: "PhD Candidate"
+position: "PhD"
 address: "Faculty of Psychology and Educational Science, Ghent University"
-#phone: +1 22 3333 4444
-www: shilaan.rbind.io
+phone: +32 476 59 18 60
+www: watjoa.github.io
 email: "joachim.waterschoot@ugent.be"
-twitter: Watjoa
 github: Watjoa
 #orcid: 'https://orcid.org/0000-0003-0845-9310' #refer to osf in back-end
-#linkedin: joachim.waterschoot@ugent.be #refer to email in back-end 
+linkedin: watjoa #refer to email in back-end 
 profilepic: image.jpg
-headcolor: "035AA6"
+headcolor: "2f5078"
 date: "`r format(Sys.time(), '%B %Y')`"
 output: 
   vitae::awesomecv:
@@ -28,16 +27,16 @@ library(fontawesome)
 
 # Education
 
-**Faculty of Psychology and Educational Sciences, Ghent University** \hfill Expected 2023   
-PhD candidate in Motivational Psychology, Department of Developmental, Personality and Social Psychology
+**Faculty of Psychology and Educational Sciences, Ghent University** \hfill July 2023
+PhD in Motivational Psychology, Department of Developmental, Personality and Social Psychology, Ghent University
 
-**Faculty of Sciences, Ghent University** \hfill 2020   
+**Faculty of Sciences, Ghent University** \hfill 2020
 MSc in Statistical Data Analysis, Department of Applied Mathematics, Computer Science, and Statistics
 
-**Faculty of Psychology and Educational Sciences, Ghent University** \hfill 2017  
+**Faculty of Psychology and Educational Sciences, Ghent University** \hfill 2017
 MSc in Experimental and Theoretical Psychology
 
-# Research interests  
+# Research interests
 
 Motivation; Basic Psychological Needs; Health; Well-being; Boredom; Risk perception;
 
@@ -71,7 +70,7 @@ Motivation; Basic Psychological Needs; Health; Well-being; Boredom; Risk percept
 - Rising Scholars Conference, Harvard Business School    \hfill 2021
 - International Efforts to Improve Psychological Science Symposium, Taiwan Psychological Association \hfill 2021
 
-Vani, P.\*, **Alzahawi, S.**, Dannals, J., & Halevy, N. *Strategic Mindsets and Support for Social Change: Impact Mindset Explains Support for Black Lives Matter across Racial Groups*.  
+Vani, P.\*, **Alzahawi, S.**, Dannals, J., & Halevy, N. *Strategic Mindsets and Support for Social Change: Impact Mindset Explains Support for Black Lives Matter across Racial Groups*.
 
 - Annual Meeting of the Academy of Management (AOM), Seattle \hfill 2022
 - Society for Personality and Social Psychology, San Francisco \hfill 2022
@@ -85,22 +84,22 @@ Hartmann, H.\*, Liu, M.\*, Elsherif, M.\*, **Alzahawi, S.\***, Aldoh, A.\*, Azev
 
 - Conference of the Association for Interdisciplinary Metaresearch and Open Science (aimos) \hfill 2021
 
-**Alzahawi, S.\*** *Writing Reproducible Manuscripts in R*. [`r fa("globe", fill = "#035AA6")`](https://shilaan.rbind.io/talks/reporting/)   
+**Alzahawi, S.\*** *Writing Reproducible Manuscripts in R*. [`r fa("globe", fill = "#035AA6")`](https://shilaan.rbind.io/talks/reporting/)
 
-- University of Amsterdam Lecture Series on Good Research Practices, The Netherlands  \hfill 2021 
+- University of Amsterdam Lecture Series on Good Research Practices, The Netherlands  \hfill 2021
 - Stanford Center for Open and Reproducible Science (CORES) Fall Lecture Series \hfill 2021
 - International Association for Conflict Management 2021  \hfill 2021
 - Stanford Data Science for Social Good Program (DSSG)  \hfill 2021
 - Stanford Center for Open and Reproducible Science (CORES) launch event  \hfill 2021
 
-Halevy, N.\*, **Alzahawi, S.**, & Dannals, J. (2019). *Strategic Thinking in Everyday Life: A Social-Cognitive Approach*.  
+Halevy, N.\*, **Alzahawi, S.**, & Dannals, J. (2019). *Strategic Thinking in Everyday Life: A Social-Cognitive Approach*.
 
 - International Association for Conflict Management, Dublin, Ireland \hfill 2019
 - International Conference on Social Dilemmas, Sedona, AZ \hfill 2019
 
 ## Chaired symposium
 
-**Alzahawi, S.**, Greer, L., & Neale, M.A. *The Future of Negotiations Research*.  
+**Alzahawi, S.**, Greer, L., & Neale, M.A. *The Future of Negotiations Research*.
 
 - Academy of Management, Boston, MA. Selected as Showcase Symposium (top 10%) \hfill 2019
 
@@ -108,56 +107,56 @@ Halevy, N.\*, **Alzahawi, S.**, & Dannals, J. (2019). *Strategic Thinking in Eve
 
 ## Podcasts
 
-The Motivation Barometer: Risk perception. *Motivation Barometer* [`r fa("globe", fill = "#035AA6")`](https://anchor.fm/open-update/episodes/Interview-Meng-Liu-and-Shilaan-Alzahawi-FORRT-project-e1lcg7q) \hfill 2022  
+The Motivation Barometer: Risk perception. *Motivation Barometer* [`r fa("globe", fill = "#035AA6")`](https://anchor.fm/open-update/episodes/Interview-Meng-Liu-and-Shilaan-Alzahawi-FORRT-project-e1lcg7q) \hfill 2022
 
 Multi-Country Replication Approaches in Psychology and Behavioral Sciences. *Junior Researcher Program* \hfill 2021
 
 # Teaching experience
 
-Head Teaching Assistant, Managing Groups and Teams, Stanford MBA \hfill Fall 2022  
-Negotiations, Stanford MBA, MSx \hfill Fall 2020, Winter 2020, Fall 2022  
-Head Organizer, Data Science for Social Good Program, Stanford Data Science \hfill Spring-Summer 2022   
-Managing Groups and Teams, Stanford MBA \hfill Fall 2019, Fall 2021  
-Technical Mentor, Data Science for Social Good Program, Stanford Data Science \hfill Spring-Summer 2021  
-Acting with Power, Stanford MBA \hfill Spring 2021  
-Data and Decisions, Stanford MBA \hfill Winter 2020  
-Guest Lecturer, Conflict Management and Negotiation, Stanford MBA \hfill Fall 2020  
-Innovating in the Behavior Change Market, INSEAD MBA \hfill Spring 2018  
-International Relations, Erasmus University College \hfill Summer 2015  
-Foundations of Law, Erasmus University College \hfill Spring 2015  
-Qualitative Research II: Content Analysis, Erasmus University College \hfill Spring 2015  
-Qualitative Research I: Interviews, Erasmus University College \hfill Winter 2014  
-Highlights of Sociology, Erasmus University College \hfill Winter 2014  
-Introduction to Psychology, Erasmus University College \hfill Fall 2014  
+Head Teaching Assistant, Managing Groups and Teams, Stanford MBA \hfill Fall 2022
+Negotiations, Stanford MBA, MSx \hfill Fall 2020, Winter 2020, Fall 2022
+Head Organizer, Data Science for Social Good Program, Stanford Data Science \hfill Spring-Summer 2022
+Managing Groups and Teams, Stanford MBA \hfill Fall 2019, Fall 2021
+Technical Mentor, Data Science for Social Good Program, Stanford Data Science \hfill Spring-Summer 2021
+Acting with Power, Stanford MBA \hfill Spring 2021
+Data and Decisions, Stanford MBA \hfill Winter 2020
+Guest Lecturer, Conflict Management and Negotiation, Stanford MBA \hfill Fall 2020
+Innovating in the Behavior Change Market, INSEAD MBA \hfill Spring 2018
+International Relations, Erasmus University College \hfill Summer 2015
+Foundations of Law, Erasmus University College \hfill Spring 2015
+Qualitative Research II: Content Analysis, Erasmus University College \hfill Spring 2015
+Qualitative Research I: Interviews, Erasmus University College \hfill Winter 2014
+Highlights of Sociology, Erasmus University College \hfill Winter 2014
+Introduction to Psychology, Erasmus University College \hfill Fall 2014
 
 # Fellowships, honors, awards
 
-Stanford Data Science Scholarship \hfill 2022-2024  
+Stanford Data Science Scholarship \hfill 2022-2024
 
 # Professional memberships
 
-Academy of Management  
-Psychological Science Accelerator  
-Society for Judgment and Decision Making  
-Society for Personality and Social Psychology  
-Society for the Improvement of Psychological Science 
+Academy of Management
+Psychological Science Accelerator
+Society for Judgment and Decision Making
+Society for Personality and Social Psychology
+Society for the Improvement of Psychological Science
 
 \newpage
 
 # Academic service, volunteering, consulting
 
-Tutorial Reviewer, Advances in Methods and Practices in Psychological Science (AMPPS) \hfill 2022-present  
+Tutorial Reviewer, Advances in Methods and Practices in Psychological Science (AMPPS) \hfill 2022-present
 
 # Languages
 
 Dutch, French, English
 R, R Markdown, SPSS, Shiny, Git/GitHub, \LaTeX, HTML, CSS, SAS, Mplus, Plone, Tscope
 
-# Previous research and teaching positions 
+# Previous research and teaching positions
 
-INSEAD-Sorbonne Behavioral Lab, INSEAD Marketing Department \hfill 2017-2018  
-Harvard Psychology Department and Kennedy School of Government \hfill Summer 2017  
-Decision Processes Lab, Wharton School of Business \hfill Fall 2016  
-Erasmus School of Economics \hfill Summer 2013, 2015-2016  
-Social and Behavioral Sciences Department, Erasmus University College \hfill 2014-2015  
+INSEAD-Sorbonne Behavioral Lab, INSEAD Marketing Department \hfill 2017-2018
+Harvard Psychology Department and Kennedy School of Government \hfill Summer 2017
+Decision Processes Lab, Wharton School of Business \hfill Fall 2016
+Erasmus School of Economics \hfill Summer 2013, 2015-2016
+Social and Behavioral Sciences Department, Erasmus University College \hfill 2014-2015
 

@@ -17,7 +17,7 @@ output:
   #   latex_engine: xelatex
   #   number_sections: false
 always_allow_html: true
-mainfont: Helvetica
+mainfont: Aptos
 classoption:
 - twocolumn
 ---
@@ -72,16 +72,16 @@ div.grey { background-color:#ebebeb; color: white; border-radius: 5px; padding: 
 
 <br>
 
-TO DO'S:
+<!-- TO DO'S: -->
 
-- Mobility: (a) short-term visit or (b) longer-term mobility planned. Goals: to learn
-new techniques, transfer knowledge, establish/expand collaborations.  
-- Teach a course or mentor students: graduate or undergraduate?  
-- Invite and host a collaborator who will give a workshop in your lab.  
-- (Co-)organise a scientific meeting  
-- Develop a database: specify if it is open-access or restricted  
-- Prepare publications in the popular press: name target magazines, radio programmes, etc. Mention relevant past experience.  
-- Issue Policy paper: name target organisations, explain what relationships will pave the way for conveying your research findings.
+<!-- - Mobility: (a) short-term visit or (b) longer-term mobility planned. Goals: to learn -->
+<!-- new techniques, transfer knowledge, establish/expand collaborations.   -->
+<!-- - Teach a course or mentor students: graduate or undergraduate?   -->
+<!-- - Invite and host a collaborator who will give a workshop in your lab.   -->
+<!-- - (Co-)organise a scientific meeting   -->
+<!-- - Develop a database: specify if it is open-access or restricted   -->
+<!-- - Prepare publications in the popular press: name target magazines, radio programmes, etc. Mention relevant past experience.   -->
+<!-- - Issue Policy paper: name target organisations, explain what relationships will pave the way for conveying your research findings. -->
 
 
 
@@ -170,47 +170,47 @@ library(flextable)
 
 
 
-:::::::::::::: {.columns}
-::: {.column width="50%"}
+<!-- :::::::::::::: {.columns} -->
+<!-- ::: {.column width="50%"} -->
 
-```{r echo=FALSE, warning=FALSE,message = FALSE}
-theme <- as.data.frame(freq(Rnew$Theme))
-theme$group <- rownames(theme)
-theme$value <- theme$`val%`
-ggplot(theme, aes(x="", y=value, fill=group))+
-  geom_bar(width = 1, stat = "identity")+ coord_polar("y", start=0)+
-  scale_fill_brewer(palette="Blues")+
-  blank_theme+
-  theme(axis.text.x=element_blank(),legend.position="top") +
-  geom_text(aes(x =  1.2,label = percent(value/100)), 
-            position = position_stack(vjust = 0.5))
-```
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- theme <- as.data.frame(freq(Rnew$Theme)) -->
+<!-- theme$group <- rownames(theme) -->
+<!-- theme$value <- theme$`val%` -->
+<!-- ggplot(theme, aes(x="", y=value, fill=group))+ -->
+<!--   geom_bar(width = 1, stat = "identity")+ coord_polar("y", start=0)+ -->
+<!--   scale_fill_brewer(palette="Blues")+ -->
+<!--   blank_theme+ -->
+<!--   theme(axis.text.x=element_blank(),legend.position="top") + -->
+<!--   geom_text(aes(x =  1.2,label = percent(value/100)),  -->
+<!--             position = position_stack(vjust = 0.5)) -->
+<!-- ``` -->
 
-:::
+<!-- ::: -->
 
-::: {.column width="50%"}
+<!-- ::: {.column width="50%"} -->
 
-```{r echo=FALSE, warning=FALSE,message = FALSE}
-Rnew$pos_cat <- c()
-Rnew$Position <- as.numeric(Rnew$Position)
-Rnew[which(Rnew$Position==1),'pos_cat'] <- "1"
-Rnew[which(Rnew$Position==2),'pos_cat'] <- "2"
-Rnew[which(Rnew$Position>2),'pos_cat'] <- 'co-author'
+<!-- ```{r echo=FALSE, warning=FALSE,message = FALSE} -->
+<!-- Rnew$pos_cat <- c() -->
+<!-- Rnew$Position <- as.numeric(Rnew$Position) -->
+<!-- Rnew[which(Rnew$Position==1),'pos_cat'] <- "1" -->
+<!-- Rnew[which(Rnew$Position==2),'pos_cat'] <- "2" -->
+<!-- Rnew[which(Rnew$Position>2),'pos_cat'] <- 'co-author' -->
 
-theme <- as.data.frame(freq(Rnew$pos_cat))
-theme$group <- rownames(theme)
-theme$value <- theme$`val%`
-ggplot(theme, aes(x="", y=value, fill=group))+
-  geom_bar(width = 1, stat = "identity")+ coord_polar("y", start=0)+
-  scale_fill_brewer(palette="Blues")+
-  blank_theme+
-  theme(axis.text.x=element_blank(),legend.position="top") +
-  geom_text(aes(x =  1.2,label = percent(value/100)), 
-            position = position_stack(vjust = 0.5))
-```
+<!-- theme <- as.data.frame(freq(Rnew$pos_cat)) -->
+<!-- theme$group <- rownames(theme) -->
+<!-- theme$value <- theme$`val%` -->
+<!-- ggplot(theme, aes(x="", y=value, fill=group))+ -->
+<!--   geom_bar(width = 1, stat = "identity")+ coord_polar("y", start=0)+ -->
+<!--   scale_fill_brewer(palette="Blues")+ -->
+<!--   blank_theme+ -->
+<!--   theme(axis.text.x=element_blank(),legend.position="top") + -->
+<!--   geom_text(aes(x =  1.2,label = percent(value/100)),  -->
+<!--             position = position_stack(vjust = 0.5)) -->
+<!-- ``` -->
 
-:::
-::::::::::::::
+<!-- ::: -->
+<!-- :::::::::::::: -->
 
 <br> 
 
@@ -404,6 +404,71 @@ library(flextable)
 
 <br>
 
+### Projects going on
+
+#### In Review
+
+```{r echo=FALSE, warning=FALSE,message = FALSE}
+library(ftExtra)
+Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx')
+library(flextable)
+  Rnew <- Rnew[-c(1:9),]
+  Rnew <- Rnew[c(which(Rnew$Periode=="CURRENTLY IN THE RUNNING"):which(Rnew$Periode=="OPEN IDEAS")),c('Reference','Status','Position')]
+
+  Rnew <- as.data.frame(Rnew)
+  Rnew <- Rnew[!is.na(Rnew$Reference),]
+  Rnew <- Rnew[which(Rnew$Status=="in review"),]
+  Rnew$numb <- paste(dim(Rnew)[1]:1,'. ',sep="")
+  Rnew$ref <- paste(Rnew$numb,Rnew$Reference)
+  Rnew <- Rnew[,c('ref')]
+  
+  kable(Rnew, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL)
+
+```
+
+<br>
+
+#### Submitted
+
+```{r echo=FALSE, warning=FALSE,message = FALSE}
+library(ftExtra)
+Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx')
+library(flextable)
+  Rnew <- Rnew[-c(1:9),]
+  Rnew <- Rnew[c(which(Rnew$Periode=="CURRENTLY IN THE RUNNING"):which(Rnew$Periode=="OPEN IDEAS")),c('Reference','Status','Position')]
+
+  Rnew <- as.data.frame(Rnew)
+  Rnew <- Rnew[!is.na(Rnew$Reference),]
+  Rnew <- Rnew[which(Rnew$Status=="Submitted"),]
+  Rnew$numb <- paste(dim(Rnew)[1]:1,'. ',sep="")
+  Rnew$ref <- paste(Rnew$numb,Rnew$Reference)
+  Rnew <- Rnew[,c('ref')]
+  
+  kable(Rnew, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL)
+
+```
+
+<br>
+
+#### In progress
+
+```{r echo=FALSE, warning=FALSE,message = FALSE}
+library(ftExtra)
+Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/overview_scientificprojects.xlsx')
+library(flextable)
+  Rnew <- Rnew[-c(1:9),]
+  Rnew <- Rnew[c(which(Rnew$Periode=="CURRENTLY IN THE RUNNING"):which(Rnew$Periode=="OPEN IDEAS")),c('Reference','Status','Position')]
+
+  Rnew <- as.data.frame(Rnew)
+  Rnew <- Rnew[!is.na(Rnew$Reference),]
+  Rnew <- Rnew[which(Rnew$Status=="in progress"),]
+  Rnew$numb <- paste(dim(Rnew)[1]:1,'. ',sep="")
+  Rnew$ref <- paste(Rnew$numb,Rnew$Reference)
+  Rnew <- Rnew[,c('ref')]
+  
+  kable(Rnew, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL)
+
+```
 
 <br>
 
