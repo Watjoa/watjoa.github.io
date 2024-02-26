@@ -13,4 +13,6 @@ navbar:
       href: https://www.linkedin.com/in/watjoa/
     - icon: fa-brands fa-researchgate
       href: https://www.researchgate.net/profile/Joachim-Waterschoot
+    - icon: fa-brands fa-google-scholar
+      href: https://scholar.google.com/citations?user=F-fOgBoAAAAJ&hl=nl
 output_dir: "docs"
