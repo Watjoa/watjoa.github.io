@@ -11,4 +11,6 @@ navbar:
       href: https://github.com/watjoa/
     - icon: fa-github
       href: https://www.linkedin.com/in/watjoa/
+    - icon: fa-brands fa-researchgate
+      href: https://www.researchgate.net/profile/Joachim-Waterschoot
 output_dir: "docs"
