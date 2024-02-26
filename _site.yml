@@ -1,11 +1,11 @@
 name: "Joachim Waterschoot"
 navbar:
   title: "Joachim Waterschoot"
-  left:
-    - text: "Curriculum"
-      href: Vitae.html
-    - text: "CaviR"
-      href: https://watjoa.github.io/CaviR-statistics/
+  index: Vitae.html
+    # - text: "Curriculum"
+    #   href: 
+    # - text: "CaviR"
+    #   href: https://watjoa.github.io/CaviR-statistics/
   right:
     - icon: fa-linkedin
       href: https://github.com/watjoa/
