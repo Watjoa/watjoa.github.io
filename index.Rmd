@@ -24,13 +24,6 @@ classoption:
 - twocolumn
 ---
 
-```{r, echo=FALSE}
-htmltools::img(src = 'image.jpg', 
-               alt = 'logo', 
-               style = 'position:absolute; top:0; right:0; padding:10px; width:25%')
-```
-
-
 <!-- \fontsize{9}{10} -->
 \selectfont
 
@@ -49,7 +42,7 @@ font-style: italic;
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
 div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding: 20px;}
-div.grey { background-color:#ebebeb; color: white; border-radius: 5px; padding: 20px;}
+div.grey { background-color:#ebebeb; border-radius: 5px; padding: 20px;}
 
 </style>
 
@@ -70,11 +63,26 @@ div.grey { background-color:#ebebeb; color: white; border-radius: 5px; padding: 
 
 <br>
 
-# Contact information <i class="fa fa-phone" aria-hidden="true"></i>
-***
+<div class = "row">
+<div class = "col-md-8">
+<div class = "grey">
+**Contact information:**
 
 +	Email: Joachim.waterschoot@ugent.be   
 + Orcid: 0000-0003-0845-9310
++ Address: Department of Developmental, Personality and Social Psychology at the Faculty of Psychology and Educational Sciences, Ghent University, Henri Dunantlaan 2, 9000 Ghent
+</div>
+</div>
+<div class = "col-md-4">
+![ ](image.jpg)
+</div>
+</div>
+
+My research focuses on **well-being and motivation**, with a broad focus on **_antecedents_** (e.g., emotion regulation strategies, mindfulness), **_intermediate mechanisms_** (e.g., basic psychological needs, motivation, risk perception), and **_outcomes_** (e.g., boredom, vitality, life satisfaction, depression and anxiety symptoms). Within my research, these variables have been approached in the context of several themes, such as educational and health psychology (e.g. COVID-19), but also the proactive nature of human beings. As an important part of this, I have conducted several studies focusing on the question of what **proactive strategies people might use to motivate themselves** during (boring) activities, and how these strategies might differ qualitatively in predicting both subjective (e.g. boredom and effort) and objective outcomes (e.g. performance). This has been tested not only in the laboratory, but also in ecologically valid contexts. 
+
+From the beginning of the COVID-19 crisis, my focus as a PhD researcher shifted towards the crisis. Together with the other members of the team, we started the national research project of the **Motivation Barometer** (which would last for 2.5 years), monitoring the psychological dynamics of the Belgian population, analysing and reporting the results on an ongoing basis, informing policy and society, and writing a number of scientific manuscripts. 
+
+In conducting research, I have a broad fascination with **statistics**. Based on a completed master's degree in statistical data analysis, my overall goal is to address research questions in the most valid and appropriate ways. In particular, I am fascinated by multilevel modelling and different types of cluster analysis, for which I have written R shiny applications and R packages called 'CaviR'. I used this knowledge during the Motivation Barometer project to create a self-written statistical and descriptive dashboard with the most needed information regarding the psychological assessments. I also wrote and designed the website for the project, combining this with graphical visualisations and trying to make the (statistical) information attractive and understandable to the general public. 
 
 <br>
 
@@ -1063,7 +1071,7 @@ Text on the website: *Maarten Vansteenkiste, Joachim Waterschoot and Sofie MorbÃ
 <br>
 <br>
 
-# Research visit <i class="fa fa-globe" aria-hidden="true"></i>
+# Research visits <i class="fa fa-globe" aria-hidden="true"></i>
 ***
 
 
@@ -1083,6 +1091,23 @@ Text on the website: *Maarten Vansteenkiste, Joachim Waterschoot and Sofie MorbÃ
 
 </div>
 </div>
+
+<div class = "col-md-4">
+<div class = "blue">
+![ ](acu_logo.png)
+<br>
+<br>
+**Research visit** <br>
+*April 11 - July 5, 2024*
+
+<i class="fa fa-map-marker" aria-hidden="true"></i> Institute for Positive Psychology and Education, Australian Catholic University, Sydney, Australia ðŸ‡¦ðŸ‡º <br>
+<i class="fa fa-users" aria-hidden="true"></i> Invitation from Prof. Dr. Richard Ryan to visit the Insitute for Positive Psychology and Education team, next to Prof. Dr. JohnMarshal Reeve and Prof. Dr. Emma Bradshaw
+<br>
+[Link to research group](https://www.acu.edu.au/research-and-enterprise/our-research-institutes/institute-for-positive-psychology-and-education/about-us)
+
+</div>
+</div>
+
 </div>
 
 <br>
