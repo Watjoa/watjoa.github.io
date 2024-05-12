@@ -488,7 +488,7 @@ library(flextable)
 
 ## Conferences
 
-#### 2023
+#### 2024
 
 ```{r echo=FALSE, warning=FALSE,message = FALSE}
 library(ftExtra)
@@ -506,7 +506,20 @@ library(flextable)
   Rnew$Reference <- paste(Rnew$numb,Rnew$Reference,sep="")
   Rnew <- Rnew[,c('Reference','Year')]
 
-   Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2023"),c('Reference')])
+   Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2024"),c('Reference')])
+
+
+  kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL)
+```
+
+<br>
+
+
+#### 2023
+
+```{r echo=FALSE, warning=FALSE,message = FALSE}
+
+  Rnewh <- as.data.frame(Rnew[which(Rnew$Year=="2023"),c('Reference')])
 
 
   kable(Rnewh, format = "html",escape=FALSE,row.names = F,booktabs = T,col.names = NULL)
