@@ -165,9 +165,9 @@ ggplot(comparison_data, aes(x = category, y = proportion, fill = dataset)) +
 
 # Maps
 
-<span style="color: blue; cursor: help;" title="Hover over the map to see details about each country's governance type!">
+<center> <span style="color: blue; cursor: help;" title="Hover over the map to see details about each country's governance type!">
 Tip: You can zoom in and hover on the map to see more details. Double click to reset
-</span>
+</span> </center>
 
 ```{r echo=FALSE, warning=FALSE,message = FALSE}
 
@@ -344,7 +344,7 @@ datatable(df,
                          'KeyTable','Responsive'),
           options = list(
            # order = list(list(2, 'desc')),
-            pageLength = 70,
+            pageLength = 150,
             autoWidth = TRUE,
             dom = 'Bfrtip',
            # buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
