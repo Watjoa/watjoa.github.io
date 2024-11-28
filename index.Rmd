@@ -10,7 +10,7 @@ output:
     toc_float:
       collapsed: false
     toc_depth: 2
-    theme: cosmo #yeti
+    theme: yeti
     highlight: textmate
     number_sections: false
     # includes:
