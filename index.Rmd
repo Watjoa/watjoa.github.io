@@ -344,7 +344,7 @@ datatable(df,
                          'KeyTable','Responsive'),
           options = list(
            # order = list(list(2, 'desc')),
-            pageLength = 150,
+           paging = FALSE,
             autoWidth = TRUE,
             dom = 'Bfrtip',
            # buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
