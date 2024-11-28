@@ -15,8 +15,8 @@ output:
     number_sections: false
     # includes:
     #   after_body: footnote.html
-  pdf_document:
-    toc: yes
+  # pdf_document:
+  #   toc: yes
     # latex_engine: xelatex
     # number_sections: false
 always_allow_html: true
