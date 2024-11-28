@@ -1,12 +1,12 @@
 ---
 title: "FWO postdoctoral research proposal"
 subtitle: "Information on Work Package 1"
-# date: "Latest update - `r format(Sys.time(), '%d %B %Y')`"
+date: 'November 28, 2024' #"Latest update - `r format(Sys.time(), '%d %B %Y')`"
 # author:
 #   - Joachim Waterschoot^[Department of Developmental, Personality and Social Psychology, Ghent University, joachim.waterschoot@ugent.be]
 output:
   html_document:
-    toc: true
+    toc: false
     toc_float:
       collapsed: false
     toc_depth: 2
@@ -45,6 +45,11 @@ div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
 div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding: 20px;}
 div.grey { background-color:#ebebeb; border-radius: 5px; padding: 20px;}
 
+  .plotly {
+    width: 100% !important;
+    height: auto !important;
+  }
+
 </style>
 
 <style>
@@ -60,11 +65,246 @@ div.grey { background-color:#ebebeb; border-radius: 5px; padding: 20px;}
   }
 </style>
 
+<br> 
+
 # Overview
 
+<div class = "col-md-6">
+<div class = "blue">
 
+blablalba
+
++ **57** countries
+
++ **110** collaborators
+
++ proportionally more democratic than full list of countries
+
+</div>
+</div>
+<div class = "col-md-6">
+
+
+
+<center> 
+```{r echo=FALSE, warning=FALSE,message = FALSE, out.width="100%"}
+library(dplyr)
+library(ggplot2)
+
+
+Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/FWO/Engagements/Overview.xlsx')
+Rnew <- as.data.frame(Rnew)
+Rnew <- Rnew[-c(1),c(1:14)]
+names(Rnew) <- Rnew[1,]
+Rnew <- Rnew[-1,]
+
+library(flextable)
+
+Rnew <- Rnew[,c('Name','Institution','Country','Flag',"Continent","Democracy index","Type","Hyperlink")]
+Rnew$`Democracy index` <- round(as.numeric(Rnew$`Democracy index`),2)
+row.names(Rnew) <- NULL
+Rnew <- Rnew[order(Rnew$Country,decreasing=FALSE),]
+Rnew <- Rnew[1:(which(Rnew$Name=='end')-1),]
+
+Rnew <- unique(Rnew[,c('Country',"Type")])
+Rnew <- as.data.frame(Rnew)
+colnames(Rnew)[which(colnames(Rnew)=='Type')] <- 'category'
+colnames(Rnew)[which(colnames(Rnew)=='Country')] <- 'country'
+your_data <- Rnew
+colnames(your_data) <- c('country','category')
+your_data$category <- as.factor(your_data$category)
+your_data$category <- factor(your_data$category, levels=c("Autocratic regime","Hybrid regime","Flawed democracy","Full democracy" ))
+
+# Full dataset of all countries and categories
+Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/FWO/Engagements/Overview.xlsx',sheet = 'DemInd2023')
+Rnew <- as.data.frame(Rnew)
+full_data <- na.omit(Rnew[,c(1,4)])
+colnames(full_data) <- c('country','category')
+full_data$category <- as.factor(full_data$category)
+full_data$category <- factor(full_data$category, levels=c("Autocratic regime","Hybrid regime","Flawed democracy","Full democracy" ))
+
+# Calculate proportions for each category in your dataset
+your_data_summary <- your_data %>%
+  group_by(category) %>%
+  summarise(count = n()) %>%
+  mutate(proportion = count / sum(count),
+         dataset = "Work Package 1")
+
+# Calculate proportions for each category in the full dataset
+full_data_summary <- full_data %>%
+  group_by(category) %>%
+  summarise(count = n()) %>%
+  mutate(proportion = count / sum(count),
+         dataset = "Full list")
+
+# Combine the summaries
+comparison_data <- bind_rows(your_data_summary, full_data_summary)
+
+# Plot comparison as a bar chart
+ggplot(comparison_data, aes(x = category, y = proportion, fill = dataset)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  scale_y_continuous(labels = scales::percent_format()) +
+  labs(
+    title = "Comparison of democracy categories: collaborating countries vs full List",
+    x = "Democracy category",
+    y = "Proportion of countries",
+    fill = "Dataset"
+  ) +
+  theme_minimal()
+
+```
+</center>
+
+</div>
+
+<br> 
+
+<span style="color: blue; cursor: help;" title="Hover over the map to see details about each country's governance type!">
+Tip: You can zoom in and hover on the map to see more details. Double click to reset
+</span>
+
+```{r echo=FALSE, warning=FALSE,message = FALSE}
+
+library(plotly)
+library(dplyr)
+
+
+
+Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/FWO/Engagements/Overview.xlsx')
+Rnew <- as.data.frame(Rnew)
+Rnew <- Rnew[-c(1),c(1:14)]
+names(Rnew) <- Rnew[1,]
+Rnew <- Rnew[-1,]
+
+library(flextable)
+
+Rnew <- Rnew[,c('Name','Institution','Country','Flag',"Continent","Democracy index","Type","Hyperlink")]
+Rnew$`Democracy index` <- round(as.numeric(Rnew$`Democracy index`),2)
+row.names(Rnew) <- NULL
+Rnew <- Rnew[order(Rnew$Country,decreasing=FALSE),]
+Rnew <- Rnew[1:(which(Rnew$Name=='end')-1),]
+
+Rnew <- unique(Rnew[,c('Country',"Democracy index")])
+Rnew <- as.data.frame(Rnew)
+colnames(Rnew)[which(colnames(Rnew)=='Democracy index')] <- 'democracy_index'
+colnames(Rnew)[which(colnames(Rnew)=='Country')] <- 'country'
+data <- Rnew
+
+# Custom colorscale
+custom_colorscale <- list(
+  c(0, "#f0f9e8"), # Light green for lowest values
+  c(1, "#254b8c")  # Dark blue for highest values
+)
+
+# Create the plot
+plot <- plot_ly(
+  data,
+  type = 'choropleth',
+  locations = ~country,
+  locationmode = 'country names',
+  z = ~democracy_index,
+  colorscale = custom_colorscale,
+  text = ~paste(country,"<br>",'Democracy Index (2023) =', democracy_index, sep=""), # Custom hover text
+  hoverinfo = "text", # Show only custom text in hover
+  colorbar = list(
+    title = list(
+      text = "Democracy Index (2023)", # Legend title
+      font = list(family = "Arial", size = 14)
+    ),
+    x = 0.5, # Center legend horizontally
+    xanchor = "center", # Align legend by center horizontally
+    y = 1.15, # Position above the map
+    orientation = "h", # Horizontal legend
+    thickness = 10
+  )
+) %>%
+  layout(
+    geo = list(
+         projection = list(type = "natural earth", scale = 1), # Adjust scale for a larger map
+      showlakes = TRUE,
+      lakecolor = 'rgb(173, 216, 230)'
+      #center = list(lon = 0, lat = 20) # Center the map
+    ),
+    width = NULL, # Allow the plot to be responsive
+    height = NULL # Allow the plot to adapt its height
+  )
+
+plot
+```
+
+<br>
+
+<center> <b>Collaborating countries by regime type (based on Democracy Index, 2023) </b></center>
+
+```{r echo=FALSE, warning=FALSE,message = FALSE}
+
+Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/FWO/Engagements/Overview.xlsx')
+Rnew <- as.data.frame(Rnew)
+Rnew <- Rnew[-c(1),c(1:14)]
+names(Rnew) <- Rnew[1,]
+Rnew <- Rnew[-1,]
+
+library(flextable)
+
+Rnew <- Rnew[,c('Name','Institution','Country','Flag',"Continent","Democracy index","Type","Hyperlink")]
+Rnew$`Democracy index` <- round(as.numeric(Rnew$`Democracy index`),2)
+row.names(Rnew) <- NULL
+Rnew <- Rnew[order(Rnew$Country,decreasing=FALSE),]
+Rnew <- Rnew[1:(which(Rnew$Name=='end')-1),]
+
+Rnew <- unique(Rnew[,c('Country',"Type")])
+Rnew <- as.data.frame(Rnew)
+colnames(Rnew)[which(colnames(Rnew)=='Type')] <- 'category'
+colnames(Rnew)[which(colnames(Rnew)=='Country')] <- 'country'
+data <- Rnew
+
+# Assign unique colors for each category
+category_colors <- c("Autocratic regime" = "#d73027", 
+                     "Hybrid regime" = "#fc8d59", 
+                     "Flawed democracy" = "#fee08b", 
+                     "Full democracy" = "#1a9850")
+
+# Create a categorical map
+plot <- plot_ly(
+  data,
+  type = 'choropleth',
+  locations = ~country,
+  locationmode = 'country names',
+  z = ~as.numeric(factor(category, levels = names(category_colors))), # Map categories to numeric
+  colorscale = list(
+    list(0, category_colors["Autocratic regime"]),
+    list(0.33, category_colors["Hybrid regime"]),
+    list(0.66, category_colors["Flawed democracy"]),
+    list(1, category_colors["Full democracy"])
+  ),
+  text = ~paste('Country:', country, '<br>Category:', category), # Custom hover text
+  hoverinfo = "text", # Show only custom hover text
+  colorbar = list(
+    title = list(
+      text = "Governance Category",
+      font = list(family = "Arial", size = 14)
+    ),
+    tickvals = c(1, 2, 3, 4), # Numeric values for categories
+    ticktext = names(category_colors), # Corresponding category names
+    thickness = 15 # Adjust thickness of the colorbar
+  )
+) %>%
+  layout(
+    
+    geo = list(
+      projection = list(type = "natural earth", scale = 1),
+      showlakes = FALSE
+    )
+  )
+
+plot
+```
 
 # List of collaborators
+
+<span style="color: blue; cursor: help;" title="Click on the 'Form' hyperlink to see the signed collaboration form">
+Click on the 'Form' hyperlink to see the signed collaboration form
+</span>
 
 ```{r echo=FALSE, warning=FALSE,message = FALSE}
 library(ftExtra)
@@ -86,9 +326,31 @@ colnames(Rnew)[which(colnames(Rnew)=='Democracy index')] <- 'Democracy index (20
 row.names(Rnew) <- NULL
 Rnew <- Rnew[order(Rnew$Country,decreasing=FALSE),]
 Rnew <- Rnew[1:(which(Rnew$Name=='end')-1),]
+df <- Rnew
 
-kable(Rnew, format = "html",escape=FALSE,row.names = F,booktabs = T)%>%
-  kable_styling(full_width = F)
+library(DT)
+datatable(df,
+          escape=FALSE,
+        #  caption = 'Overview of reports',
+         # filter = 'top',
+          rownames = FALSE,
+          extensions = c('ColReorder',
+                         'KeyTable','Responsive'),
+          options = list(
+           # order = list(list(2, 'desc')),
+            pageLength = 70,
+            autoWidth = TRUE,
+            dom = 'Bfrtip',
+           # buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+            colReorder = TRUE,
+            keys = TRUE
+            )
+          )  %>%
+  formatStyle(columns = names(df), fontSize = '15px') %>%
+  # Format the 'Value' column to display integers without separators
+  formatStyle(columns = "Year", value = formatC(0, format = "d", big.mark = "", decimal.mark = "."))
+
+
 
 ```
 
