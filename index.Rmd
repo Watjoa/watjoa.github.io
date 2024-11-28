@@ -73,13 +73,13 @@ div.grey { background-color:#ebebeb; border-radius: 5px; padding: 20px;}
 <div class = "col-md-6">
 <div class = "blue">
 
-As part of Work Package 1 in the FWO Postdoctoral (junior), we have confirmation to collaborate of
+As part of Work Package 1 in FWO Postdoctoral Fellowship (Junior) Application, I have confirmation to collaborate of:
 
 + **58** countries
 
 + **112** collaborators
 
-+ proportionally more democratic than full list of countries (see figure right)
++ in which democratic regimes are overrepresented (see figure right)
 
 On this webpage, maps can checked of these countries with their *Democracy Index* scores and a list of the collaborators, including their signed form. 
 
@@ -308,8 +308,19 @@ plot
 
 # List of collaborators
 
-<span style="color: blue; cursor: help;" title="Click on the 'Form' hyperlink to see the signed collaboration form">
-Click on the 'Form' hyperlink to see the signed collaboration form
+
+<div class = "blue">
+
+**The form**
+
+This engagement form was designed to invite researchers worldwide to participate in a cross-national study examining the link between democracy, basic psychological needs, and well-being. The form outlined the study's goals, emphasizing the need for diverse, global representation to test the proposed model across continents. 
+
+Collaborators were asked to recruit participants, adhere to standardized data collection protocols, and contribute to the project's conceptual and analytical phases. In return, contributors were promised active involvement in the study's progression, contingent on funding approval. 
+
+</div>
+
+<center>  <span style="color: blue; cursor: help;" title="Click on the 'Form' hyperlink to see the signed collaboration form">
+Click on the 'Form' hyperlink to see the signed collaboration form </center> 
 </span>
 
 ```{r echo=FALSE, warning=FALSE,message = FALSE}
