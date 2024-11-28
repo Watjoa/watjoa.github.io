@@ -72,13 +72,15 @@ div.grey { background-color:#ebebeb; border-radius: 5px; padding: 20px;}
 <div class = "col-md-6">
 <div class = "blue">
 
-blablalba
+As part of Work Package 1 in the FWO Postdoctoral (junior), we have confirmation to collaborate of
 
 + **57** countries
 
 + **110** collaborators
 
-+ proportionally more democratic than full list of countries
++ proportionally more democratic than full list of countries (see figure right)
+
+On this webpage, maps can checked of these countries with their *Democracy Index* scores and a list of the collaborators, including their signed form. 
 
 </div>
 </div>
@@ -158,6 +160,8 @@ ggplot(comparison_data, aes(x = category, y = proportion, fill = dataset)) +
 </div>
 
 <br> 
+
+# Maps
 
 <span style="color: blue; cursor: help;" title="Hover over the map to see details about each country's governance type!">
 Tip: You can zoom in and hover on the map to see more details. Double click to reset
