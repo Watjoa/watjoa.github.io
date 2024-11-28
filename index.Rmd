@@ -1,0 +1,94 @@
+---
+title: "FWO postdoctoral research proposal"
+subtitle: "Information on Work Package 1"
+# date: "Latest update - `r format(Sys.time(), '%d %B %Y')`"
+# author:
+#   - Joachim Waterschoot^[Department of Developmental, Personality and Social Psychology, Ghent University, joachim.waterschoot@ugent.be]
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+    toc_depth: 2
+    theme: cosmo #yeti
+    highlight: textmate
+    number_sections: false
+    # includes:
+    #   after_body: footnote.html
+  pdf_document:
+    toc: yes
+    # latex_engine: xelatex
+    # number_sections: false
+always_allow_html: true
+mainfont: Aptos
+classoption:
+- twocolumn
+---
+
+<!-- \fontsize{9}{10} -->
+\selectfont
+
+<style type="text/css">
+<!-- body{ -->
+<!--   font-size: 10pt; -->
+<!-- } -->
+p.comment {
+background-color: #DBDBDB;
+padding: 10px;
+border: 1px solid black;
+margin-left: 25px;
+border-radius: 5px;
+font-style: italic;
+}
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+div.orange { background-color:#ffa366; border-radius: 5px; padding: 20px;}
+div.yellow { background-color:#09bb9f; color: white; border-radius: 5px; padding: 20px;}
+div.grey { background-color:#ebebeb; border-radius: 5px; padding: 20px;}
+
+</style>
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+
+# Overview
+
+
+
+# List of collaborators
+
+```{r echo=FALSE, warning=FALSE,message = FALSE}
+library(ftExtra)
+library(knitr)
+library(kableExtra)
+library(lubridate)
+
+Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/FWO/Engagements/Overview.xlsx')
+Rnew <- as.data.frame(Rnew)
+Rnew <- Rnew[-c(1),c(1:14)]
+names(Rnew) <- Rnew[1,]
+Rnew <- Rnew[-1,]
+
+library(flextable)
+
+Rnew <- Rnew[,c('Name','Institution','Country','Flag',"Continent","Democracy index","Type","Hyperlink")]
+Rnew$`Democracy index` <- round(as.numeric(Rnew$`Democracy index`),2)
+colnames(Rnew)[which(colnames(Rnew)=='Democracy index')] <- 'Democracy index (2023)'
+row.names(Rnew) <- NULL
+Rnew <- Rnew[order(Rnew$Country,decreasing=FALSE),]
+Rnew <- Rnew[1:(which(Rnew$Name=='end')-1),]
+
+kable(Rnew, format = "html",escape=FALSE,row.names = F,booktabs = T)%>%
+  kable_styling(full_width = F)
+
+```
+
