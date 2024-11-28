@@ -75,9 +75,9 @@ div.grey { background-color:#ebebeb; border-radius: 5px; padding: 20px;}
 
 As part of Work Package 1 in the FWO Postdoctoral (junior), we have confirmation to collaborate of
 
-+ **57** countries
++ **58** countries
 
-+ **110** collaborators
++ **112** collaborators
 
 + proportionally more democratic than full list of countries (see figure right)
 
