@@ -6,7 +6,7 @@ date: 'November 28, 2024' #"Latest update - `r format(Sys.time(), '%d %B %Y')`"
 #   - Joachim Waterschoot^[Department of Developmental, Personality and Social Psychology, Ghent University, joachim.waterschoot@ugent.be]
 output:
   html_document:
-    toc: false
+    toc: true
     toc_float:
       collapsed: false
     toc_depth: 2
