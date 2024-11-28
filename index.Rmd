@@ -69,6 +69,7 @@ div.grey { background-color:#ebebeb; border-radius: 5px; padding: 20px;}
 
 # Overview
 
+<div class = "row">
 <div class = "col-md-6">
 <div class = "blue">
 
@@ -157,6 +158,7 @@ ggplot(comparison_data, aes(x = category, y = proportion, fill = dataset)) +
 ```
 </center>
 
+</div>
 </div>
 
 <br> 
