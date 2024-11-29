@@ -69,15 +69,35 @@ div.grey { background-color:#ebebeb; border-radius: 5px; padding: 20px;}
 
 # Overview
 
+```{r echo=FALSE, warning=FALSE,message = FALSE}
+Rnew <- readxl::read_excel('/Users/joachimwaterschoot/Library/CloudStorage/OneDrive-UGent/RESEARCH/FWO/Engagements/Overview.xlsx')
+Rnew <- as.data.frame(Rnew)
+Rnew <- Rnew[-c(1),c(1:14)]
+names(Rnew) <- Rnew[1,]
+Rnew <- Rnew[-1,]
+
+library(flextable)
+
+Rnew <- Rnew[,c('Name','Institution','Country','Flag',"Continent","Democracy index","Type","Hyperlink")]
+Rnew$`Democracy index` <- round(as.numeric(Rnew$`Democracy index`),2)
+colnames(Rnew)[which(colnames(Rnew)=='Democracy index')] <- 'Democracy index (2023)'
+row.names(Rnew) <- NULL
+Rnew <- Rnew[order(Rnew$Country,decreasing=FALSE),]
+Rnew <- Rnew[1:(which(Rnew$Name=='end')-1),]
+table <- Rnew
+names <- length(unique(table$Name))
+countries <- length(unique(table$Country))
+```
+
 <div class = "row">
 <div class = "col-md-6">
 <div class = "blue">
 
 As part of Work Package 1 in FWO Postdoctoral Fellowship (Junior) Application, I have confirmation to collaborate of:
 
-+ **58** countries
++ **`r names`** countries
 
-+ **112** collaborators
++ **`r countries`** collaborators
 
 + in which democratic regimes are overrepresented (see figure right)
 
@@ -217,12 +237,12 @@ plot <- plot_ly(
       text = "Democracy Index (2023)", # Legend title
       font = list(family = "Arial", size = 14)
     ),
-    thickness = 15#,
-    # x = 0.5, # Center legend horizontally
-    # xanchor = "center", # Align legend by center horizontally
-    # y = 1.15, # Position above the map
-    # orientation = "h", # Horizontal legend
-    # thickness = 10
+    thickness = 15,#,
+    x = 0.5, # Center legend horizontally
+    xanchor = "center", # Align legend by center horizontally
+    y = 1.15, # Position above the map
+    orientation = "h", # Horizontal legend
+    thickness = 10
   )
 ) %>%
   layout(
@@ -230,8 +250,8 @@ plot <- plot_ly(
       projection = list(type = "natural earth"), # natural earth  orthographic
        showland = TRUE,
        landcolor = "#f0f0f0", # Land color for the physical base
-      showocean = TRUE,
-      oceancolor = "rgb(173, 216, 230)", # Ocean color for the physical base
+      # showocean = TRUE,
+      # oceancolor = "rgb(173, 216, 230)", # Ocean color for the physical base
       showcountries = TRUE, # Highlight country borders
       countrycolor = "white"
       # showlakes = TRUE,
@@ -298,8 +318,15 @@ plot <- plot_ly(
       font = list(family = "Arial", size = 14)
     ),
     tickvals = c(1, 2, 3, 4), # Numeric values for categories
-    ticktext = names(category_colors), # Corresponding category names
-    thickness = 15 # Adjust thickness of the colorbar
+    ticktext = c("Autocratic", "Hybrid", "Flawed", "Democratic"), # Corresponding category names
+    thickness = 15, # Adjust thickness of the colorbar
+    lenmode = "fraction",
+    len = 0.7, # Set the length of the legend
+    orientation = "h", # Horizontal orientation
+    x = 0.5, # Center the legend horizontally
+    xanchor = "center",
+    y = 1.15, # Position legend below the map
+    yanchor = "top"
   )
 ) %>%
   layout(
@@ -307,8 +334,8 @@ plot <- plot_ly(
       projection = list(type = "natural earth"), # natural earth  orthographic
        showland = TRUE,
        landcolor = "#f0f0f0", # Land color for the physical base
-      showocean = TRUE,
-      oceancolor = "rgb(173, 216, 230)", # Ocean color for the physical base
+      # showocean = TRUE,
+      # oceancolor = "rgb(173, 216, 230)", # Ocean color for the physical base
       showcountries = TRUE, # Highlight country borders
       countrycolor = "white"
       # showlakes = TRUE,
