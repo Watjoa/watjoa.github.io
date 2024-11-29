@@ -363,8 +363,12 @@ Collaborators were asked to recruit participants, adhere to standardized data co
 
 </div>
 
+<br>
+
 <center>  <span style="color: blue; cursor: help;" title="Click on the 'Form' hyperlink to see the signed collaboration form">
-Click on the 'Form' hyperlink to see the signed collaboration form </center> 
+Click on the 'Form' hyperlink to see the signed collaboration form <br>
+Sort columns <br> 
+Change order of columns</center> 
 </span>
 
 ```{r echo=FALSE, warning=FALSE,message = FALSE}
