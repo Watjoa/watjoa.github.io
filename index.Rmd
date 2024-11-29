@@ -95,9 +95,9 @@ countries <- length(unique(table$Country))
 
 As part of Work Package 1 in FWO Postdoctoral Fellowship (Junior) Application, I have confirmation to collaborate of:
 
-+ **`r names`** countries
++ **`r countries`** countries
 
-+ **`r countries`** collaborators
++ **`r names`** collaborators
 
 + in which democratic regimes are overrepresented (see figure right)
 
