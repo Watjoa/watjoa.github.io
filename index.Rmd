@@ -217,22 +217,29 @@ plot <- plot_ly(
       text = "Democracy Index (2023)", # Legend title
       font = list(family = "Arial", size = 14)
     ),
-    x = 0.5, # Center legend horizontally
-    xanchor = "center", # Align legend by center horizontally
-    y = 1.15, # Position above the map
-    orientation = "h", # Horizontal legend
-    thickness = 10
+    thickness = 15#,
+    # x = 0.5, # Center legend horizontally
+    # xanchor = "center", # Align legend by center horizontally
+    # y = 1.15, # Position above the map
+    # orientation = "h", # Horizontal legend
+    # thickness = 10
   )
 ) %>%
   layout(
     geo = list(
-         projection = list(type = "natural earth", scale = 1), # Adjust scale for a larger map
-      showlakes = TRUE,
-      lakecolor = 'rgb(173, 216, 230)'
-      #center = list(lon = 0, lat = 20) # Center the map
+      projection = list(type = "natural earth"), # natural earth  orthographic
+       showland = TRUE,
+       landcolor = "#f0f0f0", # Land color for the physical base
+      showocean = TRUE,
+      oceancolor = "rgb(173, 216, 230)", # Ocean color for the physical base
+      showcountries = TRUE, # Highlight country borders
+      countrycolor = "white"
+      # showlakes = TRUE,
+      # lakecolor = "rgb(173, 216, 230)",
+      # showrivers = TRUE,
+      # rivercolor = "blue"
     ),
-    width = NULL, # Allow the plot to be responsive
-    height = NULL # Allow the plot to adapt its height
+    margin = list(r = 0, t = 0, l = 0, b = 0) 
   )
 
 plot
@@ -296,12 +303,22 @@ plot <- plot_ly(
   )
 ) %>%
   layout(
-    
     geo = list(
-      projection = list(type = "natural earth", scale = 1),
-      showlakes = FALSE
-    )
+      projection = list(type = "natural earth"), # natural earth  orthographic
+       showland = TRUE,
+       landcolor = "#f0f0f0", # Land color for the physical base
+      showocean = TRUE,
+      oceancolor = "rgb(173, 216, 230)", # Ocean color for the physical base
+      showcountries = TRUE, # Highlight country borders
+      countrycolor = "white"
+      # showlakes = TRUE,
+      # lakecolor = "rgb(173, 216, 230)",
+      # showrivers = TRUE,
+      # rivercolor = "blue"
+    ),
+    margin = list(r = 0, t = 0, l = 0, b = 0) 
   )
+
 
 plot
 ```
